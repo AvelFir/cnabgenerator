@@ -14,11 +14,11 @@ function baixarArquivo() {
     var numeroCarteira = document.getElementById("numeroCarteira").value;
     var usoBanco = document.getElementById("usoBanco").value;
     var carteira = document.getElementById("carteira").value;
-    var codOcorrencia = document.getElementById("codOcorrencia").value;
-    var nDocumento = document.getElementById("nDocumento").value;
+    var codigoOcorrencia = document.getElementById("codigoOcorrencia").value;
+    var numeroDocumento = document.getElementById("numeroDocumento").value;
     var vencimento = document.getElementById("vencimento").value;
     var valorTitulo = document.getElementById("valorTitulo").value;
-    var codBanco = document.getElementById("codBanco").value;
+    var codigoBanco = document.getElementById("codigoBanco").value;
     var agenciaCobradora = document.getElementById("agenciaCobradora").value;
     var especie = document.getElementById("especie").value;
     var aceite = document.getElementById("aceite").value;
@@ -40,18 +40,18 @@ function baixarArquivo() {
     var cidade = document.getElementById("cidade").value;
     var estado = document.getElementById("estado").value;
     var sacadorAvalista = document.getElementById("sacadorAvalista").value;
-    var BRANCOS3 = document.getElementById("BRANCOS3").value;
+    var brancos3 = document.getElementById("brancos3").value;
     var dataMora = document.getElementById("dataMora").value;
     var prazo = document.getElementById("prazo").value;
-    var BRANCOS4 = document.getElementById("BRANCOS4").value;
+    var brancos4 = document.getElementById("brancos4").value;
     var numeroSequencial = document.getElementById("numeroSequencial").value;
   
     var dados = tipoDeRegistro + codigoDeInscricao + numeroDeInscricao + agencia + zeros1 + conta + dac + brancos1 +
             instrucaoAlegacao + usoEmpresa + nossoNumero + moedaVariavel + numeroCarteira + usoBanco + carteira +
-            codOcorrencia + nDocumento + vencimento + valorTitulo + codBanco + agenciaCobradora + especie + aceite +
+            codigoOcorrencia + numeroDocumento + vencimento + valorTitulo + codigoBanco + agenciaCobradora + especie + aceite +
             dataEmissao + instrucao1 + instrucao2 + valorJuros + dataDesconto + valorDesconto + valorIof + abatimento +
             codigoInscricaoPagador + numeroInscricaoPagador + nome + brancos2 + logradouro + bairro + cep + cidade + estado +
-            sacadorAvalista + BRANCOS3 + dataMora + prazo + BRANCOS4 + numeroSequencial;
+            sacadorAvalista + brancos3 + dataMora + prazo + brancos4 + numeroSequencial;
             
     download("cnab400.txt",dados);
   }
@@ -65,3 +65,103 @@ function baixarArquivo() {
     element.click();
     document.body.removeChild(element);
   }
+
+  function gerarRemessaPadraoDefaultValues(){
+    document.getElementById("tipoDeRegistro").value = "1";
+    document.getElementById("codigoDeInscricao").value = "01";
+    document.getElementById("numeroDeInscricao").value = "000" + geraCPF();
+    document.getElementById("agencia").value = "1500";
+    document.getElementById("zeros1").value = "00";
+    document.getElementById("conta").value = "05206";
+    document.getElementById("dac").value = "2";
+    document.getElementById("brancos1").value = "    ";
+    document.getElementById("instrucaoAlegacao").value = "0000";
+    document.getElementById("usoEmpresa").value = "0000000000000000000000000";
+    document.getElementById("nossoNumero").value = gerarNossoNumero();
+    document.getElementById("moedaVariavel").value = "0000000000000";
+    document.getElementById("numeroCarteira").value = "109";
+    document.getElementById("usoBanco").value = "                     ";
+    document.getElementById("carteira").value = "I";
+    document.getElementById("codigoOcorrencia").value = "01";
+    document.getElementById("numeroDocumento").value = "          ";
+    document.getElementById("vencimento").value = gerarDataVencimento();
+    document.getElementById("valorTitulo").value = "0000000009900";
+    document.getElementById("codigoBanco").value = "341";
+    document.getElementById("agenciaCobradora").value = "00000";
+    document.getElementById("especie").value = "01";
+    document.getElementById("aceite").value = "A";
+    document.getElementById("dataEmissao").value = gerarDataEmissao();
+    document.getElementById("instrucao1").value = "00";
+    document.getElementById("instrucao2").value = "00";
+    document.getElementById("valorJuros").value  = "0000000000000";
+    document.getElementById("dataDesconto").value = "000000";
+    document.getElementById("valorDesconto").value  = "0000000000000";
+    document.getElementById("valorIOF").value = "0000000000000";
+    document.getElementById("abatimento").value  = "0000000000000";
+    document.getElementById("codigoInscricaoPagador").value = "01";
+    document.getElementById("numeroInscricaoPagador").value = "00024498951670";
+    document.getElementById("nome").value = "Calebe Murilo Novaes".padEnd(30," ");
+    document.getElementById("brancos2").value = "          ";
+    document.getElementById("logradouro").value = "Rua Alfaiate Reis".padEnd(40," ");
+    document.getElementById("bairro").value = "Colonial".padEnd(12," ");
+    document.getElementById("cep").value = "93212050";
+    document.getElementById("cidade").value = "Sapucaia do Sul".padEnd(15," ");
+    document.getElementById("estado").value = "RS";
+    document.getElementById("sacadorAvalista").value = "                              ";
+    document.getElementById("brancos3").value = "    ";
+    document.getElementById("dataMora").value = "000000";
+    document.getElementById("prazo").value = "00";
+    document.getElementById("brancos4").value = " ";
+    document.getElementById("numeroSequencial").value = "000002";
+  }
+
+
+  function geraCPF() {
+    var n = 9;
+    var n1 = Math.floor(Math.random() * n);
+    var n2 = Math.floor(Math.random() * n);
+    var n3 = Math.floor(Math.random() * n);
+    var n4 = Math.floor(Math.random() * n);
+    var n5 = Math.floor(Math.random() * n);
+    var n6 = Math.floor(Math.random() * n);
+    var n7 = Math.floor(Math.random() * n);
+    var n8 = Math.floor(Math.random() * n);
+    var n9 = Math.floor(Math.random() * n);
+    var d1 = n9*2+n8*3+n7*4+n6*5+n5*6+n4*7+n3*8+n2*9+n1*10;
+    d1 = 11 - (Math.floor(d1 % 11));
+    if (d1>=10) d1 = 0;
+    var d2 = d1*2+n9*3+n8*4+n7*5+n6*6+n5*7+n4*8+n3*9+n2*10+n1*11;
+    d2 = 11 - (Math.floor(d2 % 11));
+    if (d2>=10) d2 = 0;
+    return '' + n1 + n2 + n3 + n4 + n5 + n6 + n7 + n8 + n9 + d1 + d2;
+  }
+
+  function gerarNossoNumero() {
+    var data = new Date();
+    var dia = data.getDate().toString().padStart(2, '0');
+    var mes = (data.getMonth() + 1).toString().padStart(2, '0');
+    var horas = data.getHours().toString().padStart(2, '0');
+    var minutos = data.getMinutes().toString().padStart(2, '0');
+    return dia + mes + horas + minutos;
+  }
+
+  function gerarDataVencimento() {
+    var hoje = new Date();
+    hoje.setDate(hoje.getDate() + 30);
+    var dia = hoje.getDate().toString().padStart(2, '0');
+    var mes = (hoje.getMonth() + 1).toString().padStart(2, '0');
+    var ano = hoje.getFullYear().toString().slice(-2);
+    return dia + mes + ano;
+  }
+  
+
+  function gerarDataEmissao() {
+    var hoje = new Date();
+    var dia = hoje.getDate().toString().padStart(2, '0');
+    var mes = (hoje.getMonth() + 1).toString().padStart(2, '0');
+    var ano = hoje.getFullYear().toString().slice(-2);
+    return dia + mes + ano;
+  }
+  
+  
+  
