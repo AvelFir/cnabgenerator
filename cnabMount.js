@@ -225,6 +225,5 @@ function mountLinhaRemessaDetalhePadrao() {
     var ano = hoje.getFullYear().toString().slice(-2);
     return dia + mes + ano;
   }
-  
-  
+
   

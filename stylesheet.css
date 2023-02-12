@@ -1,4 +1,22 @@
-.minimizedDiv {
+.form-section {
+  height: 200px;
+  overflow: hidden;
+}
+  .sectionHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .formSection.minimized {
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 0;
+  }
+  
+  .sectionBody {
     display: none;
- }
- 
+  }
+
+  
