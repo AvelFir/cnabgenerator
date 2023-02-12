@@ -1,0 +1,68 @@
+Pode transformar os seguintes campos abaixo em inputs de um form html separados por div? e criar uma função javascript que pega esses campos do formulario
+BRANCOS3
+DATA DE MORA
+PRAZO
+BRANCOS4
+NUMERO SEQÜENCIAL
+
+TIPO DE REGISTRO 
+CODIGO DE INSCRIÇÃO
+NUMERO DE INSCRIÇÃO
+AGÊNCIA
+ZEROS1
+CONTA
+DAC 
+BRANCOS1
+INSTRUÇÃO/ALEGAÇÃO
+USO DA EMPRESA 
+NOSSO NÚMERO 
+QTDE DE MOEDA 
+N DA CARTEIRA
+USO DO BANCO 
+CARTEIRA 
+
+CÓD. DE OCORRÊNCIA 
+N DO DOCUMENTO 
+VENCIMENTO 
+VALOR DO TÍTULO
+CÓDIGO DO BANCO
+AGÊNCIA COBRADORA
+ESPÉCIE 
+ACEITE 
+DATA DE EMISSÃO
+INSTRUÇÃO 1
+INSTRUÇÃO 2
+
+VALOR JUROS
+DATA DESCONTO
+VALOR DO DESCONTO
+VALOR DO I.O.F
+ABATIMENTO
+
+CODIGO DE INSCRIÇÃO
+NUMERO DE INSCRIÇÃO
+NOME
+BRANCOS2
+LOGRADOURO
+
+BAIRRO
+CEP
+CIDADE
+ESTADO
+SACADOR/AVALISTA
+
+BRANCOS3
+DATA DE MORA
+PRAZO
+BRANCOS4
+NUMERO SEQÜENCIAL
+
+
+
+
+    const formulario = document.getElementById("formulario");
+    const BRANCOS3 = formulario.elements.BRANCOS3.value;
+    const dataMora = formulario.elements.dataMora.value;
+    const prazo = formulario.elements.prazo.value;
+    const BRANCOS4 = formulario.elements.BRANCOS4.value;
+    const numeroSequencial = formulario.elements.numeroSequencial.value;
