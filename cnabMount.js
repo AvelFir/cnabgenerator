@@ -1,12 +1,13 @@
 function baixarArquivo() {
+    var input = document.getElementById("nomeArquivo").value
+    nomeArquivo = input == undefined || input == "" ? getNomeArquivo() : input;
     var headerGIA = mountHeaderGIA();
     var header = mountLinhaHeaderArquivoDefaultValues();
     var remessaPadrao = mountLinhaRemessaDetalhePadrao();
     var trailer = mountLinhaTrailerArquivoDefaultValues();
       
     var documento = [headerGIA, header, remessaPadrao, trailer].join("\n");
-    console.log(documento);
-    download("cnab400.txt",documento);
+    download(nomeArquivo,documento);
   }
   
 function mountLinhaRemessaDetalhePadrao() {
@@ -228,9 +229,19 @@ function mountLinhaRemessaDetalhePadrao() {
 
 
   function gerarNomeArquivo(){
-    var CNAB_TYPE = "CNAB400"
-    var data = new Date();
-    var nomeArquivo = CNAB_TYPE + "_" + data;
+    const nomeArquivo = getNomeArquivo();
     document.getElementById("nomeArquivo").value = nomeArquivo;
+  }
+
+  function getNomeArquivo(){
+    const CNAB_TYPE = "CNAB400"
+    const date = new Date();
+    const formattedDate = date.getDate().toString().padStart(2, '0') +
+                      (date.getMonth() + 1).toString().padStart(2, '0') +
+                      date.getFullYear() +
+                      date.getHours().toString().padStart(2, '0') +
+                      date.getMinutes().toString().padStart(2, '0') +
+                      date.getSeconds().toString().padStart(2, '0');
+    return CNAB_TYPE + "_" + formattedDate;
   }
   
