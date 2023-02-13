@@ -80,7 +80,7 @@ function mountLinhaRemessaDetalhePadrao() {
   function gerarRemessaPadraoDefaultValues(){
     document.getElementById("tipoDeRegistro").value = "1";
     document.getElementById("codigoDeInscricao").value = "01";
-    document.getElementById("numeroDeInscricao").value = "000" + geraCPF();
+    document.getElementById("numeroDeInscricao").value = "00012044551802";
     document.getElementById("agencia").value = "1500";
     document.getElementById("zeros1").value = "00";
     document.getElementById("conta").value = "05206";
@@ -88,7 +88,7 @@ function mountLinhaRemessaDetalhePadrao() {
     document.getElementById("brancos1").value = "    ";
     document.getElementById("instrucaoAlegacao").value = "0000";
     document.getElementById("usoEmpresa").value = "0000000000000000000000000";
-    document.getElementById("nossoNumero").value = gerarNossoNumero();
+    document.getElementById("nossoNumero").value = gerarNossoNumeroAleatorio();
     document.getElementById("moedaVariavel").value = "0000000000000";
     document.getElementById("numeroCarteira").value = "109";
     document.getElementById("usoBanco").value = "                     ";
@@ -200,13 +200,20 @@ function mountLinhaRemessaDetalhePadrao() {
     return '' + n1 + n2 + n3 + n4 + n5 + n6 + n7 + n8 + n9 + d1 + d2;
   }
 
-  function gerarNossoNumero() {
+ function gerarNossoNumeroData() {
     var data = new Date();
     var dia = data.getDate().toString().padStart(2, '0');
     var mes = (data.getMonth() + 1).toString().padStart(2, '0');
     var horas = data.getHours().toString().padStart(2, '0');
     var minutos = data.getMinutes().toString().padStart(2, '0');
     return dia + mes + horas + minutos;
+  }
+
+  function gerarNossoNumeroAleatorio() {
+    var max = 99999999;
+    var min = 1;
+    var nossoNumero = Math.floor(Math.random() * (max - min + 1)) + min;
+    return  nossoNumero.toString().padStart(8,"0");
   }
 
   function gerarDataVencimento() {
@@ -233,6 +240,10 @@ function mountLinhaRemessaDetalhePadrao() {
     document.getElementById("nomeArquivo").value = nomeArquivo;
   }
 
+  function gerarNossoNumero(tipo){
+    const nossoNumero = tipo == "data" ? gerarNossoNumeroData() : gerarNossoNumeroAleatorio();
+    document.getElementById("nossoNumero").value = nossoNumero;
+  }
   function getNomeArquivo(){
     const CNAB_TYPE = "CNAB400"
     const date = new Date();
