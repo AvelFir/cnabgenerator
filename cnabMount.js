@@ -226,4 +226,11 @@ function mountLinhaRemessaDetalhePadrao() {
     return dia + mes + ano;
   }
 
+
+  function gerarNomeArquivo(){
+    var CNAB_TYPE = "CNAB400"
+    var data = new Date();
+    var nomeArquivo = CNAB_TYPE + "_" + data;
+    document.getElementById("nomeArquivo").value = nomeArquivo;
+  }
   
