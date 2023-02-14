@@ -271,3 +271,18 @@ function mountLinhaRemessaDetalhePadrao() {
     document.getElementById("complementoLinha").value = complemento;
   }
   
+
+  function toggleSection(sectionName) {
+    var formSectionContent = document.getElementById(sectionName + "Content");
+    var toggleButton = document.querySelector('[data-section="' + sectionName + '"]');
+    var toggleButton = document.querySelector('[data-section="' + sectionName + '"]');
+  
+    if (formSectionContent.style.display === "none") {
+      formSectionContent.style.display = "block";
+      toggleButton.innerText = "Minimize " + sectionName;
+    } else {
+      formSectionContent.style.display = "none";
+      toggleButton.innerText = "Maximize " + sectionName;
+    }
+  }
+  

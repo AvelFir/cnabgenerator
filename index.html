@@ -7,8 +7,16 @@
   <script src="cnabMount.js"></script>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
+
+
+      var toggleButtons = document.querySelectorAll(".toggleButton");
+for (var i = 0; i < toggleButtons.length; i++) {
+  toggleButtons[i].addEventListener("click", function() {
+    toggleSection(this.getAttribute("data-section"));
+  });
+}
+
       const editButtons = document.querySelectorAll(".editButton");
-  
       editButtons.forEach(function (editButton) {
         editButton.addEventListener("click", function (event) {
           event.preventDefault();
@@ -16,7 +24,7 @@
         });
       });
     });
-  
+
     function toggleEditableField(fieldId) {
       const inputField = document.querySelector(`#${fieldId}`);
       if (inputField.hasAttribute("readonly")) {
@@ -28,24 +36,31 @@
       }
     }
   </script>
-  
+
 </head>
 
 <body>
   <button onclick="gerarRemessaPadraoDefaultValues()">Default Value All Fields</button>
   <br><br>
-  <form class="minimizable">
-    <div>
-      <label for="complementoLinha">COMPLEMENTO DE LINHA:</label>
-      <input type="text" id="complementoLinha" name="complementoLinha" maxlength="700" size=100 />
-      <button type="button" onclick="setComplemento()">Gerar Complemento</button>
-      <br>
-      <label for="isComplemento">Deseja usar complemento no fim da linha?:</label>
-      <input type="checkbox" id="isComplemento" name="isComplemento">
+  <form>
+
+    <div class="section" id="Outros">
+      <button type="button" class="toggleButton" data-section="Outros">Maximizar Outros</button>
+      <div class="sectionContent" id="OutrosContent" style="display: none;">
+        <label for="complementoLinha">COMPLEMENTO DE LINHA:</label>
+        <input type="text" id="complementoLinha" name="complementoLinha" maxlength="700" size=100 />
+        <button type="button" onclick="setComplemento()">Gerar Complemento</button>
+        <br>
+        <label for="isComplemento">Deseja usar complemento no fim da linha?:</label>
+        <input type="checkbox" id="isComplemento" name="isComplemento">
+      </div>
     </div>
+
     <br>
-    <div class="header">Clique aqui para minimizar/maximizar</div>
-    <div class="content">
+
+    <div class="section" id="remessaPadrao">
+      <button type="button" class="toggleButton" data-section="remessaPadrao">Minimizar/Maximizar Remessa Padrao</button>
+      <div class="sectionContent" id="remessaPadraoContent" name="Remessa Detalhe Padrao">
       <div>
         <label for="tipoDeRegistro">TIPO DE REGISTRO:</label>
         <input type="text" id="tipoDeRegistro" name="tipoDeRegistro" maxlength="1" readonly />
@@ -236,6 +251,8 @@
         <input type="text" id="numeroSequencial" name="numeroSequencial" maxlength="6" />
       </div>
     </div>
+    </div>
+    <br>
     <div>
       <label for="nomeArquivo">NOME ARQUIVO:</label>
       <input type="text" id="nomeArquivo" name="nomeArquivo" maxlength="30" size="30" required />
