@@ -27,7 +27,7 @@ class RemessaPadraoConstants {
     return { value: "2", filler: "0", size: 1 };
   }
 
-  static get BRANCOS() {
+  static get BRANCOS1() {
     return { value: Brancos.QUATRO, filler: Brancos.QUATRO, size: 4 };
   }
 
@@ -36,7 +36,11 @@ class RemessaPadraoConstants {
   }
 
   static get USO_EMPRESA() {
-    return { value: ("EMPRESA" + gerarNossoNumeroAleatorio + Brancos.DEZ), filler: Brancos.VINTE_CINCO, size: 25 };
+    return { value: ("EMPRESA" + gerarNossoNumeroAleatorio() + Brancos.DEZ), filler: Brancos.VINTE_CINCO, size: 25 };
+  }
+
+  static get NOSSO_NUMERO() {
+    return { value: gerarNossoNumeroAleatorio() , filler: "00000000", size: 8 };
   }
 
   static get MOEDA_VARIAVEL() {
@@ -48,7 +52,7 @@ class RemessaPadraoConstants {
   }
 
   static get USO_BANCO() {
-    return { value: ("BANCO" + gerarNossoNumeroAleatorio + Brancos.OITO), filler: Brancos.VINTE_UM, size: 21 };
+    return { value: ("BANCO" + gerarNossoNumeroAleatorio() + Brancos.OITO), filler: Brancos.VINTE_UM, size: 21 };
   }
 
   static get CARTEIRA() {
@@ -91,11 +95,11 @@ class RemessaPadraoConstants {
     return { value: gerarDataEmissao(), filler:"000000" , size: 6 };
   }
 
-  static get INSTRUCAO() {
+  static get INSTRUCAO1() {
     return { value: "01", filler: Brancos.DOIS, size: 2 };
   }
 
-  static get INSTRUCAO() {
+  static get INSTRUCAO2() {
     return { value: "30", filler: Brancos.DOIS, size: 2 };
   }
   static get VALOR_JUROS() {
@@ -130,7 +134,7 @@ class RemessaPadraoConstants {
     return { value: "Calebe Murilo Novaes" + Brancos.DEZ, filler: "1", size: 1 };
   }
 
-  static get BRANCOS() {
+  static get BRANCOS2() {
     return { value: Brancos.DEZ, filler: Brancos.DEZ, size: 10 };
   }
 
@@ -158,7 +162,7 @@ class RemessaPadraoConstants {
     return { value: "Vera e Luis Marketing Ltda".padEnd(30,Brancos.UM), filler: Brancos.TRINTA, size: 30 };
   }
 
-  static get BRANCOS() {
+  static get BRANCOS3() {
     return { value: Brancos.QUATRO, filler: Brancos.QUATRO, size: 4 };
   }
 
@@ -170,12 +174,12 @@ class RemessaPadraoConstants {
     return { value: "05", filler: "00", size: 5 };
   }
 
-  static get BRANCOS() {
+  static get BRANCOS4() {
     return { value: Brancos.UM, filler: Brancos.UM, size: 1 };
   }
 
   static get NUMERO_SEQUENCIAL() {
-    return { value: "000001", filler: "000000", size: 6 };
+    return { value: "000002", filler: "000000", size: 6 };
   }
 }
 

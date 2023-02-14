@@ -63,7 +63,7 @@ function geraCPF() {
     return dia + mes + ano;
   }
 
-  function gerarDataDesconto() {
+  function gerarDataMora() {
     var hoje = new Date();
     hoje.setDate(hoje.getDate() + 40);
     var dia = hoje.getDate().toString().padStart(2, '0');
