@@ -4,7 +4,11 @@
 <head>
   <title>Cnab Generator</title>
   <link rel="stylesheet" type="text/css" href="./stylesheet.css" />
-  <script src="cnabMount.js"></script>
+  <script src="./scripts/index.js"></script>
+  <script src="./scripts/buttons.js"></script>
+  <script src="./scripts/cnabMount.js"></script>
+  <script src="./scripts/pageUtils.js"></script>
+  <script src="./scripts/generateFields.js"></script>
 </head>
 
 <body>
@@ -15,7 +19,7 @@
       <div class="sectionContent" id="OutrosContent" style="display: none;">
         <label for="complementoLinha">COMPLEMENTO DE LINHA:</label>
         <input type="text" id="complementoLinha" name="complementoLinha" maxlength="700" size=100 />
-        <button type="button" onclick="setComplemento()">Gerar Complemento</button>
+        <button type="button" onclick="setComplementoButton()">Gerar Complemento</button>
         <br>
         <label for="isComplemento">Deseja usar complemento no fim da linha?:</label>
         <input type="checkbox" id="isComplemento" name="isComplemento">
@@ -31,13 +35,13 @@
       <div class="sectionContent" id="RemessaPadraoContent" name="Remessa Detalhe Padrao">
         <br>
         <div>
-          <button type="button" onclick="gerarRemessaPadraoDefaultValues()">Gerar Remessa Padrao Emissao</button>
+          <button type="button" onclick="setValorRemessaDetalhePadraoButton()">Gerar Remessa Padrao Emissao</button>
         </div>
         <br>
         <div>
           <label for="tipoDeRegistro">TIPO DE REGISTRO:</label>
           <input type="text" id="tipoDeRegistro" class="fixo" name="tipoDeRegistro" maxlength="1"/>
-          <button type="button" onclick="toggleEditableField('tipoDeRegistro',this)" class="editButton">Travar</button>
+          <button type="button" onclick="lockUnlockButton('tipoDeRegistro',this)" class="editButton">Travar</button>
         </div>
         <div>
           <label for="codigoDeInscricao">CÓDIGO DE INSCRIÇÃO:</label>
@@ -54,7 +58,7 @@
         <div>
           <label for="zeros1">ZEROS1:</label>
           <input type="text" id="zeros1" class="fixo" name="zeros1" maxlength="2" />
-          <button type="button" onclick="toggleEditableField('zeros1',this)" class="editButton">Travar</button>
+          <button type="button" onclick="lockUnlockButton('zeros1',this)" class="editButton">Travar</button>
         </div>
         <div>
           <label for="conta">CONTA:</label>
@@ -67,7 +71,7 @@
         <div>
           <label for="brancos1">BRANCOS1:</label>
           <input type="text" id="brancos1" class="fixo" name="brancos1" maxlength="4" />
-          <button type="button" onclick="toggleEditableField('brancos1',this)" class="editButton">Travar</button>
+          <button type="button" onclick="lockUnlockButton('brancos1',this)" class="editButton">Travar</button>
         </div>
         <div>
           <label for="instrucaoAlegacao">INSTRUÇÂO ALEGAÇÂO:</label>
@@ -80,8 +84,8 @@
         <div>
           <label for="nossoNumero">NOSSO NÚMERO:</label>
           <input type="text" id="nossoNumero" name="nossoNumero" maxlength="8" />
-          <button type="button" onclick="gerarNossoNumero('data')">Data</button>
-          <button type="button" onclick="gerarNossoNumero('aleatorio')">Aleatorio</button>
+          <button type="button" onclick="setNossoNumeroButton('data')">Data</button>
+          <button type="button" onclick="setNossoNumeroButton('aleatorio')">Aleatorio</button>
         </div>
         <div>
           <label for="moedaVariavel">MOEDA VARIAVEL:</label>
@@ -179,7 +183,7 @@
         <div>
           <label for="brancos2">BRANCOS2:</label>
           <input type="text" id="brancos2" class="fixo" name="brancos2" maxlength="10" />
-          <button type="button" onclick="toggleEditableField('brancos2',this)" class="editButton">Travar</button>
+          <button type="button" onclick="lockUnlockButton('brancos2',this)" class="editButton">Travar</button>
         </div>
         <div>
           <label>LOGRADOURO:</label>
@@ -208,7 +212,7 @@
         <div>
           <label for="brancos3">BRANCOS3:</label>
           <input type="text" id="brancos3" class="fixo" name="brancos3" maxlength="4" />
-          <button type="button" onclick="toggleEditableField('brancos3',this)" class="editButton">Travar</button>
+          <button type="button" onclick="lockUnlockButton('brancos3',this)" class="editButton">Travar</button>
         </div>
         <div>
           <label for="dataMora">DATA DE MORA:</label>
@@ -221,12 +225,12 @@
         <div>
           <label for="brancos4">BRANCOS4:</label>
           <input type="text" id="brancos4" class="fixo" name="brancos4" maxlength="1" />
-          <button type="button" onclick="toggleEditableField('brancos4',this)" class="editButton">Travar</button>
+          <button type="button" onclick="lockUnlockButton('brancos4',this)" class="editButton">Travar</button>
         </div>
         <div>
           <label for="numeroSequencial">NUMERO SEQÜENCIAL:</label>
           <input type="text" id="numeroSequencial" class="fixo" name="numeroSequencial" maxlength="6" />
-          <button type="button" onclick="toggleEditableField('numeroSequencial',this)" class="editButton">Travar</button>
+          <button type="button" onclick="lockUnlockButton('numeroSequencial',this)" class="editButton">Travar</button>
         </div>
       </div>
     </div>
@@ -234,11 +238,11 @@
     <div>
       <label for="nomeArquivo">NOME ARQUIVO:</label>
       <input type="text" id="nomeArquivo" name="nomeArquivo" maxlength="40" size="40" />
-      <button type="button" onclick="gerarNomeArquivo()">Gerar</button>
+      <button type="button" onclick="setNomeArquivoButton()">Gerar</button>
     </div>
     <br>
     <div>
-      <input type="submit" value="Baixar Arquivo" onclick="baixarArquivo()" />
+      <input type="submit" value="Baixar Arquivo" onclick="baixarArquivoButton()" />
     </div>
   </form>
   </div>
