@@ -1,22 +1,7 @@
-.form-section {
-  height: 200px;
-  overflow: hidden;
+input[readonly] {
+  opacity: 0.5;
 }
-  .sectionHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .formSection.minimized {
-    height: 0;
-    overflow: hidden;
-    margin-bottom: 0;
-  }
-  
-  .sectionBody {
-    display: none;
-  }
 
-  
+input:not(.fixo) {
+  opacity: 1.0;
+}

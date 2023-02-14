@@ -1,3 +1,27 @@
+document.addEventListener("DOMContentLoaded", function () {
+
+
+  var toggleButtons = document.querySelectorAll(".toggleButton");
+  for (var i = 0; i < toggleButtons.length; i++) {
+    toggleButtons[i].addEventListener("click", function () {
+      toggleSection(this.getAttribute("data-section"));
+    });
+  }
+
+  
+});
+
+function toggleEditableField(fieldId, button) {
+  const inputField = document.querySelector(`#${fieldId}`);
+  if (inputField.hasAttribute("readonly")) {
+    inputField.removeAttribute("readonly");
+    button.innerHTML = "Travar";
+  } else {
+    inputField.setAttribute("readonly", "");
+    button.innerHTML = "Destravar";
+  }
+}
+
 function baixarArquivo() {
     var input = document.getElementById("nomeArquivo").value
     nomeArquivo = input == undefined || input == "" ? getNomeArquivo() : input;
@@ -132,6 +156,7 @@ function mountLinhaRemessaDetalhePadrao() {
     document.getElementById("prazo").value = "00";
     document.getElementById("brancos4").value = " ";
     document.getElementById("numeroSequencial").value = "000002";
+    makeFieldsReadOnly();
   }
 
   function mountHeaderGIA(){
@@ -285,4 +310,20 @@ function mountLinhaRemessaDetalhePadrao() {
       toggleButton.innerText = "Maximize " + sectionName;
     }
   }
+
+  function makeFieldsReadOnly() {
+    var fields = document.querySelectorAll(".fixo");
+    for (var i = 0; i < fields.length; i++) {
+      fields[i].setAttribute("readonly", "readonly");
+    }
+    setEditButtons();
+  }
+
+  function setEditButtons() {
+    var editButtons = document.querySelectorAll(".editButton");
+    for (var i = 0; i < editButtons.length; i++) {
+      editButtons[i].innerHTML = "Destravar";
+    }
+  }
+  
   
