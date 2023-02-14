@@ -1,10 +1,18 @@
 function baixarArquivo() {
     var input = document.getElementById("nomeArquivo").value
     nomeArquivo = input == undefined || input == "" ? getNomeArquivo() : input;
+    
     var headerGIA = mountHeaderGIA();
     var header = mountLinhaHeaderArquivoDefaultValues();
     var remessaPadrao = mountLinhaRemessaDetalhePadrao();
     var trailer = mountLinhaTrailerArquivoDefaultValues();
+
+    var isComplemento = document.getElementById("isComplemento").checked
+    if(isComplemento){
+      var complemento = document.getElementById("complementoLinha").value
+      header += complemento;
+      remessaPadrao += complemento;
+    }
       
     var documento = [headerGIA, header, remessaPadrao, trailer].join("\n");
     download(nomeArquivo,documento);
@@ -244,6 +252,7 @@ function mountLinhaRemessaDetalhePadrao() {
     const nossoNumero = tipo == "data" ? gerarNossoNumeroData() : gerarNossoNumeroAleatorio();
     document.getElementById("nossoNumero").value = nossoNumero;
   }
+
   function getNomeArquivo(){
     const CNAB_TYPE = "CNAB400"
     const date = new Date();
@@ -254,5 +263,11 @@ function mountLinhaRemessaDetalhePadrao() {
                       date.getMinutes().toString().padStart(2, '0') +
                       date.getSeconds().toString().padStart(2, '0');
     return CNAB_TYPE + "_" + formattedDate;
+  }
+
+
+  function setComplemento(){
+    const complemento = "1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798991001011021031041051061071081091101111121131141151161171181191201211221231241251261271281291301311321331341351361371381391401411421431441451461471481491501511521123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150151152100"
+    document.getElementById("complementoLinha").value = complemento;
   }
   

@@ -34,8 +34,16 @@
 <body>
   <button onclick="gerarRemessaPadraoDefaultValues()">Default Value All Fields</button>
   <br><br>
-
   <form class="minimizable">
+    <div>
+      <label for="complementoLinha">COMPLEMENTO DE LINHA:</label>
+      <input type="text" id="complementoLinha" name="complementoLinha" maxlength="700" size=100 />
+      <button type="button" onclick="setComplemento()">Gerar Complemento</button>
+      <br>
+      <label for="isComplemento">Deseja usar complemento no fim da linha?:</label>
+      <input type="checkbox" id="isComplemento" name="isComplemento">
+    </div>
+    <br>
     <div class="header">Clique aqui para minimizar/maximizar</div>
     <div class="content">
       <div>
