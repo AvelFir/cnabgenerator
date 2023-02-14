@@ -54,6 +54,24 @@ function geraCPF() {
     return dia + mes + ano;
   }
 
+  function gerarDataDesconto() {
+    var hoje = new Date();
+    hoje.setDate(hoje.getDate() + 10);
+    var dia = hoje.getDate().toString().padStart(2, '0');
+    var mes = (hoje.getMonth() + 1).toString().padStart(2, '0');
+    var ano = hoje.getFullYear().toString().slice(-2);
+    return dia + mes + ano;
+  }
+
+  function gerarDataDesconto() {
+    var hoje = new Date();
+    hoje.setDate(hoje.getDate() + 40);
+    var dia = hoje.getDate().toString().padStart(2, '0');
+    var mes = (hoje.getMonth() + 1).toString().padStart(2, '0');
+    var ano = hoje.getFullYear().toString().slice(-2);
+    return dia + mes + ano;
+  }
+
   function gerarNomeArquivo(){
     const CNAB_TYPE = "CNAB400"
     const date = new Date();
