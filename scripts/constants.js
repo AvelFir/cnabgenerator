@@ -7,174 +7,174 @@ class RemessaPadraoConstants {
     return { value: "01", filler: "00", size: 2 };
   }
 
-  static get numeroDeInscricao() {
+  static get NUMERO_INSCRICAO() {
     return { value: "00012044551802", filler: "0000000000000", size: 14 };
   }
 
-  static get agencia() {
+  static get AGENCIA() {
     return { value: "1500", filler: "0000", size: 4 };
   }
 
-  static get zeros1() {
+  static get ZEROS() {
     return { value: "00", filler: "00", size: 2 };
   }
 
-  static get conta() {
+  static get CONTA() {
     return { value: "05206", filler: "00000", size: 5};
   }
 
-  static get dac() {
+  static get DAC() {
     return { value: "2", filler: "0", size: 1 };
   }
 
-  static get brancos1() {
+  static get BRANCOS() {
     return { value: Brancos.QUATRO, filler: Brancos.QUATRO, size: 4 };
   }
 
-  static get instrucaoAlegacao() {
+  static get INSTRUCAO_ALEGACAO() {
     return { value: "0001", filler: "0000", size: 4 };
   }
 
-  static get usoEmpresa() {
+  static get USO_EMPRESA() {
     return { value: ("EMPRESA" + gerarNossoNumeroAleatorio + Brancos.DEZ), filler: Brancos.VINTE_CINCO, size: 25 };
   }
 
-  static get moedaVariavel() {
+  static get MOEDA_VARIAVEL() {
     return { value: "0000000000199", filler: "0000000000000", size: 13 };
   }
 
-  static get numeroCarteira() {
+  static get NUMERO_CARTEIRA() {
     return { value: "109", filler: "000", size: 3 };
   }
 
-  static get usoBanco() {
+  static get USO_BANCO() {
     return { value: ("BANCO" + gerarNossoNumeroAleatorio + Brancos.OITO), filler: Brancos.VINTE_UM, size: 21 };
   }
 
-  static get carteira() {
+  static get CARTEIRA() {
     return { value: "I", filler: Brancos.UM, size: 1 };
   }
 
-  static get codigoOcorrencia() {
+  static get CODIGO_OCORRENCIA() {
     return { value: "01", filler: "00", size: 2 };
   }
 
-  static get numeroDocumento() {
+  static get NUMERO_DOCUMENTO() {
     return { value: "DOC1234567", filler: Brancos.DEZ, size: 10 };
   }
 
-  static get vencimento() {
+  static get VENCIMENTO() {
     return { value: gerarDataVencimento(), filler: "000000", size: 6 };
   }
 
-  static get valorTitulo() {
+  static get VALOR_TITULO() {
     return { value: "0000000010000", filler: "0000000000000", size: 13 };
   }
 
-  static get codigoBanco() {
+  static get CODIGO_BANCO() {
     return { value: "341", filler: "000", size: 3 };
   }
 
-  static get agenciaCobradora() {
+  static get AGENCIA_COBRADORA() {
     return { value: "12345", filler: "00000", size: 5 };
   }
 
-  static get especie() {
+  static get ESPECIE() {
     return { value: "01", filler: Brancos.DOIS, size: 2 };
   }
 
-  static get aceite() {
+  static get ACEITE() {
     return { value: "A", filler: Brancos.UM, size: 1 };
   }
 
-  static get dataEmissao() {
+  static get DATA_EMISSAO() {
     return { value: gerarDataEmissao(), filler:"000000" , size: 6 };
   }
 
-  static get instrucao1() {
+  static get INSTRUCAO() {
     return { value: "01", filler: Brancos.DOIS, size: 2 };
   }
 
-  static get instrucao2() {
+  static get INSTRUCAO() {
     return { value: "30", filler: Brancos.DOIS, size: 2 };
   }
-  static get valorJuros() {
+  static get VALOR_JUROS() {
     return { value: "0000000000199", filler: "0000000000000", size: 13 };
   }
 
-  static get dataDesconto() {
+  static get DATA_DESCONTO() {
     return { value: gerarDataDesconto(), filler: "000000", size: 6 };
   }
 
-  static get valorDesconto() {
+  static get VALOR_DESCONTO() {
     return { value: "0000000000199", filler: "0000000000000", size: 13 };
   }
 
-  static get valorIOF() {
+  static get VALOR_IOF() {
     return { value: "0000000000199", filler: "0000000000000", size: 13 };
   }
 
-  static get abatimento() {
+  static get ABATIMENTO() {
     return { value: "0000000000199", filler: "0000000000000", size: 13 };
   }
 
-  static get codigoInscricaoPagador() {
+  static get CODIGO_INSCRICAO_PAGADOR() {
     return { value: "01", filler: "00", size: 2 };
   }
 
-  static get numeroInscricaoPagador() {
+  static get NUMERO_INSCRICAO_PAGADOR() {
     return { value: "00024498951670", filler: "00000000000000", size: 14 };
   }
 
-  static get nome() {
+  static get NOME() {
     return { value: "Calebe Murilo Novaes" + Brancos.DEZ, filler: "1", size: 1 };
   }
 
-  static get brancos2() {
+  static get BRANCOS() {
     return { value: Brancos.DEZ, filler: Brancos.DEZ, size: 10 };
   }
 
-  static get logradouro() {
+  static get LOGRADOURO() {
     return { value: "Rua Alfaiate Reis".padEnd(40,Brancos.UM), filler: Brancos.QUARENTA, size: 40 };
   }
 
-  static get bairro() {
+  static get BAIRRO() {
     return { value: "Colonial".padEnd(12,Brancos.UM), filler: Brancos.DOZE, size: 12 };
   }
 
-  static get cep() {
+  static get CEP() {
     return { value: "93212050", filler: Brancos.OITO, size: 8 };
   }
 
-  static get cidade() {
+  static get CIDADE() {
     return { value: "Sapucaia do Sul".padEnd(15,Brancos.UM), filler: Brancos.QUINZE, size: 15 };
   }
 
-  static get estado() {
+  static get ESTADO() {
     return { value: "RS", filler: Brancos.DOIS, size: 2 };
   }
 
-  static get sacadorAvalista() {
+  static get SACADOR_AVALISTA() {
     return { value: "Vera e Luis Marketing Ltda".padEnd(30,Brancos.UM), filler: Brancos.TRINTA, size: 30 };
   }
 
-  static get brancos3() {
+  static get BRANCOS() {
     return { value: Brancos.QUATRO, filler: Brancos.QUATRO, size: 4 };
   }
 
-  static get dataMora() {
+  static get DATA_MORA() {
     return { value: gerarDataMora(), filler: "000000", size: 6 };
   }
 
-  static get prazo() {
+  static get PRAZO() {
     return { value: "05", filler: "00", size: 5 };
   }
 
-  static get brancos4() {
+  static get BRANCOS() {
     return { value: Brancos.UM, filler: Brancos.UM, size: 1 };
   }
 
-  static get numeroSequencial() {
+  static get NUMERO_SEQUENCIAL() {
     return { value: "000001", filler: "000000", size: 6 };
   }
 }

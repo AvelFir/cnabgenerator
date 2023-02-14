@@ -16,8 +16,8 @@ function lockUnlockButton(fieldId, button) {
   }
 
   function setValorRemessaDetalhePadraoButton(){
-    document.getElementById("tipoDeRegistro").value = "1";
-    document.getElementById("codigoDeInscricao").value = "01";
+    document.getElementById("tipoDeRegistro").value = RemessaPadraoConstants.TIPO_REGISTRO.value;
+    document.getElementById("codigoDeInscricao").value = RemessaPadraoConstants.CODIGO_INSCRICAO.size;
     document.getElementById("numeroDeInscricao").value = "00012044551802";
     document.getElementById("agencia").value = "1500";
     document.getElementById("zeros1").value = "00";
