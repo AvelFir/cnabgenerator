@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const agencia = localStorage.getItem("agenciaPadrao");
   const conta = localStorage.getItem("contaPadrao");
   const dac = localStorage.getItem("dacPadrao");
+  const complementoLinha = localStorage.getItem("complementoLinhaPadrao");
+  const isComplementoPadrao = localStorage.getItem("isComplementoPadrao");
   
   if (agencia) {
     document.getElementById("agenciaPadrao").value = agencia;
@@ -18,6 +20,12 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   if (dac) {
     document.getElementById("dacPadrao").value = dac;
+  }
+  if (complementoLinha) {
+    document.getElementById("complementoLinhaPadrao").value = complementoLinha;
+  }
+  if (isComplementoPadrao) {
+    document.getElementById("isComplementoPadrao").checked = isComplementoPadrao;
   }
 
 });
