@@ -6,9 +6,9 @@ function mountCnab400(){
   var remessaPadrao = mountLinhaRemessaDetalhePadrao();
   var trailer = mountLinhaTrailerArquivoDefaultValues();
 
-  var isComplemento = document.getElementById("isComplemento").checked
+  var isComplemento = document.getElementById("isComplementoPadrao").checked
   if(isComplemento){
-    var complemento = document.getElementById("complementoLinha").value
+    var complemento = document.getElementById("complementoLinhaPadrao").value
     header += complemento;
     remessaPadrao += complemento;
   }
