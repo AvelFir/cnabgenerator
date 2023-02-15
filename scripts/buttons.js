@@ -80,4 +80,44 @@ function lockUnlockButton(fieldId, button) {
     document.getElementById("complementoLinha").value = complemento;
   }
   
+  function salvarItemById(campo) {
+    let elemento = document.getElementById(campo);
+    if (elemento) {
+      localStorage.setItem(campo, elemento.value);
+    }
+  }
+  
+  function salvarConfiguracoes() {
+    var agencia = document.getElementById("agenciaPadrao").value;
+    var conta = document.getElementById("contaPadrao").value;
+    var dac = document.getElementById("dacPadrao").value;
+    var salvo = false;
+    
+    if(agencia){
+      localStorage.setItem("agenciaPadrao", agencia);
+      salvo = true;
+    }
+  
+    if(conta){
+      localStorage.setItem("contaPadrao", conta);
+      salvo = true;
+    }
+  
+    if(dac){
+      localStorage.setItem("dacPadrao", dac);
+      salvo = true;
+    }
 
+    var message = salvo ? "Configurações Salvas!" : "Nada Foi Salvo!";
+    alert(message);
+  }
+  
+  function apagarConfiguracoes(){
+    localStorage.removeItem('agenciaPadrao');
+    localStorage.removeItem('contaPadrao');
+    localStorage.removeItem('dacPadrao');
+    document.getElementById("agenciaPadrao").value = "";
+    document.getElementById("contaPadrao").value = "";
+    document.getElementById("dacPadrao").value = "";
+    alert("Configurações Deletadas")
+  }

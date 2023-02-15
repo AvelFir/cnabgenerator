@@ -5,6 +5,21 @@ document.addEventListener("DOMContentLoaded", function () {
       toggleSection(this.getAttribute("data-section"));
     });
   }
+
+  const agencia = localStorage.getItem("agenciaPadrao");
+  const conta = localStorage.getItem("contaPadrao");
+  const dac = localStorage.getItem("dacPadrao");
+  
+  if (agencia) {
+    document.getElementById("agenciaPadrao").value = agencia;
+  }
+  if (conta) {
+    document.getElementById("contaPadrao").value = conta;
+  }
+  if (dac) {
+    document.getElementById("dacPadrao").value = dac;
+  }
+
 });
 
 function toggleSection(sectionName) {

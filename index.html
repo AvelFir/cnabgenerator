@@ -16,6 +16,24 @@
 <body>
   <form method="post">
 
+    <div class="section" id="Configuracao">
+      <button type="button" class="toggleButton" data-section="Configuracao">Expandir Configurações</button>
+      <div class="sectionContent" id="ConfiguracaoContent" style="display: none;">
+        <label for="agenciaPadrao">AGENCIA PADRAO:</label>
+        <input type="text" id="agenciaPadrao" name="agenciaPadrao" maxlength="4" size=4 />
+        <br>
+        <label for="contaPadrao">CONTA PADRAO:</label>
+        <input type="text" id="contaPadrao" name="contaPadrao" maxlength="5" size=5 />
+        <br>
+        <label for="dacPadrao">DAC PADRAO:</label>
+        <input type="text" id="dacPadrao" name="dacPadrao" maxlength="1" size=1 />
+        <br>
+        <br>
+        <button type="button" onclick="salvarConfiguracoes()">Salvar Configuracoes</button>
+        <button type="button" onclick="apagarConfiguracoes()">Deletar Configuracoes</button>
+      </div>
+    </div>
+    <br>
     <div class="section" id="Outros">
       <button type="button" class="toggleButton" data-section="Outros">Expandir Outros</button>
       <div class="sectionContent" id="OutrosContent" style="display: none;">
