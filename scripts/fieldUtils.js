@@ -9,7 +9,11 @@ function formatEnd(str,size,filler){
 function getValueOrFiller(field, configuration){
     var fieldValue = field.value;
     var fillerValue = configuration.filler;
+    var savedValue = localStorage.getItem(field.name + "Padrao");
     if(fieldValue == "" || fieldValue == "undefined"){
+        if(savedValue){
+            return configuration.formatStyle(savedValue)
+        }
         return fillerValue;
     }
     var size = configuration.size;
