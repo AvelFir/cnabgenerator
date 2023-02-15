@@ -18,7 +18,7 @@
 
     <div class="section" id="Configuracao">
       <button type="button" class="toggleButton" data-section="Configuracao">Expandir Configurações</button>
-      <div class="sectionContent" id="ConfiguracaoContent" style="display: none;">
+      <div class="sectionContent" id="ConfiguracaoContent" >
         <label for="agenciaPadrao">AGENCIA PADRAO:</label>
         <input type="text" id="agenciaPadrao" name="agenciaPadrao" maxlength="4" size=4 />
         <br>
@@ -44,6 +44,10 @@
         <br>
         <label for="isComplementoPadrao">Deseja usar complemento no fim da linha?:</label>
         <input type="checkbox" id="isComplementoPadrao" name="isComplementoPadrao">
+        <br>
+        <br>
+        <label for="isSobreporLinha">Sobrepor Linha?:</label>
+        <input type="checkbox" id="isSobreporLinha" name="isSobreporLinha">
         <br>
         <br>
         <button type="button" onclick="salvarConfiguracoes()">Salvar Configuracoes</button>

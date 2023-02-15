@@ -100,45 +100,25 @@ function lockUnlockButton(fieldId, button) {
     var codigoOcorrenciaPadrao = document.getElementById("codigoOcorrenciaPadrao").value;
     var complemento = document.getElementById("complementoLinhaPadrao").value;
     var isComplemento = document.getElementById("isComplementoPadrao").checked;
+    var isSobreporLinha = document.getElementById("isSobreporLinha").checked;
 
-    var salvo = false;
-    
-    if(agencia){
-      localStorage.setItem("agenciaPadrao", agencia);
-      salvo = true;
-    }
-  
-    if(conta){
-      localStorage.setItem("contaPadrao", conta);
-      salvo = true;
-    }
-  
-    if(dac){
-      localStorage.setItem("dacPadrao", dac);
-      salvo = true;
-    }
+    localStorage.setItem("agenciaPadrao", agencia);
 
-    if(complemento){
-      localStorage.setItem("complementoLinhaPadrao", complemento);
-      salvo = true;
-    }
+    localStorage.setItem("contaPadrao", conta);
 
-    if(isComplemento){
-      localStorage.setItem("isComplementoPadrao", isComplemento);
-      salvo = true;
-    }
+    localStorage.setItem("dacPadrao", dac);
 
-    if(nossoNumero){
-      localStorage.setItem("nossoNumeroPadrao", nossoNumero);
-      salvo = true;
-    }
+    localStorage.setItem("complementoLinhaPadrao", complemento);
 
-    if(codigoOcorrenciaPadrao){
-      localStorage.setItem("codigoOcorrenciaPadrao", codigoOcorrenciaPadrao);
-      salvo = true;
-    }
+    localStorage.setItem("isComplementoPadrao", isComplemento);
 
-    var message = salvo ? "Configurações Salvas!" : "Nada Foi Salvo!";
+    localStorage.setItem("nossoNumeroPadrao", nossoNumero);
+
+    localStorage.setItem("codigoOcorrenciaPadrao", codigoOcorrenciaPadrao);
+
+    localStorage.setItem("isSobreporLinha", isSobreporLinha);
+
+    var message = "Configurações Salvas!";
     alert(message);
   }
   
@@ -150,12 +130,14 @@ function lockUnlockButton(fieldId, button) {
     localStorage.removeItem('isComplementoPadrao');
     localStorage.removeItem('nossoNumeroPadrao');
     localStorage.removeItem('codigoOcorrenciaPadrao');
+    localStorage.removeItem('isSobreporLinha');
     document.getElementById("agenciaPadrao").value = "";
     document.getElementById("contaPadrao").value = "";
     document.getElementById("dacPadrao").value = "";
     document.getElementById("nossoNumeroPadrao").value = "";
     document.getElementById("complementoLinhaPadrao").value = "";
     document.getElementById("isComplementoPadrao").checked = false;
+    document.getElementById("isSobreporLinha").checked = false;
     document.getElementById("codigoOcorrenciaPadrao").value = "";
     alert("Configurações Deletadas")
   }

@@ -10,12 +10,14 @@ function getValueOrFiller(field, configuration){
     var fieldValue = field.value;
     var fillerValue = configuration.filler;
     var savedValue = localStorage.getItem(field.name + "Padrao");
-    if(fieldValue == "" || fieldValue == "undefined"){
-        if(savedValue){
-            return configuration.formatStyle(savedValue)
-        }
-        return fillerValue;
-    }
+    var isSobrepor = localStorage.getItem("isSobreporLinha");
     var size = configuration.size;
-    return configuration.formatStyle(fieldValue,size,fillerValue[0]);
+
+    if(isSobrepor && savedValue){
+        return configuration.formatStyle(savedValue,size,fillerValue[0]);
+    }
+    if(fieldValue){
+        return configuration.formatStyle(fieldValue,size,fillerValue[0]);
+    }
+    return fillerValue;    
 } 
