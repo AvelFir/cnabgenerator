@@ -90,7 +90,7 @@ function geraCPF() {
     if(nome == "" || nome == undefined){
       nome = "Calebe Murilo Novaes"
     }
-    const nomeFormatado = formateEnd(nome.value,30," ")
+    const nomeFormatado = formatEnd(nome.value,30," ")
     complemento += nomeFormatado;
     complemento += "3100200000000000000000000000000000000000000000000000000000000000000000"
     return complemento;
