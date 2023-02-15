@@ -69,6 +69,11 @@ function lockUnlockButton(fieldId, button) {
     const nossoNumero = tipo == "data" ? gerarNossoNumeroData() : gerarNossoNumeroAleatorio();
     document.getElementById("nossoNumero").value = nossoNumero;
   }
+  
+  function setNossoNumerPadraoButton(tipo){
+    const nossoNumero = tipo == "data" ? gerarNossoNumeroData() : gerarNossoNumeroAleatorio();
+    document.getElementById("nossoNumeroPadrao").value = nossoNumero;
+  }
 
   function setNomeArquivoButton(){
     const nomeArquivo = gerarNomeArquivo();
@@ -91,6 +96,7 @@ function lockUnlockButton(fieldId, button) {
     var agencia = document.getElementById("agenciaPadrao").value;
     var conta = document.getElementById("contaPadrao").value;
     var dac = document.getElementById("dacPadrao").value;
+    var nossoNumero = document.getElementById("nossoNumeroPadrao").value;
     var complemento = document.getElementById("complementoLinhaPadrao").value;
     var isComplemento = document.getElementById("isComplementoPadrao").checked;
 
@@ -121,6 +127,11 @@ function lockUnlockButton(fieldId, button) {
       salvo = true;
     }
 
+    if(nossoNumero){
+      localStorage.setItem("nossoNumeroPadrao", nossoNumero);
+      salvo = true;
+    }
+
     var message = salvo ? "Configurações Salvas!" : "Nada Foi Salvo!";
     alert(message);
   }
@@ -131,9 +142,11 @@ function lockUnlockButton(fieldId, button) {
     localStorage.removeItem('dacPadrao');
     localStorage.removeItem('complementoLinhaPadrao');
     localStorage.removeItem('isComplementoPadrao');
+    localStorage.removeItem('nossoNumeroPadrao');
     document.getElementById("agenciaPadrao").value = "";
     document.getElementById("contaPadrao").value = "";
     document.getElementById("dacPadrao").value = "";
+    document.getElementById("nossoNumeroPadrao").value = "";
     document.getElementById("complementoLinhaPadrao").value = "";
     document.getElementById("isComplementoPadrao").checked = false;
     alert("Configurações Deletadas")
