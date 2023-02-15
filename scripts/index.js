@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const conta = localStorage.getItem("contaPadrao");
   const dac = localStorage.getItem("dacPadrao");
   const nossoNumeroPadrao = localStorage.getItem("nossoNumeroPadrao");
+  const codigoOcorrenciaPadrao = localStorage.getItem("codigoOcorrenciaPadrao");
   const complementoLinha = localStorage.getItem("complementoLinhaPadrao");
   const isComplementoPadrao = localStorage.getItem("isComplementoPadrao");
   
@@ -24,6 +25,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   if (nossoNumeroPadrao) {
     document.getElementById("nossoNumeroPadrao").value = nossoNumeroPadrao;
+  }
+  if (codigoOcorrenciaPadrao) {
+    document.getElementById("codigoOcorrenciaPadrao").value = codigoOcorrenciaPadrao;
   }
   if (complementoLinha) {
     document.getElementById("complementoLinhaPadrao").value = complementoLinha;
