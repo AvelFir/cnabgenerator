@@ -1,12 +1,10 @@
 //Arquivo Responsavel por Montar as Linhas, ou seja pegar o valor dos campos e retornar
 
 function mountCnab400(){
-  var headerGIA = mountHeaderGIA();
   var header = mountLinhaHeaderArquivoDefaultValues();
   var remessaPadrao = mountLinhaRemessaDetalhePadrao();
   var trailer = mountLinhaTrailerArquivoDefaultValues();
 
-  
   var isComplemento = localStorage.getItem("isComplementoPadrao") === "true";
 
   if(isComplemento){
@@ -14,8 +12,18 @@ function mountCnab400(){
     header += complemento;
     remessaPadrao += complemento;
   }
-    
-  var documento = [headerGIA, header, remessaPadrao, trailer].join("\n");
+
+  var isHeaderPadrao = localStorage.getItem("isHeaderPadrao") === "true";
+
+  var documento;
+
+  if(isHeaderPadrao){
+    var headerPadrao = localStorage.getItem("headerPadrao");
+    var documento = [headerPadrao, header, remessaPadrao, trailer].join("\n");
+  }else{
+    documento = [header, remessaPadrao, trailer].join("\n");
+  }
+
   return documento;
 }
 

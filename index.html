@@ -38,6 +38,14 @@
           <input type="text" id="codigoOcorrenciaPadrao" name="codigoOcorrenciaPadrao" maxlength="2" />
         <br>
         <br>
+        <label for="headerPadrao">HEADER PADRAO:</label>
+        <input type="text" id="headerPadrao" name="headerPadrao" maxlength="109" size=100 />
+        <button type="button" onclick="setHeaderPadraoButton()">Gerar Header</button>
+        <br>
+        <label for="isHeaderPadrao">Deseja usar header padrao no topo do arquivo?:</label>
+        <input type="checkbox" id="isHeaderPadrao" name="isHeaderPadrao">
+        <br>
+        <br>
         <label for="complementoLinhaPadrao">COMPLEMENTO DE LINHA PADRAO:</label>
         <input type="text" id="complementoLinhaPadrao" name="complementoLinhaPadrao" maxlength="700" size=100 />
         <button type="button" onclick="setComplementoButton()">Gerar Complemento</button>

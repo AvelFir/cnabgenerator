@@ -95,3 +95,23 @@ function geraCPF() {
     complemento += "3100200000000000000000000000000000000000000000000000000000000000000000"
     return complemento;
   }
+
+  function gerarHeader(){
+    var codigo = "@@H@@";
+    var brancos1 = "".padStart(10," ")
+    var id = "GERABOL"
+    const date = new Date();
+    const formattedDate = date.getDate().toString().padStart(2, '0') +
+                      (date.getMonth() + 1).toString().padStart(2, '0') +
+                      date.getFullYear() +
+                      date.getHours().toString().padStart(2, '0') +
+                      date.getMinutes().toString().padStart(2, '0') +
+                      date.getSeconds().toString().padStart(2, '0');
+    var zeros1 = "".padStart(21,"0");
+    var brancos2 = "".padStart(2," ");
+    var zeros2 = "".padStart(11,"0");
+    var brancos3 = "".padStart(29," ");
+    var final = "EFETIVACAO";
+    var dados = codigo + brancos1 + id + formattedDate + zeros1 + brancos2 + zeros2 + brancos3 + final;
+    return dados;
+  }
