@@ -20,6 +20,8 @@ function download(filename, text) {
 // }
 
 function adicionarLinha() {
+  
+var contadorSequencialGlobal = getContadorSequencialGlobal();
 
 // selecione a tabela onde deseja adicionar a nova linha
 const tabela = document.querySelector('#tabelaArquivo');
@@ -52,7 +54,7 @@ const input2 = document.createElement('input');
 input2.classList.add('sequencialLinha');
 input2.setAttribute('type', 'text');
 input2.setAttribute('maxlength', '6');
-input2.value = "000001"
+input2.value = contadorSequencialGlobal;
 coluna3.appendChild(input2);
 
 // adicione as colunas à nova linha
@@ -63,4 +65,21 @@ novaLinha.appendChild(coluna3);
 // adicione a nova linha à tabela
 tabela.appendChild(novaLinha);
 
+addContadorSequencialGlobal();
+
+}
+
+function getContadorSequencialGlobal(){
+  var contadorSequencialGlobal = document.getElementById("contadorSequencialGlobal").value.padStart(6,"0");
+  return contadorSequencialGlobal;
+}
+
+function addContadorSequencialGlobal() {
+  var contador = document.getElementById("contadorSequencialGlobal");
+  var valorAtual = parseInt(contador.value, 10);
+  contador.value = valorAtual + 1;
+}
+
+function resetContadorSequencialGlobal() {
+  document.getElementById("contadorSequencialGlobal") = 0;
 }

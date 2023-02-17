@@ -38,3 +38,7 @@ input:not(.fixo) {
 .sequencialLinha {
   width: 100%;
 }
+
+#contadorSequencialGlobal {
+  display: none;
+}
