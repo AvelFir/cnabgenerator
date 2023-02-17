@@ -27,6 +27,50 @@ function mountCnab400(){
   return documento;
 }
 
+function mountArquivo() {
+  var header = mountLinhaHeaderArquivoDefaultValues();
+  var trailer = mountLinhaTrailerArquivoDefaultValues();
+
+  var isComplemento = localStorage.getItem("isComplementoPadrao") === "true";
+
+  if(isComplemento){
+    var complemento = localStorage.getItem("complementoLinhaPadrao");
+    header += complemento;
+  }
+
+  let linhas = document.querySelectorAll(".linha");
+  let listaConcatenada = [];
+
+  for (let i = 0; i < linhas.length; i++) {
+    let colunaCorpo = linhas[i].querySelector(".corpoLinha");
+    let colunaSequencial = linhas[i].querySelector(".sequencialLinha");
+
+    let valorConcatenado = colunaCorpo.value + colunaSequencial.value;
+    listaConcatenada.push(valorConcatenado);
+  }
+
+  var isHeaderPadrao = localStorage.getItem("isHeaderPadrao") === "true";
+
+  var documento;
+
+  if(isHeaderPadrao){
+    var headerPadrao = localStorage.getItem("headerPadrao");
+    documento = [headerPadrao,header]
+    for (let i = 0; i < listaConcatenada.length; i++) {
+      documento.push(listaConcatenada[i]);
+    }
+    documento.push(trailer);
+  }else{
+    documento = [header]
+    for (let i = 0; i < listaConcatenada.length; i++) {
+      documento.push(listaConcatenada[i]);
+    }
+    documento.push(trailer);
+  }
+
+  return documento.join("\n");
+}
+
 function mountLinhaRemessaDetalhePadrao() {
   var tipoDeRegistro = getValueOrFiller(document.getElementById("tipoDeRegistro"), RemessaPadraoConstants.TIPO_REGISTRO);
   var codigoDeInscricao = getValueOrFiller(document.getElementById("codigoDeInscricao"), RemessaPadraoConstants.CODIGO_INSCRICAO);
@@ -81,7 +125,7 @@ function mountLinhaRemessaDetalhePadrao() {
     codigoOcorrencia + numeroDocumento + vencimento + valorTitulo + codigoBanco + agenciaCobradora + especie + aceite +
     dataEmissao + instrucao1 + instrucao2 + valorJuros + dataDesconto + valorDesconto + valorIof + abatimento +
     codigoInscricaoPagador + numeroInscricaoPagador + nome + brancos2 + logradouro + bairro + cep + cidade + estado +
-    sacadorAvalista + brancos3 + dataMora + prazo + brancos4 + numeroSequencial;
+    sacadorAvalista + brancos3 + dataMora + prazo + brancos4;
   return remessaPadrao;
 }
 

@@ -15,6 +15,18 @@ function lockUnlockButton(fieldId, button) {
     download(nomeArquivo,documento);
   }
 
+  function baixarArquivoButton2() {
+    var nomeArquivo = mountNomeArquivo();
+    var documento = mountArquivo();
+    download(nomeArquivo,documento);
+  }
+
+  function adicionarLinhaButton(){
+    var linha = mountLinhaRemessaDetalhePadrao();
+    var sequencial = getContadorSequencialGlobal();
+    adicionarLinha(linha,sequencial);
+  }
+
   function setValorRemessaDetalhePadraoButton(){
     document.getElementById("tipoDeRegistro").value = RemessaPadraoConstants.TIPO_REGISTRO.value;
     document.getElementById("codigoDeInscricao").value = RemessaPadraoConstants.CODIGO_INSCRICAO.value;
@@ -96,7 +108,7 @@ function lockUnlockButton(fieldId, button) {
       localStorage.setItem(campo, elemento.value);
     }
   }
-  
+
   function salvarConfiguracoes() {
     var agencia = document.getElementById("agenciaPadrao").value;
     var conta = document.getElementById("contaPadrao").value;
