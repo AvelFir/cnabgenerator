@@ -25,3 +25,7 @@ function getValueOrFiller(field, configuration){
 function isValidString(str){
     return str != null && str != "" && str != undefined;
 }
+
+function isLinhaComplemento(value){
+    return value === "0" || value === "1";
+}

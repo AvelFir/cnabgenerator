@@ -44,8 +44,11 @@ function mountArquivo() {
   for (let i = 0; i < linhas.length; i++) {
     let colunaCorpo = linhas[i].querySelector(".corpoLinha");
     let colunaSequencial = linhas[i].querySelector(".sequencialLinha");
-
     let valorConcatenado = colunaCorpo.value + colunaSequencial.value;
+    if(isLinhaComplemento(valorConcatenado[0]) && isComplemento){
+      var complemento = localStorage.getItem("complementoLinhaPadrao");
+      valorConcatenado += complemento;
+    }
     listaConcatenada.push(valorConcatenado);
   }
 
