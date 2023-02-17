@@ -43,7 +43,7 @@ const input1 = document.createElement('input');
 input1.classList.add('corpoLinha');
 input1.setAttribute('type', 'text');
 input1.setAttribute('maxlength', '394');
-input1.value = "Teste"
+input1.value = "01REMESSA01COBRANCA       150000052062        Bernardo e Henrique Assessoria341BANCO ITAU SA  170223                                                                                                                                                                                                                                                                                                      "
 coluna2.appendChild(input1);
 
 const coluna3 = document.createElement('td');
@@ -52,6 +52,7 @@ const input2 = document.createElement('input');
 input2.classList.add('sequencialLinha');
 input2.setAttribute('type', 'text');
 input2.setAttribute('maxlength', '6');
+input2.value = "000001"
 coluna3.appendChild(input2);
 
 // adicione as colunas à nova linha
