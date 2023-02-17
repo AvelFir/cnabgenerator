@@ -23,8 +23,8 @@ function lockUnlockButton(fieldId, button) {
 
   function adicionarLinhaButton(){
     var linha = mountLinhaRemessaDetalhePadrao();
-    var sequencial = getContadorSequencialGlobal();
-    adicionarLinha(linha,sequencial);
+    linha = linha.substring(0, linha.length - 6);
+    adicionarLinha(linha);
   }
 
   function setValorRemessaDetalhePadraoButton(){

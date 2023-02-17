@@ -8,7 +8,7 @@ function download(filename, text) {
   document.body.removeChild(element);
 }
 
-function adicionarLinha(input1Content,contadorSequencialGlobal) {
+function adicionarLinha(input1Content) {
   // selecione a tabela onde deseja adicionar a nova linha
   const tabela = document.querySelector('#tabelaArquivo');
 
@@ -34,24 +34,12 @@ function adicionarLinha(input1Content,contadorSequencialGlobal) {
   input1.value = input1Content;
   coluna2.appendChild(input1);
 
-  const coluna3 = document.createElement('td');
-  coluna3.style.width = '4%';
-  const input2 = document.createElement('input');
-  input2.classList.add('sequencialLinha');
-  input2.setAttribute('type', 'text');
-  input2.setAttribute('maxlength', '6');
-  input2.value = contadorSequencialGlobal;
-  coluna3.appendChild(input2);
-
   // adicione as colunas à nova linha
   novaLinha.appendChild(coluna1);
   novaLinha.appendChild(coluna2);
-  novaLinha.appendChild(coluna3);
 
   // adicione a nova linha à tabela
   tabela.appendChild(novaLinha);
-
-  addContadorSequencialGlobal();
 }
 
 

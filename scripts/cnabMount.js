@@ -29,36 +29,44 @@ function mountCnab400(){
 
 function mountArquivo() {
   var header = mountLinhaHeaderArquivoDefaultValues();
-  var trailer = mountLinhaTrailerArquivoDefaultValues();
+  header = header.substring(0, header.length - 6);
+  header += getContadorSequencialGlobal();
+  addContadorSequencialGlobal();
 
   var isComplemento = localStorage.getItem("isComplementoPadrao") === "true";
-
-  if(isComplemento){
+  if(header && isComplemento){
     var complemento = localStorage.getItem("complementoLinhaPadrao");
     header += complemento;
   }
-
+  
   let linhas = document.querySelectorAll(".linha");
   let listaConcatenada = [];
 
   for (let i = 0; i < linhas.length; i++) {
+    var sequencial = getContadorSequencialGlobal();
     let colunaCorpo = linhas[i].querySelector(".corpoLinha");
-    let colunaSequencial = linhas[i].querySelector(".sequencialLinha");
-    let valorConcatenado = colunaCorpo.value + colunaSequencial.value;
+    let valorConcatenado = colunaCorpo.value + sequencial;
     if(isLinhaComplemento(valorConcatenado[0]) && isComplemento){
       var complemento = localStorage.getItem("complementoLinhaPadrao");
       valorConcatenado += complemento;
     }
     listaConcatenada.push(valorConcatenado);
+    addContadorSequencialGlobal();
   }
 
-  var isHeaderPadrao = localStorage.getItem("isHeaderPadrao") === "true";
+  var trailer = mountLinhaTrailerArquivoDefaultValues();
+  trailer = trailer.substring(0, trailer.length - 6);
+  trailer += getContadorSequencialGlobal();
+  addContadorSequencialGlobal();
+
+
+  var isComplementoArquivoPadrao = localStorage.getItem("isComplementoArquivoPadrao") === "true";
 
   var documento;
 
-  if(isHeaderPadrao){
-    var headerPadrao = localStorage.getItem("headerPadrao");
-    documento = [headerPadrao,header]
+  if(isComplementoArquivoPadrao){
+    var complementoArquivoPadrao = localStorage.getItem("complementoArquivoPadrao");
+    documento = [complementoArquivoPadrao,header]
     for (let i = 0; i < listaConcatenada.length; i++) {
       documento.push(listaConcatenada[i]);
     }
@@ -128,7 +136,7 @@ function mountLinhaRemessaDetalhePadrao() {
     codigoOcorrencia + numeroDocumento + vencimento + valorTitulo + codigoBanco + agenciaCobradora + especie + aceite +
     dataEmissao + instrucao1 + instrucao2 + valorJuros + dataDesconto + valorDesconto + valorIof + abatimento +
     codigoInscricaoPagador + numeroInscricaoPagador + nome + brancos2 + logradouro + bairro + cep + cidade + estado +
-    sacadorAvalista + brancos3 + dataMora + prazo + brancos4;
+    sacadorAvalista + brancos3 + dataMora + prazo + brancos4 + numeroSequencial;
   return remessaPadrao;
 }
 
