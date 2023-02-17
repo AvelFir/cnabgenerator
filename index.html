@@ -63,7 +63,7 @@
       </div>
     </div>
     <br>
-  
+
     <div class="container">
       <div class="linhas" style="border: 1px solid red;">
         <div class="section" id="remessaPadrao">
@@ -73,6 +73,7 @@
             <br>
             <div>
               <button type="button" onclick="setValorRemessaDetalhePadraoButton()">Gerar Remessa Padrao Emissao</button>
+              <button type="button" onclick="adicionarLinha()">Adicionar Linha</button>
             </div>
             <br>
             <div>
@@ -140,7 +141,7 @@
               <label for="carteira">CARTEIRA:</label>
               <input type="text" id="carteira" name="carteira" maxlength="1" />
             </div>
-    
+
             <div>
               <label for="codigoOcorrencia">CÓD. DE OCORRÊNCIA</label>
               <input type="text" id="codigoOcorrencia" name="codigoOcorrencia" maxlength="2" />
@@ -267,7 +268,8 @@
             <div>
               <label for="numeroSequencial">NUMERO SEQÜENCIAL:</label>
               <input type="text" id="numeroSequencial" class="fixo" name="numeroSequencial" maxlength="6" />
-              <button type="button" onclick="lockUnlockButton('numeroSequencial',this)" class="editButton">Travar</button>
+              <button type="button" onclick="lockUnlockButton('numeroSequencial',this)"
+                class="editButton">Travar</button>
             </div>
           </div>
         </div>
@@ -279,18 +281,20 @@
           <button type="button" onclick="setNomeArquivoButton()">Gerar</button>
           <input type="submit" value="Baixar Arquivo" onclick="baixarArquivoButton()" />
         </div>
-        <table style="width: 100%;">
-          <tr class="linha">
-            <td style="width: 1%;" >
-              <button type="button" class="buttonLinha">-</button>
-            </td>
-            <td style="width: 95%;">
-              <input type="text" class="corpoLinha" maxlength="394" />
-            </td>
-            <td style="width: 4%;">
-              <input type="text" class="sequencialLinha" maxlength="6" />
-            </td>
-          </tr>
+        <table id="tabelaArquivo" style="width: 100%;">
+          <tbody>
+            <!-- <tr class="linha">
+              <td style="width: 1%;">
+                <button type="button" class="buttonLinha">-</button>
+              </td>
+              <td style="width: 95%;">
+                <input type="text" class="corpoLinha" maxlength="394" />
+              </td>
+              <td style="width: 4%;">
+                <input type="text" class="sequencialLinha" maxlength="6" />
+              </td>
+            </tr> -->
+          </tbody>
         </table>
       </div>
     </div>
