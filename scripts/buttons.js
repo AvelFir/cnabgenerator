@@ -97,9 +97,9 @@ function lockUnlockButton(fieldId, button) {
     document.getElementById("complementoLinhaPadrao").value = complemento;
   }
 
-  function setHeaderPadraoButton(){
+  function setComplementoArquivoPadraoButton(){
     const complemento = gerarHeader();
-    document.getElementById("headerPadrao").value = complemento;
+    document.getElementById("complementoArquivoPadrao").value = complemento;
   }
   
   function salvarItemById(campo) {
@@ -115,8 +115,8 @@ function lockUnlockButton(fieldId, button) {
     var dac = document.getElementById("dacPadrao").value;
     var nossoNumero = document.getElementById("nossoNumeroPadrao").value;
     var codigoOcorrenciaPadrao = document.getElementById("codigoOcorrenciaPadrao").value;
-    var header = document.getElementById("headerPadrao").value;
-    var isHeader = document.getElementById("isHeaderPadrao").checked;
+    var complementoArquivoPadrao = document.getElementById("complementoArquivoPadrao").value;
+    var isComplementoArquivoPadrao = document.getElementById("isComplementoArquivoPadrao").checked;
     var complemento = document.getElementById("complementoLinhaPadrao").value;
     var isComplemento = document.getElementById("isComplementoPadrao").checked;
     var isSobreporLinha = document.getElementById("isSobreporLinha").checked;
@@ -127,9 +127,9 @@ function lockUnlockButton(fieldId, button) {
 
     localStorage.setItem("dacPadrao", dac);
 
-    localStorage.setItem("headerPadrao", header);
+    localStorage.setItem("complementoArquivoPadrao", complementoArquivoPadrao);
 
-    localStorage.setItem("isHeaderPadrao", isHeader);
+    localStorage.setItem("isComplementoArquivoPadrao", isComplementoArquivoPadrao);
 
     localStorage.setItem("complementoLinhaPadrao", complemento);
 
@@ -149,8 +149,8 @@ function lockUnlockButton(fieldId, button) {
     localStorage.removeItem('agenciaPadrao');
     localStorage.removeItem('contaPadrao');
     localStorage.removeItem('dacPadrao');
-    localStorage.removeItem('headerPadrao');
-    localStorage.removeItem('isHeaderPadrao');
+    localStorage.removeItem('complementoArquivoPadrao');
+    localStorage.removeItem('isComplementoArquivoPadrao');
     localStorage.removeItem('complementoLinhaPadrao');
     localStorage.removeItem('isComplementoPadrao');
     localStorage.removeItem('nossoNumeroPadrao');
@@ -160,8 +160,8 @@ function lockUnlockButton(fieldId, button) {
     document.getElementById("contaPadrao").value = "";
     document.getElementById("dacPadrao").value = "";
     document.getElementById("nossoNumeroPadrao").value = "";
-    document.getElementById("headerPadrao").value = "";
-    document.getElementById("isHeaderPadrao").checked = false;
+    document.getElementById("complementoArquivoPadrao").value = "";
+    document.getElementById("isComplementoArquivoPadrao").checked = false;
     document.getElementById("complementoLinhaPadrao").value = "";
     document.getElementById("isComplementoPadrao").checked = false;
     document.getElementById("isSobreporLinha").checked = false;

@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+  //Minimizar
   var toggleButtons = document.querySelectorAll(".toggleButton");
   for (var i = 0; i < toggleButtons.length; i++) {
     toggleButtons[i].addEventListener("click", function () {
@@ -6,13 +8,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+
+  //Configurações Padrao
   const agencia = localStorage.getItem("agenciaPadrao");
   const conta = localStorage.getItem("contaPadrao");
   const dac = localStorage.getItem("dacPadrao");
   const nossoNumeroPadrao = localStorage.getItem("nossoNumeroPadrao");
   const codigoOcorrenciaPadrao = localStorage.getItem("codigoOcorrenciaPadrao");
-  const headerPadrao = localStorage.getItem("headerPadrao");
-  const isHeaderPadrao = localStorage.getItem("isHeaderPadrao");
+  const complementoArquivoPadrao = localStorage.getItem("complementoArquivoPadrao");
+  const isComplementoArquivoPadrao = localStorage.getItem("isComplementoArquivoPadrao");
   const complementoLinha = localStorage.getItem("complementoLinhaPadrao");
   const isComplementoPadrao = localStorage.getItem("isComplementoPadrao");
   const isSobreporLinha = localStorage.getItem("isSobreporLinha");
@@ -32,16 +36,17 @@ document.addEventListener("DOMContentLoaded", function () {
   if (codigoOcorrenciaPadrao) {
     document.getElementById("codigoOcorrenciaPadrao").value = codigoOcorrenciaPadrao;
   }
-  if (headerPadrao) {
-    document.getElementById("headerPadrao").value = headerPadrao;
+  if (complementoArquivoPadrao) {
+    document.getElementById("complementoArquivoPadrao").value = complementoArquivoPadrao;
   }
   if (complementoLinha) {
     document.getElementById("complementoLinhaPadrao").value = complementoLinha;
   }
-  document.getElementById("isHeaderPadrao").checked = (isHeaderPadrao === "true");
+  document.getElementById("isComplementoArquivoPadrao").checked = (isComplementoArquivoPadrao === "true");
   document.getElementById("isComplementoPadrao").checked = (isComplementoPadrao === "true");
   document.getElementById("isSobreporLinha").checked = (isSobreporLinha === "true");
 
+  //Adicionar Header
 
 });
 
