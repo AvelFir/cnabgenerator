@@ -183,6 +183,74 @@ class RemessaPadraoConstants {
   }
 }
 
+class RemessaHeaderArquivo {
+  static get TIPO_REGISTRO() {
+    return { value: "0", filler: "0", size: 1, formatStyle: (value, fill, size) => formatStart(value, fill, size) };
+  }
+
+  static get OPERACAO() {
+    return { value: "1", filler: "0", size: 1, formatStyle: (value, fill, size) => formatStart(value, fill, size) };
+  }
+
+  static get LITERAL_REMESSA() {
+    return { value: "REMESSA", filler: Brancos.SETE, size: 7, formatStyle: (value, fill, size) => formatEnd(value, fill, size)  };
+  }
+
+  
+  static get CODIGO_SERVICO() {
+    return { value: "01", filler: "00", size: 2, formatStyle: (value, fill, size) => formatStart(value, fill, size)  };
+  }
+
+  static get LITERAL_SERVICO() {
+    return { value: "COBRANCA".padEnd(15,Brancos.UM), filler: Brancos.QUINZE, size: 15, formatStyle: (value, fill, size) => formatEnd(value, fill, size)  };
+  }
+
+  static get AGENCIA() {
+    return { value: "1500", filler: "0000", size: 4, formatStyle: (value, fill, size) => formatStart(value, fill, size)  };
+  }
+
+  static get ZEROS() {
+    return { value: "00", filler: "00", size: 2, formatStyle: (value, fill, size) => formatStart(value, fill, size)  };
+  }
+
+  static get CONTA() {
+    return { value: "05206", filler: "00000", size: 5, formatStyle: (value, fill, size) => formatStart(value, fill, size) };
+  }
+
+  static get DAC() {
+    return { value: "2", filler: "0", size: 1, formatStyle: (value, fill, size) => formatStart(value, fill, size)  };
+  }
+
+  static get BRANCOS1() {
+    return { value: Brancos.OITO, filler: Brancos.OITO, size: 4, formatStyle: (value, fill, size) => formatEnd(value, fill, size) };
+  }
+
+  static get NOME_EMPRESA() {
+    return { value: "Bernardo e Henrique Assessoria".padEnd(30,Brancos.UM), filler: Brancos.TRINTA, size: 30, formatStyle: (value, fill, size) => formatEnd(value, fill, size) };
+  }
+
+  static get CODIGO_BANCO() {
+    return { value: "341", filler: "000", size: 3, formatStyle: (value, fill, size) => formatStart(value, fill, size)  };
+  }
+
+  static get NOME_BANCO() {
+    return { value: "BANCO ITAU SA".padEnd(15,Brancos.UM), filler: Brancos.QUINZE, size: 15, formatStyle: (value, fill, size) => formatEnd(value, fill, size) };
+  }
+
+  static get DATA_GERACAO() {
+    return { value: gerarDataEmissao(), filler:"000000" , size: 6, formatStyle: (value, fill, size) => formatEnd(value, fill, size) };
+  }
+  
+  static get BRANCOS2() {
+    return { value: Brancos.DUZENTOS_NOVENTA_QUATRO, filler: Brancos.DUZENTOS_NOVENTA_QUATRO, size: 294, formatStyle: (value, fill, size) => formatEnd(value, fill, size) };
+  }
+
+  static get NUMERO_SEQUENCIAL() {
+    return { value: "000001", filler: "000000", size: 6, formatStyle: (value, fill, size) => formatStart(value, fill, size)  };
+  }
+}
+
+
 class Brancos{
     static UM = " ".repeat(1);
     static DOIS = " ".repeat(2);
@@ -200,4 +268,5 @@ class Brancos{
     static VINTE_CINCO = " ".repeat(25);
     static TRINTA = " ".repeat(30);
     static QUARENTA = " ".repeat(40);
+    static DUZENTOS_NOVENTA_QUATRO = " ".repeat(294);
 }

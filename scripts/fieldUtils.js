@@ -22,6 +22,21 @@ function getValueOrFiller(field, configuration){
     return fillerValue;    
 } 
 
+function getSavedValueOrFiller(fieldName, configuration){
+    var fillerValue = configuration.filler;
+    var savedValue = localStorage.getItem(fieldName + "Padrao");
+    var size = configuration.size;
+
+    if(isValidString(savedValue)){
+        return configuration.formatStyle(savedValue,size,fillerValue[0]);
+    }
+    return fillerValue;    
+} 
+
+function getFirstValueOr(primaryValue,secondaryValue){
+    return isValidString(primaryValue) ? primaryValue : secondaryValue;
+}
+
 function isValidString(str){
     return str != null && str != "" && str != undefined;
 }

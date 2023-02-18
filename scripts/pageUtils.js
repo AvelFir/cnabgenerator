@@ -66,4 +66,3 @@ function addContadorSequencialGlobal() {
 function resetContadorSequencialGlobal() {
   document.getElementById("contadorSequencialGlobal") = 0;
 }
-

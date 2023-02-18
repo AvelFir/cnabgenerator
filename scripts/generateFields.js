@@ -96,7 +96,7 @@ function geraCPF() {
     return complemento;
   }
 
-  function gerarHeader(){
+  function gerarComplementoArquivo(){
     var codigo = "@@H@@";
     var brancos1 = "".padStart(10," ")
     var id = "GERABOL"

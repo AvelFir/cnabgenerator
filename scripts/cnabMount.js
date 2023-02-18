@@ -1,7 +1,7 @@
 //Arquivo Responsavel por Montar as Linhas, ou seja pegar o valor dos campos e retornar
 
 function mountCnab400(){
-  var header = mountLinhaHeaderArquivoDefaultValues();
+  var header = mountRemessaHeaderArquivoDefaultValues();
   var remessaPadrao = mountLinhaRemessaDetalhePadrao();
   var trailer = mountLinhaTrailerArquivoDefaultValues();
 
@@ -28,8 +28,7 @@ function mountCnab400(){
 }
 
 function mountArquivo() {
-  var header = mountLinhaHeaderArquivoDefaultValues();
-  header = header.substring(0, header.length - 6);
+  var header = getFirstValueOr(localStorage.getItem("headerArquivoPadrao"), mountRemessaHeaderArquivoDefaultValues().substring(0, 400 - 6));
   header += getContadorSequencialGlobal();
   addContadorSequencialGlobal();
 
@@ -164,23 +163,23 @@ function mountLinhaRemessaDetalhePadrao() {
     return dados;
   }
 
-  function mountLinhaHeaderArquivoDefaultValues(){
-    var tipoDeRegistro = "0";
-    var operacao = "1";
-    var literalRemessa = "REMESSA";
-    var codigoServico = "01";
-    var literalServico = "COBRANCA".padEnd(15," ");
-    var agencia = "1500";
-    var zeros1 = "00";
-    var conta =  "05206";
-    var dac = "2";
-    var brancos1 = "        "
-    var nomeEmpresa = "Bernardo e Henrique Assessoria".padEnd(30," ")
-    var codigoBanco = "341";
-    var nomeBanco = "BANCO ITAU SA".padEnd(15," ");
-    var dataGeracao = gerarDataEmissao();
-    var brancos2 = "".padStart(294," ")
-    var numeroSequencial = "000001"
+  function mountRemessaHeaderArquivoDefaultValues(){
+    var tipoDeRegistro = RemessaHeaderArquivo.TIPO_REGISTRO.value;
+    var operacao =  RemessaHeaderArquivo.OPERACAO.value;
+    var literalRemessa =  RemessaHeaderArquivo.LITERAL_REMESSA.value;
+    var codigoServico =  RemessaHeaderArquivo.CODIGO_SERVICO.value;
+    var literalServico =  RemessaHeaderArquivo.LITERAL_SERVICO.value;
+    var agencia = getSavedValueOrFiller("agencia",RemessaHeaderArquivo.AGENCIA);
+    var zeros1 = RemessaHeaderArquivo.ZEROS.value;
+    var conta =  getSavedValueOrFiller("conta",RemessaHeaderArquivo.CONTA);
+    var dac = getSavedValueOrFiller("dac",RemessaHeaderArquivo.DAC);
+    var brancos1 =  RemessaHeaderArquivo.BRANCOS1.value;
+    var nomeEmpresa = RemessaHeaderArquivo.NOME_EMPRESA.value;
+    var codigoBanco = RemessaHeaderArquivo.CODIGO_BANCO.value;
+    var nomeBanco = RemessaHeaderArquivo.NOME_BANCO.value;
+    var dataGeracao = RemessaHeaderArquivo.DATA_GERACAO.value;
+    var brancos2 = RemessaHeaderArquivo.BRANCOS2.value;
+    var numeroSequencial = RemessaHeaderArquivo.NUMERO_SEQUENCIAL.value;
 
     var dados = tipoDeRegistro + operacao + literalRemessa + codigoServico + literalServico + agencia + zeros1 + conta + dac + brancos1 + nomeEmpresa + codigoBanco + nomeBanco + dataGeracao + brancos2 + numeroSequencial;
     return dados;

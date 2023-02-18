@@ -98,9 +98,17 @@ function lockUnlockButton(fieldId, button) {
   }
 
   function setComplementoArquivoPadraoButton(){
-    const complemento = gerarHeader();
+    const complemento = gerarComplementoArquivo();
     document.getElementById("complementoArquivoPadrao").value = complemento;
   }
+
+
+  function setHeaderArquivoPadraoButton(){
+    var header = mountRemessaHeaderArquivoDefaultValues();
+    header = header.substring(0, header.length - 6);
+    document.getElementById("headerArquivoPadrao").value = header;
+  }
+
   
   function salvarItemById(campo) {
     let elemento = document.getElementById(campo);
@@ -113,6 +121,7 @@ function lockUnlockButton(fieldId, button) {
     var agencia = document.getElementById("agenciaPadrao").value;
     var conta = document.getElementById("contaPadrao").value;
     var dac = document.getElementById("dacPadrao").value;
+    var headerArquivoPadrao = document.getElementById("headerArquivoPadrao").value;
     var nossoNumero = document.getElementById("nossoNumeroPadrao").value;
     var codigoOcorrenciaPadrao = document.getElementById("codigoOcorrenciaPadrao").value;
     var complementoArquivoPadrao = document.getElementById("complementoArquivoPadrao").value;
@@ -126,6 +135,8 @@ function lockUnlockButton(fieldId, button) {
     localStorage.setItem("contaPadrao", conta);
 
     localStorage.setItem("dacPadrao", dac);
+
+    localStorage.setItem("headerArquivoPadrao", headerArquivoPadrao);
 
     localStorage.setItem("complementoArquivoPadrao", complementoArquivoPadrao);
 
@@ -149,6 +160,7 @@ function lockUnlockButton(fieldId, button) {
     localStorage.removeItem('agenciaPadrao');
     localStorage.removeItem('contaPadrao');
     localStorage.removeItem('dacPadrao');
+    localStorage.removeItem('headerArquivoPadrao');
     localStorage.removeItem('complementoArquivoPadrao');
     localStorage.removeItem('isComplementoArquivoPadrao');
     localStorage.removeItem('complementoLinhaPadrao');
@@ -159,6 +171,7 @@ function lockUnlockButton(fieldId, button) {
     document.getElementById("agenciaPadrao").value = "";
     document.getElementById("contaPadrao").value = "";
     document.getElementById("dacPadrao").value = "";
+    document.getElementById("headerArquivoPadrao").value = "";
     document.getElementById("nossoNumeroPadrao").value = "";
     document.getElementById("complementoArquivoPadrao").value = "";
     document.getElementById("isComplementoArquivoPadrao").checked = false;

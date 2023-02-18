@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const agencia = localStorage.getItem("agenciaPadrao");
   const conta = localStorage.getItem("contaPadrao");
   const dac = localStorage.getItem("dacPadrao");
+  const headerArquivoPadrao = localStorage.getItem("headerArquivoPadrao");
   const nossoNumeroPadrao = localStorage.getItem("nossoNumeroPadrao");
   const codigoOcorrenciaPadrao = localStorage.getItem("codigoOcorrenciaPadrao");
   const complementoArquivoPadrao = localStorage.getItem("complementoArquivoPadrao");
@@ -29,6 +30,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   if (dac) {
     document.getElementById("dacPadrao").value = dac;
+  }
+  if (headerArquivoPadrao) {
+    document.getElementById("headerArquivoPadrao").value = headerArquivoPadrao;
   }
   if (nossoNumeroPadrao) {
     document.getElementById("nossoNumeroPadrao").value = nossoNumeroPadrao;
