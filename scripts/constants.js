@@ -131,7 +131,7 @@ class RemessaPadraoConstants {
   }
 
   static get NOME() {
-    return { value: "Calebe Murilo Novaes".padEnd(30,Brancos.UM), filler: Brancos.TRINTA, size: 1, formatStyle: (value, fill, size) => formatEnd(value, fill, size) };
+    return { value: "Calebe Murilo Novaes".padEnd(30,Brancos.UM), filler: Brancos.TRINTA, size: 30, formatStyle: (value, fill, size) => formatEnd(value, fill, size) };
   }
 
   static get BRANCOS2() {
