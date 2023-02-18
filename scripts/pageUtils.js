@@ -38,10 +38,19 @@ function adicionarLinha(input1Content) {
   novaLinha.appendChild(coluna1);
   novaLinha.appendChild(coluna2);
 
+  // adicione o ouvinte de eventos ao botão
+  botao.addEventListener('click', removerLinha);
+
   // adicione a nova linha à tabela
   tabela.appendChild(novaLinha);
 }
 
+function removerLinha(event) {
+  // encontre a linha correspondente ao botão clicado
+  const linha = event.target.parentNode.parentNode;
+  // remova a linha da tabela
+  linha.remove();
+}
 
 function getContadorSequencialGlobal(){
   var contadorSequencialGlobal = document.getElementById("contadorSequencialGlobal").value.padStart(6,"0");
@@ -57,3 +66,4 @@ function addContadorSequencialGlobal() {
 function resetContadorSequencialGlobal() {
   document.getElementById("contadorSequencialGlobal") = 0;
 }
+
