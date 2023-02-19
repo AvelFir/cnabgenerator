@@ -72,6 +72,16 @@ function geraCPF() {
     return dia + mes + ano;
   }
 
+  function gerarDataMulta() {
+    var hoje = new Date();
+    hoje.setDate(hoje.getDate() + 40);
+    var dia = hoje.getDate().toString().padStart(2, '0');
+    var mes = (hoje.getMonth() + 1).toString().padStart(2, '0');
+    var ano = hoje.getFullYear().toString();
+    return dia + mes + ano;
+  }
+
+
   function gerarNomeArquivo(){
     const CNAB_TYPE = "CNAB400"
     const date = new Date();

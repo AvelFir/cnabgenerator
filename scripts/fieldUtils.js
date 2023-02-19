@@ -44,3 +44,27 @@ function isValidString(str){
 function isLinhaComplemento(value){
     return value === "0" || value === "1";
 }
+
+function calcularDacCNAB400(numero) {
+    // Remove caracteres não numéricos do número
+    numero = numero.replace(/\D/g, '');
+  
+    // Define os pesos de cada posição do número
+    const pesos = [2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2, 1, 2];
+  
+    // Inverte o número para facilitar o cálculo do DAC
+    numero = numero.split('').reverse().join('');
+  
+    let soma = 0;
+    for (let i = 0; i < numero.length; i++) {
+      const produto = parseInt(numero[i]) * pesos[i];
+      soma += produto < 10 ? produto : 1 + produto - 10;
+    }
+  
+    let dac = 11 - (soma % 11);
+    if (dac >= 10) {
+      dac = 0;
+    }
+  
+    return dac.toString();
+  }
