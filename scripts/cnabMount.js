@@ -210,7 +210,7 @@ function mountLinhaRemessaDetalhePadrao() {
   
     return tipoRegistro + codigoInscricao + email + logradouro + bairro + cep + cidade + estado + brancos2 + numeroSequencial;
   }
-  
+
   function mountRemessaRateioCredito() {
     const tipoRegistro = getValueOrFiller(document.getElementById('tipoRegistro'), RemessaRateioCredito.TIPO_REGISTRO);
     const codigoInscricao = getValueOrFiller(document.getElementById('codigoInscricao'), RemessaRateioCredito.CODIGO_INSCRICAO);
