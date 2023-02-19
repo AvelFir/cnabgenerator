@@ -303,32 +303,32 @@
           <br>
           <div id="ComplementoDetalheMulta">
             <button type="button" class="toggleButton" data-section="ComplementoDetalheMulta">Maximizar Complemento Detalhe Multa</button>
-            <div class="sectionContent" id="ComplementoDetalheMultaContent" name="ComplementoDetalheMulta" style="display: none;">
+            <div class="sectionContent" id="ComplementoDetalheMultaContent" name="ComplementoDetalheMulta"
+              style="display: none;">
               <br>
               <div>
-                <button type="button" onclick="setValorRemessaDetalhePadraoButton()">Gerar Remessa Padrao
-                  Emissao</button>
+                <button type="button" onclick="setDetalheMultaButton()">Gerar Multa</button>
                 <button type="button" onclick="adicionarLinhaButton()">Adicionar Linha</button>
               </div>
               <br>
               <div>
                 <label for="tipoRegistro">TIPO DE REGISTRO:</label>
                 <input type="text" id="tipoRegistro" name="tipoRegistro"><br>
-              
+
                 <label for="codigoMulta">CODIGO DA MULTA:</label>
                 <input type="text" id="codigoMulta" name="codigoMulta"><br>
-              
+
                 <label for="dataMulta">DATA DA MULTA:</label>
                 <input type="text" id="dataMulta" name="dataMulta"><br>
-              
+
                 <label for="valorMulta">VALOR DA MULTA:</label>
                 <input type="text" id="valorMulta" name="valorMulta"><br>
-              
+
                 <label for="brancos">BRANCOS:</label>
                 <input type="text" id="brancos" name="brancos"><br>
-              
-                <label for="numeroSequencial">NUMERO SEQUENCIAL:</label>
-                <input type="text" id="numeroSequencial" name="numeroSequencial"><br>
+
+                <label for="numeroSequencialMulta">NUMERO SEQUENCIAL:</label>
+                <input type="text" id="numeroSequencialMulta" name="numeroSequencialMulta" maxlength="6"><br>
               </div>
             </div>
           </div>
@@ -338,8 +338,7 @@
             <div class="sectionContent" id="RateioCreditoContent" name="RateioCredito" style="display: none;">
               <br>
               <div>
-                <button type="button" onclick="setValorRemessaDetalhePadraoButton()">Gerar Remessa Padrao
-                  Emissao</button>
+                <button type="button" onclick="setRemessaRateioCreditoButton()">Gerar Rateio de Credito</button>
                 <button type="button" onclick="adicionarLinhaButton()">Adicionar Linha</button>
               </div>
               <br>
@@ -351,107 +350,345 @@
                 <label for="codigoInscricao">CODIGO DE INSCRICAO:</label>
                 <input type="text" id="codigoInscricao" name="codigoInscricao">
                 <br>
-              
+
                 <label for="numeroInscricao">NUMERO DE INSCRICAO:</label>
                 <input type="text" id="numeroInscricao" name="numeroInscricao">
                 <br>
-              
+
                 <label for="agencia">AGENCIA:</label>
                 <input type="text" id="agencia" name="agencia">
                 <br>
-              
+
                 <label for="zeros">ZEROS:</label>
                 <input type="text" id="zeros" name="zeros">
                 <br>
-              
+
                 <label for="conta">CONTA:</label>
                 <input type="text" id="conta" name="conta">
                 <br>
-              
+
                 <label for="dac">DAC:</label>
                 <input type="text" id="dac" name="dac">
                 <br>
-              
+
                 <label for="numeroCarteira">NUMERO DA CARTEIRA:</label>
                 <input type="text" id="numeroCarteira" name="numeroCarteira">
                 <br>
-              
+
                 <label for="nossoNumero">NOSSO NUMERO:</label>
                 <input type="text" id="nossoNumero" name="nossoNumero">
                 <br>
-              
+
                 <label for="dacNossoNumero">DAC DO NOSSO NUMERO:</label>
                 <input type="text" id="dacNossoNumero" name="dacNossoNumero">
                 <br>
-              
+
                 <label for="sequenciaRateio">SEQUENCIA DE RATEIO:</label>
                 <input type="text" id="sequenciaRateio" name="sequenciaRateio">
                 <br>
-              
-                <label for="agenciaRateio">AGENCIA DE RATEIO</label>
-                <input type="text" id="agenciaRateio" name="agenciaRateio">
-                <br>
-              
-                <label for="contaRateio">CONTA DE RATEIO</label>
-                <input type="text" id="contaRateio" name="contaRateio">
-                <br>
-              
-                <label for="dacRateio">DAC:</label>
-                <input type="text" id="dacRateio" name="dacRateio">
-                <br>
-              
-                <label for="valorRateio">VALOR RATEIO:</label>
-                <input type="text" id="valorRateio" name="valorRateio">
-                <br>
-              
+
+                <div>
+                  <label for="agenciaRateio1">AGENCIA DE RATEIO 1</label>
+                  <input type="text" id="agenciaRateio1" name="agenciaRateio1">
+                  <br>
+
+
+                  <label for="contaRateio1">CONTA DE RATEIO 1</label>
+                  <input type="text" id="contaRateio1" name="contaRateio1">
+                  <br>
+
+                  <label for="dacRateio1">DAC RATEIO 1:</label>
+                  <input type="text" id="dacRateio1" name="dacRateio1">
+                  <br>
+
+                  <label for="valorRateio1">VALOR RATEIO 1:</label>
+                  <input type="text" id="valorRateio1" name="valorRateio1">
+                  <br>
+                </div>
+
+                <div>
+                  <label for="agenciaRateio2">AGENCIA DE RATEIO 2</label>
+                  <input type="text" id="agenciaRateio2" name="agenciaRateio2">
+                  <br>
+
+                  <label for="contaRateio2">CONTA DE RATEIO 2</label>
+                  <input type="text" id="contaRateio2" name="contaRateio2">
+                  <br>
+
+                  <label for="dacRateio2">DAC RATEIO 2:</label>
+                  <input type="text" id="dacRateio2" name="dacRateio2">
+                  <br>
+
+                  <label for="valorRateio2">VALOR RATEIO 2:</label>
+                  <input type="text" id="valorRateio2" name="valorRateio2">
+                  <br>
+                </div>
+
+                <div>
+                  <label for="agenciaRateio3">AGENCIA DE RATEIO 3</label>
+                  <input type="text" id="agenciaRateio3" name="agenciaRateio3">
+                  <br>
+
+                  <label for="contaRateio3">CONTA DE RATEIO 3</label>
+                  <input type="text" id="contaRateio3" name="contaRateio3">
+                  <br>
+
+                  <label for="dacRateio3">DAC RATEIO 3:</label>
+                  <input type="text" id="dacRateio3" name="dacRateio3">
+                  <br>
+
+                  <label for="valorRateio3">VALOR RATEIO 3:</label>
+                  <input type="text" id="valorRateio3" name="valorRateio3">
+                  <br>
+                </div>
+
+                <div>
+                  <label for="agenciaRateio4">AGENCIA DE RATEIO 4</label>
+                  <input type="text" id="agenciaRateio4" name="agenciaRateio4">
+                  <br>
+
+                  <label for="contaRateio4">CONTA DE RATEIO 4</label>
+                  <input type="text" id="contaRateio4" name="contaRateio4">
+                  <br>
+
+                  <label for="dacRateio4">DAC RATEIO 4:</label>
+                  <input type="text" id="dacRateio4" name="dacRateio4">
+                  <br>
+
+                  <label for="valorRateio4">VALOR RATEIO 4:</label>
+                  <input type="text" id="valorRateio4" name="valorRateio4">
+                  <br>
+                </div>
+
+                <div>
+                  <label for="agenciaRateio5">AGENCIA DE RATEIO 5</label>
+                  <input type="text" id="agenciaRateio5" name="agenciaRateio5">
+                  <br>
+
+                  <label for="contaRateio5">CONTA DE RATEIO 5</label>
+                  <input type="text" id="contaRateio5" name="contaRateio5">
+                  <br>
+
+                  <label for="dacRateio5">DAC RATEIO 5:</label>
+                  <input type="text" id="dacRateio5" name="dacRateio5">
+                  <br>
+
+                  <label for="valorRateio5">VALOR RATEIO 5:</label>
+                  <input type="text" id="valorRateio5" name="valorRateio5">
+                  <br>
+                </div>
+
+                <div>
+                  <label for="agenciaRateio6">AGENCIA DE RATEIO 6</label>
+                  <input type="text" id="agenciaRateio6" name="agenciaRateio6">
+                  <br>
+
+                  <label for="contaRateio6">CONTA DE RATEIO 6</label>
+                  <input type="text" id="contaRateio6" name="contaRateio6">
+                  <br>
+
+                  <label for="dacRateio6">DAC RATEIO 6:</label>
+                  <input type="text" id="dacRateio6" name="dacRateio6">
+                  <br>
+
+                  <label for="valorRateio6">VALOR RATEIO 6:</label>
+                  <input type="text" id="valorRateio6" name="valorRateio6">
+                  <br>
+                </div>
+
+                <div>
+                  <label for="agenciaRateio7">AGENCIA DE RATEIO 7</label>
+                  <input type="text" id="agenciaRateio7" name="agenciaRateio7">
+                  <br>
+
+                  <label for="contaRateio7">CONTA DE RATEIO 7</label>
+                  <input type="text" id="contaRateio7" name="contaRateio7">
+                  <br>
+
+                  <label for="dacRateio7">DAC RATEIO 7:</label>
+                  <input type="text" id="dacRateio7" name="dacRateio7">
+                  <br>
+
+                  <label for="valorRateio7">VALOR RATEIO 7:</label>
+                  <input type="text" id="valorRateio7" name="valorRateio7">
+                  <br>
+                </div>
+
+                <div>
+                  <label for="agenciaRateio8">AGENCIA DE RATEIO 8</label>
+                  <input type="text" id="agenciaRateio8" name="agenciaRateio8">
+                  <br>
+
+                  <label for="contaRateio8">CONTA DE RATEIO 8</label>
+                  <input type="text" id="contaRateio8" name="contaRateio8">
+                  <br>
+
+                  <label for="dacRateio8">DAC RATEIO 8:</label>
+                  <input type="text" id="dacRateio8" name="dacRateio8">
+                  <br>
+
+                  <label for="valorRateio8">VALOR RATEIO 8:</label>
+                  <input type="text" id="valorRateio8" name="valorRateio8">
+                  <br>
+                </div>
+
+                <div>
+                  <label for="agenciaRateio9">AGENCIA DE RATEIO 9</label>
+                  <input type="text" id="agenciaRateio9" name="agenciaRateio9">
+                  <br>
+
+                  <label for="contaRateio9">CONTA DE RATEIO 9</label>
+                  <input type="text" id="contaRateio9" name="contaRateio9">
+                  <br>
+
+                  <label for="dacRateio9">DAC RATEIO 9:</label>
+                  <input type="text" id="dacRateio9" name="dacRateio9">
+                  <br>
+
+                  <label for="valorRateio9">VALOR RATEIO 9:</label>
+                  <input type="text" id="valorRateio9" name="valorRateio9">
+                  <br>
+                </div>
+
+                <div>
+                  <label for="agenciaRateio10">AGENCIA DE RATEIO 10</label>
+                  <input type="text" id="agenciaRateio10" name="agenciaRateio10">
+                  <br>
+
+                  <label for="contaRateio10">CONTA DE RATEIO 10</label>
+                  <input type="text" id="contaRateio10" name="contaRateio10">
+                  <br>
+
+                  <label for="dacRateio10">DAC RATEIO 10:</label>
+                  <input type="text" id="dacRateio10" name="dacRateio10">
+                  <br>
+
+                  <label for="valorRateio10">VALOR RATEIO 10:</label>
+                  <input type="text" id="valorRateio10" name="valorRateio10">
+                  <br>
+                </div>
+
+                <div>
+                  <label for="agenciaRateio11">AGENCIA DE RATEIO 11</label>
+                  <input type="text" id="agenciaRateio11" name="agenciaRateio11">
+                  <br>
+
+                  <label for="contaRateio11">CONTA DE RATEIO 11</label>
+                  <input type="text" id="contaRateio11" name="contaRateio11">
+                  <br>
+
+                  <label for="dacRateio11">DAC RATEIO 11:</label>
+                  <input type="text" id="dacRateio11" name="dacRateio11">
+                  <br>
+
+                  <label for="valorRateio11">VALOR RATEIO 11:</label>
+                  <input type="text" id="valorRateio11" name="valorRateio11">
+                  <br>
+                </div>
+
+                <div>
+                  <label for="agenciaRateio12">AGENCIA DE RATEIO 12</label>
+                  <input type="text" id="agenciaRateio12" name="agenciaRateio12">
+                  <br>
+
+                  <label for="contaRateio12">CONTA DE RATEIO 12</label>
+                  <input type="text" id="contaRateio12" name="contaRateio12">
+                  <br>
+
+                  <label for="dacRateio12">DAC RATEIO 12:</label>
+                  <input type="text" id="dacRateio12" name="dacRateio12">
+                  <br>
+
+                  <label for="valorRateio12">VALOR RATEIO 12:</label>
+                  <input type="text" id="valorRateio12" name="valorRateio12">
+                  <br>
+                </div>
+
+                <div>
+                  <label for="agenciaRateio13">AGENCIA DE RATEIO 13</label>
+                  <input type="text" id="agenciaRateio13" name="agenciaRateio13">
+                  <br>
+
+                  <label for="contaRateio13">CONTA DE RATEIO 13</label>
+                  <input type="text" id="contaRateio13" name="contaRateio13">
+                  <br>
+
+                  <label for="dacRateio13">DAC RATEIO 13:</label>
+                  <input type="text" id="dacRateio13" name="dacRateio13">
+                  <br>
+
+                  <label for="valorRateio13">VALOR RATEIO 13:</label>
+                  <input type="text" id="valorRateio13" name="valorRateio13">
+                  <br>
+                </div>
+
+                <div>
+                  <label for="agenciaRateio14">AGENCIA DE RATEIO 14</label>
+                  <input type="text" id="agenciaRateio14" name="agenciaRateio14">
+                  <br>
+
+                  <label for="contaRateio14">CONTA DE RATEIO 14</label>
+                  <input type="text" id="contaRateio14" name="contaRateio14">
+                  <br>
+
+                  <label for="dacRateio14">DAC RATEIO 14:</label>
+                  <input type="text" id="dacRateio14" name="dacRateio14">
+                  <br>
+
+                  <label for="valorRateio14">VALOR RATEIO 14:</label>
+                  <input type="text" id="valorRateio14" name="valorRateio14">
+                  <br>
+                </div>
+
                 <label for="tipoValor">TIPO DE VALOR:</label>
                 <input type="text" id="tipoValor" name="tipoValor">
                 <br>
-              
+
                 <label for="numeroSequencial">NUMERO SEQÜENCIAL:</label>
-                <input type="text" id="numeroSequencial" name="numeroSequencial">    
+                <input type="text" id="numeroSequencial" name="numeroSequencial">
               </div>
             </div>
           </div>
           <br>
           <div id="DadosSacadorAvalista">
-            <button type="button" class="toggleButton" data-section="DadosSacadorAvalista">Maximizar Dados Sacador Avalista</button>
-            <div class="sectionContent" id="DadosSacadorAvalistaContent" name="DadosSacadorAvalista" style="display: none;">
+            <button type="button" class="toggleButton" data-section="DadosSacadorAvalista">Maximizar Dados Sacador
+              Avalista</button>
+            <div class="sectionContent" id="DadosSacadorAvalistaContent" name="DadosSacadorAvalista"
+              style="display: none;">
               <br>
               <div>
-                <button type="button" onclick="setValorRemessaDetalhePadraoButton()">Gerar Remessa Padrao
-                  Emissao</button>
+                <button type="button" onclick="setDadosSacadorAvalistaButton()">Gerar Dados Sacador Avalista</button>
                 <button type="button" onclick="adicionarLinhaButton()">Adicionar Linha</button>
               </div>
               <br>
               <div>
                 <label for="tipoRegistro">TIPO REGISTRO:</label>
                 <input type="text" id="tipoRegistro" name="tipoRegistro"><br>
-                
+
                 <label for="codigoInscricao">CÓDIGO INSCRIÇÃO:</label>
                 <input type="text" id="codigoInscricao" name="codigoInscricao"><br>
-              
+
                 <label for="email">EMAIL:</label>
                 <input type="text" id="email" name="email"><br>
-              
+
                 <label for="logradouro">LOGRADOURO:</label>
                 <input type="text" id="logradouro" name="logradouro"><br>
-              
+
                 <label for="bairro">BAIRRO:</label>
                 <input type="text" id="bairro" name="bairro"><br>
-              
+
                 <label for="cep">CEP:</label>
                 <input type="text" id="cep" name="cep"><br>
-              
+
                 <label for="cidade">CIDADE:</label>
                 <input type="text" id="cidade" name="cidade"><br>
-              
+
                 <label for="estado">ESTADO:</label>
                 <input type="text" id="estado" name="estado"><br>
-              
+
                 <label for="brancos2">BRANCOS2:</label>
                 <input type="text" id="brancos2" name="brancos2"><br>
-              
+
                 <label for="numeroSequencial">NÚMERO SEQUENCIAL:</label>
                 <input type="text" id="numeroSequencial" name="numeroSequencial"><br>
               </div>

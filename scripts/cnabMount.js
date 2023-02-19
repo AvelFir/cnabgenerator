@@ -191,7 +191,7 @@ function mountLinhaRemessaDetalhePadrao() {
     const dataMulta = getValueOrFiller(document.getElementById('dataMulta'), RemessaMulta.DATA_MULTA);
     const valorMulta = getValueOrFiller(document.getElementById('valorMulta'), RemessaMulta.VALOR_MULTA);
     const brancos = getValueOrFiller(document.getElementById('brancos'), RemessaMulta.BRANCOS);
-    const numeroSequencial = getValueOrFiller(document.getElementById('numeroSequencial'), RemessaMulta.NUMERO_SEQUENCIAL);
+    const numeroSequencial = getValueOrFiller(document.getElementById('numeroSequencialMulta'), RemessaMulta.NUMERO_SEQUENCIAL);
   
     return tipoRegistro + codigoMulta + dataMulta + valorMulta + brancos + numeroSequencial;
   }

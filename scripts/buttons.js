@@ -77,6 +77,49 @@ function lockUnlockButton(fieldId, button) {
     setFieldsReadOnly();
   }
 
+  function setDadosSacadorAvalistaButton() {
+    document.getElementById('tipoRegistro').value = RemessaDadosSacadorAvalista.TIPO_REGISTRO.value;
+    document.getElementById('codigoInscricao').value = RemessaDadosSacadorAvalista.CODIGO_INSCRICAO.value;
+    document.getElementById('email').value = RemessaDadosSacadorAvalista.EMAIL.value;
+    document.getElementById('logradouro').value = RemessaDadosSacadorAvalista.LOGRADOURO.value;
+    document.getElementById('bairro').value = RemessaDadosSacadorAvalista.BAIRRO.value;
+    document.getElementById('cep').value = RemessaDadosSacadorAvalista.CEP.value;
+    document.getElementById('cidade').value = RemessaDadosSacadorAvalista.CIDADE.value;
+    document.getElementById('estado').value = RemessaDadosSacadorAvalista.ESTADO.value;
+    document.getElementById('brancos2').value = RemessaDadosSacadorAvalista.BRANCOS2.value;
+    document.getElementById('numeroSequencial').value = RemessaDadosSacadorAvalista.NUMERO_SEQUENCIAL.value;
+  }
+
+  function setDetalheMultaButton() {
+    document.getElementById('tipoRegistro').value = RemessaMulta.TIPO_REGISTRO.value;
+    document.getElementById('codigoMulta').value = RemessaMulta.CODIGO_MULTA.value;
+    document.getElementById('dataMulta').value = RemessaMulta.DATA_MULTA.value;
+    document.getElementById('valorMulta').value = RemessaMulta.VALOR_MULTA.value;
+    document.getElementById('brancos').value = RemessaMulta.BRANCOS.value;
+    document.getElementById('numeroSequencialMulta').value = RemessaMulta.NUMERO_SEQUENCIAL.value;
+  }
+  
+
+  function setRemessaRateioCreditoButton(){
+    document.getElementById('tipoRegistro').value = RemessaRateioCredito.TIPO_REGISTRO.value;
+    document.getElementById('codigoInscricao').value = RemessaRateioCredito.CODIGO_INSCRICAO.value;
+    document.getElementById('numeroInscricao').value = RemessaRateioCredito.NUMERO_INSCRICAO.value;
+    document.getElementById('agencia').value = RemessaRateioCredito.AGENCIA.value;
+    document.getElementById('zeros').value = RemessaRateioCredito.ZEROS.value;
+    document.getElementById('conta').value = RemessaRateioCredito.CONTA.value;
+    document.getElementById('dac').value = RemessaRateioCredito.DAC.value;
+    document.getElementById('numeroCarteira').value = RemessaRateioCredito.NUMERO_CARTEIRA.value;
+    document.getElementById('nossoNumero').value = RemessaRateioCredito.NOSSO_NUMERO.value;
+    document.getElementById('dacNossoNumero').value = RemessaRateioCredito.DAC_NOSSO_NUMERO.value;
+    document.getElementById('sequenciaRateio').value = RemessaRateioCredito.SEQUENCIA_RATEIO.value;
+    document.getElementById('agenciaRateio1').value = RemessaRateioCredito.AGENCIA_RATEIO.value;
+    document.getElementById('contaRateio1').value = RemessaRateioCredito.CONTA_RATEIO.value;
+    document.getElementById('dacRateio1').value = RemessaRateioCredito.DAC_RATEIO.value;
+    document.getElementById('valorRateio1').value = RemessaRateioCredito.VALOR_RATEIO.value;
+    document.getElementById('tipoValor').value = RemessaRateioCredito.TIPO_VALOR.value;
+    document.getElementById('numeroSequencial').value = RemessaRateioCredito.NUMERO_SEQUENCIAL.value;
+  }
+  
   function setNossoNumeroButton(tipo){
     const nossoNumero = tipo == "data" ? gerarNossoNumeroData() : gerarNossoNumeroAleatorio();
     document.getElementById("nossoNumero").value = nossoNumero;
@@ -108,7 +151,6 @@ function lockUnlockButton(fieldId, button) {
     header = header.substring(0, header.length - 6);
     document.getElementById("headerArquivoPadrao").value = header;
   }
-
   
   function salvarItemById(campo) {
     let elemento = document.getElementById(campo);
