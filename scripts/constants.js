@@ -406,8 +406,6 @@ class RemessaDadosSacadorAvalista {
     return { value: "000003", filler: "000000", size: 6, formatStyle: (value, fill, size) => formatStart(value, fill, size)  };
   }
 }
-
-
 class Brancos{
     static UM = " ".repeat(1);
     static DOIS = " ".repeat(2);
