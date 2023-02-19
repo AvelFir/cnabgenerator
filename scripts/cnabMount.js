@@ -185,6 +185,56 @@ function mountLinhaRemessaDetalhePadrao() {
     return dados;
   }
 
+  function mountRemessaMultaDefaultValues() {
+    const tipoRegistro = getValueOrFiller(document.getElementById('tipoRegistro'), RemessaMulta.TIPO_REGISTRO);
+    const codigoMulta = getValueOrFiller(document.getElementById('codigoMulta'), RemessaMulta.CODIGO_MULTA);
+    const dataMulta = getValueOrFiller(document.getElementById('dataMulta'), RemessaMulta.DATA_MULTA);
+    const valorMulta = getValueOrFiller(document.getElementById('valorMulta'), RemessaMulta.VALOR_MULTA);
+    const brancos = getValueOrFiller(document.getElementById('brancos'), RemessaMulta.BRANCOS);
+    const numeroSequencial = getValueOrFiller(document.getElementById('numeroSequencial'), RemessaMulta.NUMERO_SEQUENCIAL);
+  
+    return tipoRegistro + codigoMulta + dataMulta + valorMulta + brancos + numeroSequencial;
+  }
+
+  function mountSacadorAvalista() {
+    const tipoRegistro = getValueOrFiller(document.getElementById("tipoRegistro"), RemessaDadosSacadorAvalista.TIPO_REGISTRO);
+    const codigoInscricao = getValueOrFiller(document.getElementById("codigoInscricao"), RemessaDadosSacadorAvalista.CODIGO_INSCRICAO);
+    const email = getValueOrFiller(document.getElementById("email"), RemessaDadosSacadorAvalista.EMAIL);
+    const logradouro = getValueOrFiller(document.getElementById("logradouro"), RemessaDadosSacadorAvalista.LOGRADOURO);
+    const bairro = getValueOrFiller(document.getElementById("bairro"), RemessaDadosSacadorAvalista.BAIRRO);
+    const cep = getValueOrFiller(document.getElementById("cep"), RemessaDadosSacadorAvalista.CEP);
+    const cidade = getValueOrFiller(document.getElementById("cidade"), RemessaDadosSacadorAvalista.CIDADE);
+    const estado = getValueOrFiller(document.getElementById("estado"), RemessaDadosSacadorAvalista.ESTADO);
+    const brancos2 = getValueOrFiller(document.getElementById("brancos2"), RemessaDadosSacadorAvalista.BRANCOS2);
+    const numeroSequencial = getValueOrFiller(document.getElementById("numeroSequencial"), RemessaDadosSacadorAvalista.NUMERO_SEQUENCIAL);
+  
+    return tipoRegistro + codigoInscricao + email + logradouro + bairro + cep + cidade + estado + brancos2 + numeroSequencial;
+  }
+  
+  function mountRemessaRateioCredito() {
+    const tipoRegistro = getValueOrFiller(document.getElementById('tipoRegistro'), RemessaRateioCredito.TIPO_REGISTRO);
+    const codigoInscricao = getValueOrFiller(document.getElementById('codigoInscricao'), RemessaRateioCredito.CODIGO_INSCRICAO);
+    const numeroInscricao = getValueOrFiller(document.getElementById('numeroInscricao'), RemessaRateioCredito.NUMERO_INSCRICAO);
+    const agencia = getValueOrFiller(document.getElementById('agencia'), RemessaRateioCredito.AGENCIA);
+    const zeros = getValueOrFiller(document.getElementById('zeros'), RemessaRateioCredito.ZEROS);
+    const conta = getValueOrFiller(document.getElementById('conta'), RemessaRateioCredito.CONTA);
+    const dac = getValueOrFiller(document.getElementById('dac'), RemessaRateioCredito.DAC);
+    const numeroCarteira = getValueOrFiller(document.getElementById('numeroCarteira'), RemessaRateioCredito.NUMERO_CARTEIRA);
+    const nossoNumero = getValueOrFiller(document.getElementById('nossoNumero'), RemessaRateioCredito.NOSSO_NUMERO);
+    const dacNossoNumero = getValueOrFiller(document.getElementById('dacNossoNumero'), RemessaRateioCredito.DAC_NOSSO_NUMERO);
+    const sequenciaRateio = getValueOrFiller(document.getElementById('sequenciaRateio'), RemessaRateioCredito.SEQUENCIA_RATEIO);
+    const agenciaRateio = getValueOrFiller(document.getElementById('agenciaRateio'), RemessaRateioCredito.AGENCIA_RATEIO);
+    const contaRateio = getValueOrFiller(document.getElementById('contaRateio'), RemessaRateioCredito.CONTA_RATEIO);
+    const dacRateio = getValueOrFiller(document.getElementById('dacRateio'), RemessaRateioCredito.DAC_RATEIO);
+    const valorRateio = getValueOrFiller(document.getElementById('valorRateio'), RemessaRateioCredito.VALOR_RATEIO);
+    const tipoValor = getValueOrFiller(document.getElementById('tipoValor'), RemessaRateioCredito.TIPO_VALOR);
+    const numeroSequencial = getValueOrFiller(document.getElementById('numeroSequencial'), RemessaRateioCredito.NUMERO_SEQUENCIAL);
+
+    return tipoRegistro + codigoInscricao + numeroInscricao + agencia + zeros + conta + dac + numeroCarteira + 
+    nossoNumero + dacNossoNumero + sequenciaRateio + agenciaRateio + contaRateio + dacRateio + valorRateio + tipoValor 
+    + numeroSequencial;
+  }
+  
   function mountLinhaTrailerArquivoDefaultValues(){
     var tipoDeRegistro = "9";
     var brancos = "".padStart(393," ")

@@ -249,7 +249,6 @@ class RemessaPadraoConstants {
     return { value: "000002", filler: "000000", size: 6, formatStyle: (value, fill, size) => formatStart(value, fill, size)  };
   }
 }
-
 class RemessaMulta {
 
   static get TIPO_REGISTRO() {
@@ -268,7 +267,7 @@ class RemessaMulta {
     return { value: "0000000000199", filler: "0000000000000", size: 13, formatStyle: (value, fill, size) => formatStart(value, fill, size)  };
   }
 
-  static get BRANCOS2() {
+  static get BRANCOS() {
     return { value: Brancos.TREZENTOS_SETENTA_UM, filler: Brancos.TREZENTOS_SETENTA_UM, size: 371, formatStyle: (value, fill, size) => formatEnd(value, fill, size) };
   }
 
@@ -276,7 +275,6 @@ class RemessaMulta {
     return { value: "000003", filler: "000000", size: 6, formatStyle: (value, fill, size) => formatStart(value, fill, size)  };
   }
 }
-
 class RemessaRateioCredito {
 
   static get TIPO_REGISTRO() {
@@ -307,22 +305,6 @@ class RemessaRateioCredito {
     return { value: "2", filler: "0", size: 1, formatStyle: (value, fill, size) => formatStart(value, fill, size)  };
   }
 
-  static get DATA_MULTA() {
-    return { value: gerarDataMulta(), filler: "00000000", size: 8, formatStyle: (value, fill, size) => formatStart(value, fill, size)  };
-  }
-
-  static get VALOR_MULTA() {
-    return { value: "0000000000199", filler: "0000000000000", size: 13, formatStyle: (value, fill, size) => formatStart(value, fill, size)  };
-  }
-
-  static get BRANCOS2() {
-    return { value: Brancos.TREZENTOS_SETENTA_UM, filler: Brancos.TREZENTOS_SETENTA_UM, size: 371, formatStyle: (value, fill, size) => formatEnd(value, fill, size) };
-  }
-
-  static get NUMERO_SEQUENCIAL() {
-    return { value: "000003", filler: "000000", size: 6, formatStyle: (value, fill, size) => formatStart(value, fill, size)  };
-  }
-
   static get NUMERO_CARTEIRA() {
     return { value: "109", filler: "000", size: 3, formatStyle: (value, fill, size) => formatStart(value, fill, size)  };
   }
@@ -331,7 +313,7 @@ class RemessaRateioCredito {
     return { value: gerarNossoNumeroAleatorio() , filler: "00000000", size: 8, formatStyle: (value, fill, size) => formatStart(value, fill, size)  };
   }
 
-  static get NOSSO_NUMERO() {
+  static get DAC_NOSSO_NUMERO() {
     return { value: gerarNossoNumeroAleatorio() , filler: "0", size: 1, formatStyle: (value, fill, size) => formatStart(value, fill, size)  };
   }
 
