@@ -380,7 +380,7 @@ class RemessaDadosSacadorAvalista {
     return { value: "RS", filler: Brancos.DOIS, size: 2, formatStyle: (value, fill, size) => formatEnd(value, fill, size) };
   }
 
-  static get BRANCOS2() {
+  static get BRANCOS() {
     return { value: Brancos.CENTO_OITENTA, filler: Brancos.CENTO_OITENTA, size: 180, formatStyle: (value, fill, size) => formatEnd(value, fill, size) };
   }
 
