@@ -314,7 +314,7 @@ class RemessaRateioCredito {
   }
 
   static get DAC_NOSSO_NUMERO() {
-    return { value: gerarNossoNumeroAleatorio() , filler: "0", size: 1, formatStyle: (value, fill, size) => formatStart(value, fill, size)  };
+    return { value: "1" , filler: "0", size: 1, formatStyle: (value, fill, size) => formatStart(value, fill, size)  };
   }
 
   static get SEQUENCIA_RATEIO() {
@@ -363,7 +363,7 @@ class RemessaDadosSacadorAvalista {
   static get NUMERO_INSCRICAO() {
     return { value: "00012044551802", filler: "00000000000000", size: 14, formatStyle: (value, fill, size) => formatStart(value, fill, size)  };
   }
-  
+
   static get LOGRADOURO() {
     return { value: "Rua Alfaiate Reis".padEnd(40,Brancos.UM), filler: Brancos.QUARENTA, size: 40, formatStyle: (value, fill, size) => formatEnd(value, fill, size) };
   }
