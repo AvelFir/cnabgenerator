@@ -199,6 +199,7 @@ function mountLinhaRemessaDetalhePadrao() {
   function mountSacadorAvalista() {
     const tipoRegistroSacador = getValueOrFiller(document.getElementById("tipoRegistroSacador"), RemessaDadosSacadorAvalista.TIPO_REGISTRO);
     const codigoInscricaoSacador = getValueOrFiller(document.getElementById("codigoInscricaoSacador"), RemessaDadosSacadorAvalista.CODIGO_INSCRICAO);
+    const numeroInscricaoSacador = getValueOrFiller(document.getElementById("numeroInscricaoSacador"), RemessaDadosSacadorAvalista.NUMERO_INSCRICAO);
     const email = getValueOrFiller(document.getElementById("email"), RemessaDadosSacadorAvalista.EMAIL);
     const logradouroSacador = getValueOrFiller(document.getElementById("logradouroSacador"), RemessaDadosSacadorAvalista.LOGRADOURO);
     const bairroSacador = getValueOrFiller(document.getElementById("bairroSacador"), RemessaDadosSacadorAvalista.BAIRRO);
@@ -208,7 +209,7 @@ function mountLinhaRemessaDetalhePadrao() {
     const brancosSacador = getValueOrFiller(document.getElementById("brancos2"), RemessaDadosSacadorAvalista.BRANCOS);
     const numeroSequencialSacador = getValueOrFiller(document.getElementById("numeroSequencialSacador"), RemessaDadosSacadorAvalista.NUMERO_SEQUENCIAL);
   
-    return tipoRegistroSacador + codigoInscricaoSacador + email + logradouroSacador + bairroSacador + cepSacador + cidadeSacador + estadoSacador + brancosSacador + numeroSequencialSacador;
+    return tipoRegistroSacador + email + codigoInscricaoSacador  +  numeroInscricaoSacador + logradouroSacador + bairroSacador + cepSacador + cidadeSacador + estadoSacador + brancosSacador + numeroSequencialSacador;
   }
 
   function mountRemessaRateioCredito() {

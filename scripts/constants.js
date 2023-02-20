@@ -352,14 +352,18 @@ class RemessaDadosSacadorAvalista {
     return { value: "5", filler: "0", size: 1, formatStyle: (value, fill, size) => formatStart(value, fill, size) };
   }
 
-  static get CODIGO_INSCRICAO() {
-    return { value: "1", filler: "0", size: 1, formatStyle: (value, fill, size) => formatStart(value, fill, size)  };
-  }
-
   static get EMAIL() {
     return { value: "teste@teste.com.br".padEnd(120,Brancos.UM), filler: Brancos.CENTO_VINTE, size: 120, formatStyle: (value, fill, size) => formatEnd(value, fill, size) };
   }
 
+  static get CODIGO_INSCRICAO() {
+    return { value: "01", filler: "00", size: 2, formatStyle: (value, fill, size) => formatStart(value, fill, size)  };
+  }
+
+  static get NUMERO_INSCRICAO() {
+    return { value: "00012044551802", filler: "00000000000000", size: 14, formatStyle: (value, fill, size) => formatStart(value, fill, size)  };
+  }
+  
   static get LOGRADOURO() {
     return { value: "Rua Alfaiate Reis".padEnd(40,Brancos.UM), filler: Brancos.QUARENTA, size: 40, formatStyle: (value, fill, size) => formatEnd(value, fill, size) };
   }

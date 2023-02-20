@@ -97,8 +97,9 @@ function lockUnlockButton(fieldId, button) {
 
   function setDadosSacadorAvalistaButton() {
     document.getElementById('tipoRegistroSacador').value = RemessaDadosSacadorAvalista.TIPO_REGISTRO.value;
-    document.getElementById('codigoInscricaoSacador').value = RemessaDadosSacadorAvalista.CODIGO_INSCRICAO.value;
     document.getElementById('email').value = RemessaDadosSacadorAvalista.EMAIL.value;
+    document.getElementById('codigoInscricaoSacador').value = RemessaDadosSacadorAvalista.CODIGO_INSCRICAO.value;
+    document.getElementById('numeroInscricaoSacador').value = RemessaDadosSacadorAvalista.NUMERO_INSCRICAO.value;
     document.getElementById('logradouroSacador').value = RemessaDadosSacadorAvalista.LOGRADOURO.value;
     document.getElementById('bairroSacador').value = RemessaDadosSacadorAvalista.BAIRRO.value;
     document.getElementById('cepSacador').value = RemessaDadosSacadorAvalista.CEP.value;
