@@ -21,8 +21,26 @@ function lockUnlockButton(fieldId, button) {
     download(nomeArquivo,documento);
   }
 
-  function adicionarLinhaButton(){
+  function adicionarLinhaRemessaDetalhePadraoButton(){
     var linha = mountLinhaRemessaDetalhePadrao();
+    linha = linha.substring(0, linha.length - 6);
+    adicionarLinha(linha);
+  }
+
+  function adicionarLinhaDetalheMultaButton(){
+    var linha = mountRemessaMultaDefaultValues();
+    linha = linha.substring(0, linha.length - 6);
+    adicionarLinha(linha);
+  }
+
+  function adicionarLinhaRemessaRateioButton(){
+    var linha = mountRemessaRateioCredito();
+    linha = linha.substring(0, linha.length - 6);
+    adicionarLinha(linha);
+  }
+
+  function adicionarLinhaDadosSacadorAvalistaButton(){
+    var linha = mountSacadorAvalista();
     linha = linha.substring(0, linha.length - 6);
     adicionarLinha(linha);
   }
