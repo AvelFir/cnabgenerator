@@ -61,10 +61,10 @@ function toggleSection(sectionName) {
 
   if (formSectionContent.style.display === "none") {
     formSectionContent.style.display = "block";
-    toggleButton.innerText = "Minimize " + sectionName;
+    toggleButton.innerText = "Minimizar " + sectionName;
   } else {
     formSectionContent.style.display = "none";
-    toggleButton.innerText = "Maximize " + sectionName;
+    toggleButton.innerText = "Maximizar " + sectionName;
   }
 }
 
