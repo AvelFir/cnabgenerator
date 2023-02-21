@@ -20,6 +20,22 @@ function getValueOrFiller(field, configuration){
         return configuration.formatStyle(fieldValue,size,fillerValue[0]);
     }
     return fillerValue;    
+}
+
+function getValueOrFiller(field, configuration, savedValueName){
+    var fieldValue = field.value;
+    var fillerValue = configuration.filler;
+    var savedValue = localStorage.getItem(savedValueName);
+    var isSobrepor = localStorage.getItem("isSobreporLinha") === "true";
+    var size = configuration.size;
+
+    if((isSobrepor || !isValidString(fieldValue)) && isValidString(savedValue)){
+        return configuration.formatStyle(savedValue,size,fillerValue[0]);
+    }
+    if(isValidString(fieldValue)){
+        return configuration.formatStyle(fieldValue,size,fillerValue[0]);
+    }
+    return fillerValue;    
 } 
 
 function getSavedValueOrFiller(fieldName, configuration){
@@ -65,4 +81,3 @@ function calcularDacCNAB400(numero) {
   
     return digito;
   }
-  

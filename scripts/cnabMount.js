@@ -216,10 +216,10 @@ function mountLinhaRemessaDetalhePadrao() {
     const tipoRegistroRateio = getValueOrFiller(document.getElementById('tipoRegistroRateio'), RemessaRateioCredito.TIPO_REGISTRO);
     const codigoInscricaoRateio = getValueOrFiller(document.getElementById('codigoInscricaoRateio'), RemessaRateioCredito.CODIGO_INSCRICAO);
     const numeroInscricaoRateio = getValueOrFiller(document.getElementById('numeroInscricaoRateio'), RemessaRateioCredito.NUMERO_INSCRICAO);
-    const agenciaBeneficiarioRateio = getValueOrFiller(document.getElementById('agenciaBeneficiarioRateio'), RemessaRateioCredito.AGENCIA);
+    const agenciaBeneficiarioRateio = getValueOrFiller(document.getElementById('agenciaBeneficiarioRateio'), RemessaRateioCredito.AGENCIA, "agenciaPadrao");
     const zerosRateio = getValueOrFiller(document.getElementById('zerosRateio'), RemessaRateioCredito.ZEROS);
-    const contaBeneficiarioRateio = getValueOrFiller(document.getElementById('contaBeneficiarioRateio'), RemessaRateioCredito.CONTA);
-    const dacBeneficiarioRateio = getValueOrFiller(document.getElementById('dacBeneficiarioRateio'), RemessaRateioCredito.DAC);
+    const contaBeneficiarioRateio = getValueOrFiller(document.getElementById('contaBeneficiarioRateio'), RemessaRateioCredito.CONTA, "contaPadrao");
+    const dacBeneficiarioRateio = getValueOrFiller(document.getElementById('dacBeneficiarioRateio'), RemessaRateioCredito.DAC, "dacPadrao");
     const numeroCarteiraRateio = getValueOrFiller(document.getElementById('numeroCarteiraRateio'), RemessaRateioCredito.NUMERO_CARTEIRA);
     const nossoNumeroRateio = getValueOrFiller(document.getElementById('nossoNumeroRateio'), RemessaRateioCredito.NOSSO_NUMERO);
     const dacNossoNumeroRateio = getValueOrFiller(document.getElementById('dacNossoNumeroRateio'), RemessaRateioCredito.DAC_NOSSO_NUMERO);
