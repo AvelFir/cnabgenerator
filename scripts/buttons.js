@@ -178,6 +178,13 @@ function lockUnlockButton(fieldId, button) {
     }
   }
 
+  function setDacButton(agenciaElement,contaElement,targetElement){
+    const agencia = document.getElementById(agenciaElement).value.padStart(4,"0");
+    const conta = document.getElementById(contaElement).value.padStart(7,"0");
+    const dac = calcularDacCNAB400(agencia + conta);
+    document.getElementById(targetElement).value = dac;
+  }
+
   function salvarConfiguracoes() {
     var agencia = document.getElementById("agenciaPadrao").value;
     var conta = document.getElementById("contaPadrao").value;
