@@ -19,29 +19,37 @@
     <div class="section" id="Configuracao" S>
       <button type="button" class="toggleButton" data-section="Configuracao">Expandir Configurações</button>
       <div class="sectionContent" id="ConfiguracaoContent">
-        <label for="agenciaPadrao">AGENCIA PADRAO:</label>
-        <input type="text" id="agenciaPadrao" name="agenciaPadrao" maxlength="4" size=4 />
         <br>
-        <label for="contaPadrao">CONTA PADRAO:</label>
-        <input type="text" id="contaPadrao" name="contaPadrao" maxlength="5" size=5 />
-        <br>
-        <label for="dacPadrao">DAC PADRAO:</label>
-        <input type="text" id="dacPadrao" name="dacPadrao" maxlength="1" size=1 />
-        <button type="button" onclick="setDacButton('agenciaPadrao','contaPadrao','dacPadrao')">Calcular Dac</button>
+        <div>
+          <label for="agenciaPadrao">AGENCIA PADRAO:</label>
+          <input type="text" id="agenciaPadrao" name="agenciaPadrao" maxlength="4" size=4 />
+          <br>
+          <label for="contaPadrao">CONTA PADRAO:</label>
+          <input type="text" id="contaPadrao" name="contaPadrao" maxlength="5" size=5 />
+          <br>
+          <label for="dacPadrao">DAC PADRAO:</label>
+          <input type="text" id="dacPadrao" name="dacPadrao" maxlength="1" size=1 />
+          <button type="button" onclick="setDacButton('agenciaPadrao','contaPadrao','dacPadrao')">Calcular Dac</button>
+          <br>
+          <br>
+          <label for="nossoNumeroPadrao">NOSSO NÚMERO PADRAO:</label>
+          <input type="text" id="nossoNumeroPadrao" name="nossoNumeroPadrao" maxlength="8" />
+          <button type="button" onclick="setNossoNumerPadraoButton('data')">Data</button>
+          <button type="button" onclick="setNossoNumerPadraoButton('aleatorio')">Aleatorio</button>
+          <br>
+          <label for="codigoOcorrenciaPadrao">CÓD. DE OCORRÊNCIA PADRAO</label>
+          <input type="text" id="codigoOcorrenciaPadrao" name="codigoOcorrenciaPadrao" maxlength="2" />
+          <br>
+          <div>
+            <label for="isSobreporLinha">Sobrepor Linha?:</label>
+            <input type="checkbox" id="isSobreporLinha" name="isSobreporLinha">
+          </div>
+        </div>
         <br>
         <br>
         <label for="headerArquivoPadrao">HEADER ARQUIVO PADRAO:</label>
         <input type="text" id="headerArquivoPadrao" name="headerArquivoPadrao" maxlength="394" size=100 />
         <button type="button" onclick="setHeaderArquivoPadraoButton()">Gerar Header</button>
-        <br>
-        <br>
-        <label for="nossoNumeroPadrao">NOSSO NÚMERO PADRAO:</label>
-        <input type="text" id="nossoNumeroPadrao" name="nossoNumeroPadrao" maxlength="8" />
-        <button type="button" onclick="setNossoNumerPadraoButton('data')">Data</button>
-        <button type="button" onclick="setNossoNumerPadraoButton('aleatorio')">Aleatorio</button>
-        <br>
-        <label for="codigoOcorrenciaPadrao">CÓD. DE OCORRÊNCIA PADRAO</label>
-        <input type="text" id="codigoOcorrenciaPadrao" name="codigoOcorrenciaPadrao" maxlength="2" />
         <br>
         <br>
         <label for="complementoArquivoPadrao">COMPLEMENTO DE ARQUIVO PADRAO:</label>
@@ -58,10 +66,6 @@
         <br>
         <label for="isComplementoPadrao">Deseja usar complemento no fim da linha?:</label>
         <input type="checkbox" id="isComplementoPadrao" name="isComplementoPadrao">
-        <br>
-        <br>
-        <label for="isSobreporLinha">Sobrepor Linha?:</label>
-        <input type="checkbox" id="isSobreporLinha" name="isSobreporLinha">
         <br>
         <br>
         <button type="button" onclick="salvarConfiguracoes()">Salvar Configuracoes</button>
@@ -353,7 +357,9 @@
 
                 <label for="dacBeneficiarioRateio">DAC:</label>
                 <input type="text" id="dacBeneficiarioRateio" name="dacBeneficiarioRateio" maxlength="1">
-                <button type="button" onclick="setDacButton('agenciaBeneficiarioRateio','contaBeneficiarioRateio','dacBeneficiarioRateio')">Calcular Dac</button>\
+                <button type="button"
+                  onclick="setDacButton('agenciaBeneficiarioRateio','contaBeneficiarioRateio','dacBeneficiarioRateio')">Calcular
+                  Dac</button>\
                 <br>
 
                 <label for="numeroCarteiraRateio">NUMERO DA CARTEIRA:</label>
