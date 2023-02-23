@@ -24,25 +24,25 @@ function lockUnlockButton(fieldId, button) {
   function adicionarLinhaRemessaDetalhePadraoButton(){
     var linha = mountLinhaRemessaDetalhePadrao();
     linha = linha.substring(0, linha.length - 6);
-    adicionarLinha(linha);
+    adicionarLinha400(linha);
   }
 
   function adicionarLinhaDetalheMultaButton(){
     var linha = mountRemessaMultaDefaultValues();
     linha = linha.substring(0, linha.length - 6);
-    adicionarLinha(linha);
+    adicionarLinha400(linha);
   }
 
   function adicionarLinhaRemessaRateioButton(){
     var linha = mountRemessaRateioCredito();
     linha = linha.substring(0, linha.length - 6);
-    adicionarLinha(linha);
+    adicionarLinha400(linha);
   }
 
   function adicionarLinhaDadosSacadorAvalistaButton(){
     var linha = mountSacadorAvalista();
     linha = linha.substring(0, linha.length - 6);
-    adicionarLinha(linha);
+    adicionarLinha400(linha);
   }
 
   function setValorRemessaDetalhePadraoButton(){

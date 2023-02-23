@@ -1,14 +1,19 @@
 function download(filename, text) {
-  var element = document.createElement('a');
-  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
-  element.setAttribute('download', filename);
+  const element = document.createElement('a');
+  element.href = URL.createObjectURL(new Blob([text], { type: 'text/plain;charset=utf-8' }));
+  element.download = filename;
   element.style.display = 'none';
   document.body.appendChild(element);
+  element.addEventListener('click', () => {
+    requestAnimationFrame(() => {
+      URL.revokeObjectURL(element.href);
+      document.body.removeChild(element);
+    });
+  });
   element.click();
-  document.body.removeChild(element);
 }
 
-function adicionarLinha(input1Content) {
+function adicionarLinha400(input1Content) {
   // selecione a tabela onde deseja adicionar a nova linha
   const tabela = document.querySelector('#tabelaArquivo');
 
