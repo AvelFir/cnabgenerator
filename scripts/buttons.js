@@ -92,7 +92,7 @@ function lockUnlockButton(fieldId, button) {
     document.getElementById("prazo").value = RemessaPadraoConstants.PRAZO.filler;
     document.getElementById("brancos4").value = RemessaPadraoConstants.BRANCOS4.value;
     document.getElementById("numeroSequencial").value = RemessaPadraoConstants.NUMERO_SEQUENCIAL.value;;
-    setFieldsReadOnly();
+    setFieldsReadOnly('RemessaPadraoContent');
   }
 
   function setDadosSacadorAvalistaButton() {
@@ -107,6 +107,7 @@ function lockUnlockButton(fieldId, button) {
     document.getElementById('estadoSacador').value = RemessaDadosSacadorAvalista.ESTADO.value;
     document.getElementById('brancosSacador').value = RemessaDadosSacadorAvalista.BRANCOS.value;
     document.getElementById('numeroSequencialSacador').value = RemessaDadosSacadorAvalista.NUMERO_SEQUENCIAL.value;
+    setFieldsReadOnly('DadosSacadorAvalistaContent');
   }
 
   function setDetalheMultaButton() {
@@ -116,6 +117,7 @@ function lockUnlockButton(fieldId, button) {
     document.getElementById('valorMulta').value = RemessaMulta.VALOR_MULTA.value;
     document.getElementById('brancosMulta').value = RemessaMulta.BRANCOS.value;
     document.getElementById('numeroSequencialMulta').value = RemessaMulta.NUMERO_SEQUENCIAL.value;
+    setFieldsReadOnly('ComplementoDetalheMultaContent');
   }
   
 

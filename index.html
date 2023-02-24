@@ -133,7 +133,8 @@
               </div>
               <div>
                 <label for="usoEmpresa">USO DA EMPRESA:</label>
-                <input type="text" id="usoEmpresa" name="usoEmpresa" maxlength="25" size="25" />
+                <input type="text" id="usoEmpresa" name="usoEmpresa" class="fixo" maxlength="25" size="25" />
+                <button type="button" onclick="lockUnlockButton('usoEmpresa',this)" class="editButton">Travar</button>
               </div>
               <div>
                 <label for="nossoNumero">NOSSO NÚMERO:</label>
@@ -151,20 +152,21 @@
               </div>
               <div>
                 <label for="usoBanco">USO DO BANCO:</label>
-                <input type="text" id="usoBanco" name="usoBanco" maxlength="21" />
+                <input type="text" id="usoBanco" class="fixo" name="usoBanco" maxlength="21" />
+                <button type="button" onclick="lockUnlockButton('usoBanco',this)" class="editButton">Travar</button>
               </div>
               <div>
                 <label for="carteira">CARTEIRA:</label>
                 <input type="text" id="carteira" name="carteira" maxlength="1" />
               </div>
-
               <div>
                 <label for="codigoOcorrencia">CÓD. DE OCORRÊNCIA</label>
                 <input type="text" id="codigoOcorrencia" name="codigoOcorrencia" maxlength="2" />
               </div>
               <div>
                 <label for="numeroDocumento">N DO DOCUMENTO</label>
-                <input type="text" id="numeroDocumento" name="numeroDocumento" maxlength="10" />
+                <input type="text" id="numeroDocumento" class="fixo" name="numeroDocumento" maxlength="10" />
+                <button type="button" onclick="lockUnlockButton('numeroDocumento',this)" class="editButton">Travar</button>
               </div>
               <div>
                 <label for="vencimento">VENCIMENTO</label>
@@ -196,11 +198,13 @@
               </div>
               <div>
                 <label for="instrucao1">INSTRUÇÃO 1</label>
-                <input type="text" id="instrucao1" name="instrucao1" maxlength="2" />
+                <input type="text" id="instrucao1" class = "fixo"name="instrucao1" maxlength="2" />
+                <button type="button" onclick="lockUnlockButton('instrucao1',this)" class="editButton">Travar</button>
               </div>
               <div>
                 <label for="instrucao2">INSTRUÇÃO 2</label>
-                <input type="text" id="instrucao2" name="instrucao2" maxlength="2" />
+                <input type="text" id="instrucao2" class = "fixo" name="instrucao2" maxlength="2" />
+                <button type="button" onclick="lockUnlockButton('instrucao2',this)" class="editButton">Travar</button>
               </div>
               <div>
                 <label for="valorJuros">VALOR JUROS:</label>
@@ -261,7 +265,8 @@
               </div>
               <div>
                 <label for="sacadorAvalista">SACADOR AVALISTA:</label>
-                <input type="text" id="sacadorAvalista" name="sacadorAvalista" maxlength="30" />
+                <input type="text" id="sacadorAvalista" class="fixo" name="sacadorAvalista" maxlength="30" />
+                <button type="button" onclick="lockUnlockButton('sacadorAvalista',this)" class="editButton">Travar</button>
               </div>
               <div>
                 <label for="brancos3">BRANCOS3:</label>
@@ -314,9 +319,11 @@
                 <label for="valorMulta">VALOR DA MULTA:</label>
                 <input type="text" id="valorMulta" name="valorMulta" maxlength="13"><br>
 
+              </div>
                 <label for="brancosMulta">BRANCOS:</label>
-                <input type="text" id="brancosMulta" name="brancosMulta" maxlength="371"><br>
-
+                <input type="text" id="brancosMulta" class="fixo" name="brancosMulta" maxlength="371">
+                <button type="button" onclick="lockUnlockButton('brancosMulta',this)"class="editButton">Travar</button>
+                <div>
                 <label for="numeroSequencialMulta">NUMERO SEQUENCIAL:</label>
                 <input type="text" id="numeroSequencialMulta" name="numeroSequencialMulta" maxlength="6"><br>
               </div>
@@ -655,41 +662,51 @@
               </div>
               <br>
               <div>
+                <div>
                 <label for="tipoRegistroSacador">TIPO REGISTRO:</label>
                 <input type="text" id="tipoRegistroSacador" name="tipoRegistroSacador" maxlength="1"><br>
-
+              </div>
+              <div>
                 <label for="email">EMAIL:</label>
                 <input type="text" id="email" name="email" maxlength="120"><br>
-
+              </div>
                 <label for="codigoInscricaoSacador">CÓDIGO INSCRIÇÃO:</label>
                 <input type="text" id="codigoInscricaoSacador" name="codigoInscricaoSacador" maxlength="2"><br>
-
+              <div>
                 <label for="numeroInscricaoSacador">NUMERO INSCRICAO:</label>
                 <input type="text" id="numeroInscricaoSacador" name="numeroInscricaoSacador" maxlength="14"><br>
-
+              </div>
+              <div>
                 <label for="logradouroSacador">LOGRADOURO:</label>
                 <input type="text" id="logradouroSacador" name="logradouroSacador" maxlength="40"><br>
-
+              </div>
+                <div>
                 <label for="bairroSacador">BAIRRO:</label>
                 <input type="text" id="bairroSacador" name="bairroSacador" maxlength="12"><br>
-
+              </div>
+                <div>
                 <label for="cepSacador">CEP:</label>
                 <input type="text" id="cepSacador" name="cepSacador" maxlength="8"><br>
-
+              </div>
+                <div>
                 <label for="cidadeSacador">CIDADE:</label>
                 <input type="text" id="cidadeSacador" name="cidadeSacador" maxlength="15"><br>
-
+              </div>
+                <div>
                 <label for="estadoSacador">ESTADO:</label>
                 <input type="text" id="estadoSacador" name="estadoSacador" maxlength="2"><br>
-
+              </div>
+                <div>
                 <label for="brancosSacador">BRANCOS:</label>
-                <input type="text" id="brancosSacador" name="brancosSacador" maxlength="180"><br>
-
+                <input type="text" id="brancosSacador" class="fixo" name="brancosSacador" maxlength="180">
+                <button type="button" onclick="lockUnlockButton('brancosSacador',this)" class="editButton">Travar</button>
+              </div>
                 <label for="numeroSequencialSacador">NÚMERO SEQUENCIAL:</label>
                 <input type="text" id="numeroSequencialSacador" name="numeroSequencialSacador" maxlength="6"><br>
               </div>
             </div>
           </div>
+          <br>
         </div>
       </div>
       <div class="displayArquivo" style="border: 1px solid black;">

@@ -68,16 +68,17 @@ function toggleSection(sectionName) {
   }
 }
 
-function setFieldsReadOnly() {
-  var fields = document.querySelectorAll(".fixo");
+function setFieldsReadOnly(parentId) {
+  var fields = document.querySelectorAll(`#${parentId} .fixo`);
   for (var i = 0; i < fields.length; i++) {
     fields[i].setAttribute("readonly", "readonly");
   }
-  setEditButtonsMessage();
+  setEditButtonsMessage(parentId);
 }
 
-function setEditButtonsMessage() {
-  var editButtons = document.querySelectorAll(".editButton");
+
+function setEditButtonsMessage(parentId) {
+  var editButtons = document.querySelectorAll(`#${parentId} .editButton`);
   for (var i = 0; i < editButtons.length; i++) {
     editButtons[i].innerHTML = "Destravar";
   }
