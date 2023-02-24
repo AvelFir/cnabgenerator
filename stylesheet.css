@@ -42,3 +42,7 @@ input:not(.fixo) {
 #contadorSequencialGlobal {
   display: none;
 }
+
+.editButton {
+  display: none;
+}

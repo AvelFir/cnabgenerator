@@ -73,6 +73,7 @@ function setFieldsReadOnly(parentId) {
   for (var i = 0; i < fields.length; i++) {
     fields[i].setAttribute("readonly", "readonly");
   }
+  setEditButtonsVisible(parentId);
   setEditButtonsMessage(parentId);
 }
 
@@ -81,5 +82,12 @@ function setEditButtonsMessage(parentId) {
   var editButtons = document.querySelectorAll(`#${parentId} .editButton`);
   for (var i = 0; i < editButtons.length; i++) {
     editButtons[i].innerHTML = "Destravar";
+  }
+}
+
+function setEditButtonsVisible(parentId) {
+  var editButtons = document.querySelectorAll(`#${parentId} .editButton`);
+  for (var i = 0; i < editButtons.length; i++) {
+    editButtons[i].style.display = "inline-block";
   }
 }
