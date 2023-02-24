@@ -91,7 +91,6 @@ function lockUnlockButton(fieldId, button) {
     document.getElementById("dataMora").value = RemessaPadraoConstants.DATA_MORA.filler;
     document.getElementById("prazo").value = RemessaPadraoConstants.PRAZO.filler;
     document.getElementById("brancos4").value = RemessaPadraoConstants.BRANCOS4.value;
-    document.getElementById("numeroSequencial").value = RemessaPadraoConstants.NUMERO_SEQUENCIAL.value;;
     setFieldsReadOnly('RemessaPadraoContent');
   }
 
@@ -106,7 +105,6 @@ function lockUnlockButton(fieldId, button) {
     document.getElementById('cidadeSacador').value = RemessaDadosSacadorAvalista.CIDADE.value;
     document.getElementById('estadoSacador').value = RemessaDadosSacadorAvalista.ESTADO.value;
     document.getElementById('brancosSacador').value = RemessaDadosSacadorAvalista.BRANCOS.value;
-    document.getElementById('numeroSequencialSacador').value = RemessaDadosSacadorAvalista.NUMERO_SEQUENCIAL.value;
     setFieldsReadOnly('DadosSacadorAvalistaContent');
   }
 
@@ -116,7 +114,6 @@ function lockUnlockButton(fieldId, button) {
     document.getElementById('dataMulta').value = RemessaMulta.DATA_MULTA.value;
     document.getElementById('valorMulta').value = RemessaMulta.VALOR_MULTA.value;
     document.getElementById('brancosMulta').value = RemessaMulta.BRANCOS.value;
-    document.getElementById('numeroSequencialMulta').value = RemessaMulta.NUMERO_SEQUENCIAL.value;
     setFieldsReadOnly('ComplementoDetalheMultaContent');
   }
   
@@ -138,7 +135,6 @@ function lockUnlockButton(fieldId, button) {
     document.getElementById('dacRateio1').value = RemessaRateioCredito.DAC_RATEIO.value;
     document.getElementById('valorRateio1').value = RemessaRateioCredito.VALOR_RATEIO.value;
     document.getElementById('tipoValorRateio').value = RemessaRateioCredito.TIPO_VALOR.value;
-    document.getElementById('numeroSequencialRateio').value = RemessaRateioCredito.NUMERO_SEQUENCIAL.value;
   }
   
   function setNossoNumeroButton(tipo){

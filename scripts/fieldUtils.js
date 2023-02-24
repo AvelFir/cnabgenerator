@@ -7,7 +7,7 @@ function formatEnd(str,size,filler){
 }
 
 function getValueOrFiller(field, configuration){
-    var fieldValue = field.value;
+    var fieldValue = field ? field.value : "";
     var fillerValue = configuration.filler;
     var savedValue = localStorage.getItem(field.name + "Padrao");
     var isSobrepor = localStorage.getItem("isSobreporLinha") === "true";
@@ -23,7 +23,7 @@ function getValueOrFiller(field, configuration){
 }
 
 function getValueOrFiller(field, configuration, savedValueName){
-    var fieldValue = field.value;
+    var fieldValue = field ? field.value : "";
     var fillerValue = configuration.filler;
     var savedValue = localStorage.getItem(savedValueName);
     var isSobrepor = localStorage.getItem("isSobreporLinha") === "true";
