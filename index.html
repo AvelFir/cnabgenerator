@@ -13,6 +13,7 @@
   <script src="./scripts/constants.js"></script>
   <script src="./scripts/displayArquivo.js"></script>
   <script src="./scripts/global.js"></script>
+  <script src="./scripts/camposRateio.js"></script>
 </head>
 
 <body>
@@ -23,23 +24,23 @@
       <div class="sectionContent" id="ConfiguracaoContent">
         <br>
         <div>
-          <label for="agenciaPadrao">AGENCIA PADRAO:</label>
+          <label for="agenciaPadrao">AGENCIA PADRAO (4):</label>
           <input type="text" id="agenciaPadrao" name="agenciaPadrao" maxlength="4" size=4 />
           <br>
-          <label for="contaPadrao">CONTA PADRAO:</label>
+          <label for="contaPadrao">CONTA PADRAO (5):</label>
           <input type="text" id="contaPadrao" name="contaPadrao" maxlength="5" size=5 />
           <br>
-          <label for="dacPadrao">DAC PADRAO:</label>
+          <label for="dacPadrao">DAC PADRAO (1):</label>
           <input type="text" id="dacPadrao" name="dacPadrao" maxlength="1" size=1 />
           <button type="button" onclick="setDacButton('agenciaPadrao','contaPadrao','dacPadrao')">Calcular Dac</button>
           <br>
           <br>
-          <label for="nossoNumeroPadrao">NOSSO NÚMERO PADRAO:</label>
+          <label for="nossoNumeroPadrao">NOSSO NÚMERO PADRAO (8):</label>
           <input type="text" id="nossoNumeroPadrao" name="nossoNumeroPadrao" maxlength="8" />
           <button type="button" onclick="setNossoNumerPadraoButton('data')">Data</button>
           <button type="button" onclick="setNossoNumerPadraoButton('aleatorio')">Aleatorio</button>
           <br>
-          <label for="codigoOcorrenciaPadrao">CÓD. DE OCORRÊNCIA PADRAO</label>
+          <label for="codigoOcorrenciaPadrao">CÓD. DE OCORRÊNCIA PADRAO (2)</label>
           <input type="text" id="codigoOcorrenciaPadrao" name="codigoOcorrenciaPadrao" maxlength="2" />
           <br>
           <div>
@@ -49,12 +50,12 @@
         </div>
         <br>
         <br>
-        <label for="headerArquivoPadrao">HEADER ARQUIVO PADRAO:</label>
+        <label for="headerArquivoPadrao">HEADER ARQUIVO PADRAO (394):</label>
         <input type="text" id="headerArquivoPadrao" name="headerArquivoPadrao" maxlength="394" size=100 />
         <button type="button" onclick="setHeaderArquivoPadraoButton()">Gerar Header</button>
         <br>
         <br>
-        <label for="complementoArquivoPadrao">COMPLEMENTO DE ARQUIVO PADRAO:</label>
+        <label for="complementoArquivoPadrao">COMPLEMENTO DE ARQUIVO PADRAO (109):</label>
         <input type="text" id="complementoArquivoPadrao" name="complementoArquivoPadrao" maxlength="109" size=100 />
         <button type="button" onclick="setComplementoArquivoPadraoButton()">Gerar Complemento</button>
         <br>
@@ -62,7 +63,7 @@
         <input type="checkbox" id="isComplementoArquivoPadrao" name="isComplementoArquivoPadrao">
         <br>
         <br>
-        <label for="complementoLinhaPadrao">COMPLEMENTO DE LINHA PADRAO:</label>
+        <label for="complementoLinhaPadrao">COMPLEMENTO DE LINHA PADRAO (700):</label>
         <input type="text" id="complementoLinhaPadrao" name="complementoLinhaPadrao" maxlength="700" size=100 />
         <button type="button" onclick="setComplementoButton()">Gerar Complemento</button>
         <br>
@@ -90,194 +91,194 @@
               </div>
               <br>
               <div>
-                <label for="codigoDeInscricao">CÓDIGO DE INSCRIÇÃO:</label>
+                <label for="codigoDeInscricao">CÓDIGO DE INSCRIÇÃO (2):</label>
                 <input type="text" id="codigoDeInscricao" name="codigoDeInscricao" maxlength="2" />
               </div>
               <div>
-                <label for="numeroDeInscricao">NÚMERO DE INSCRIÇÃO:</label>
+                <label for="numeroDeInscricao">NÚMERO DE INSCRIÇÃO (14):</label>
                 <input type="text" id="numeroDeInscricao" name="numeroDeInscricao" maxlength="14" size="14" />
               </div>
               <div>
-                <label for="agencia">AGÊNCIA:</label>
+                <label for="agencia">AGÊNCIA (4):</label>
                 <input type="text" id="agencia" name="agencia" maxlength="4" />
               </div>
               <div>
-                <label for="zeros1">ZEROS1:</label>
+                <label for="zeros1">ZEROS1 (2):</label>
                 <input type="text" id="zeros1" class="fixo" name="zeros1" maxlength="2" />
                 <button type="button" onclick="lockUnlockButton('zeros1',this)" class="editButton">Travar</button>
               </div>
               <div>
-                <label for="conta">CONTA:</label>
+                <label for="conta">CONTA (5):</label>
                 <input type="text" id="conta" name="conta" maxlength="5" />
               </div>
               <div>
-                <label for="dac">DAC:</label>
+                <label for="dac">DAC (1):</label>
                 <input type="text" id="dac" name="dac" maxlength="1" />
                 <button type="button" onclick="setDacButton('agencia','conta','dac')">Calcular Dac</button>\
               </div>
               <div>
-                <label for="brancos1">BRANCOS1:</label>
+                <label for="brancos1">BRANCOS1 (4):</label>
                 <input type="text" id="brancos1" class="fixo" name="brancos1" maxlength="4" />
                 <button type="button" onclick="lockUnlockButton('brancos1',this)" class="editButton">Travar</button>
               </div>
               <div>
-                <label for="instrucaoAlegacao">INSTRUÇÂO ALEGAÇÂO:</label>
+                <label for="instrucaoAlegacao">INSTRUÇÂO ALEGAÇÂO (4):</label>
                 <input type="text" id="instrucaoAlegacao" name="instrucaoAlegacao" maxlength="4" />
               </div>
               <div>
-                <label for="usoEmpresa">USO DA EMPRESA:</label>
+                <label for="usoEmpresa">USO DA EMPRESA (25):</label>
                 <input type="text" id="usoEmpresa" name="usoEmpresa" class="fixo" maxlength="25" size="25" />
                 <button type="button" onclick="lockUnlockButton('usoEmpresa',this)" class="editButton">Travar</button>
               </div>
               <div>
-                <label for="nossoNumero">NOSSO NÚMERO:</label>
+                <label for="nossoNumero">NOSSO NÚMERO (8):</label>
                 <input type="text" id="nossoNumero" name="nossoNumero" maxlength="8" />
                 <button type="button" onclick="setNossoNumeroButton('data')">Data</button>
                 <button type="button" onclick="setNossoNumeroButton('aleatorio')">Aleatorio</button>
               </div>
               <div>
-                <label for="moedaVariavel">MOEDA VARIAVEL:</label>
+                <label for="moedaVariavel">MOEDA VARIAVEL (13):</label>
                 <input type="text" id="moedaVariavel" name="moedaVariavel" maxlength="13" />
               </div>
               <div>
-                <label for="numeroCarteira">N DA CARTEIRA:</label>
+                <label for="numeroCarteira">N DA CARTEIRA (3):</label>
                 <input type="text" id="numeroCarteira" name="numeroCarteira" maxlength="3" />
               </div>
               <div>
-                <label for="usoBanco">USO DO BANCO:</label>
+                <label for="usoBanco">USO DO BANCO (21):</label>
                 <input type="text" id="usoBanco" class="fixo" name="usoBanco" maxlength="21" />
                 <button type="button" onclick="lockUnlockButton('usoBanco',this)" class="editButton">Travar</button>
               </div>
               <div>
-                <label for="carteira">CARTEIRA:</label>
+                <label for="carteira">CARTEIRA (1):</label>
                 <input type="text" id="carteira" name="carteira" maxlength="1" />
               </div>
               <div>
-                <label for="codigoOcorrencia">CÓD. DE OCORRÊNCIA</label>
+                <label for="codigoOcorrencia">CÓD. DE OCORRÊNCIA (2)</label>
                 <input type="text" id="codigoOcorrencia" name="codigoOcorrencia" maxlength="2" />
               </div>
               <div>
-                <label for="numeroDocumento">N DO DOCUMENTO</label>
+                <label for="numeroDocumento">N DO DOCUMENTO (10)</label>
                 <input type="text" id="numeroDocumento" class="fixo" name="numeroDocumento" maxlength="10" />
                 <button type="button" onclick="lockUnlockButton('numeroDocumento',this)"
                   class="editButton">Travar</button>
               </div>
               <div>
-                <label for="vencimento">VENCIMENTO</label>
+                <label for="vencimento">VENCIMENTO (6)</label>
                 <input type="text" id="vencimento" name="vencimento" maxlength="6" />
               </div>
               <div>
-                <label for="valorTitulo">VALOR DO TÍTULO</label>
+                <label for="valorTitulo">VALOR DO TÍTULO (13)</label>
                 <input type="text" id="valorTitulo" name="valorTitulo" maxlength="13" />
               </div>
               <div>
-                <label for="codigoBanco">CÓDIGO DO BANCO</label>
+                <label for="codigoBanco">CÓDIGO DO BANCO (3)</label>
                 <input type="text" id="codigoBanco" name="codigoBanco" maxlength="3" />
               </div>
               <div>
-                <label for="agenciaCobradora">AGÊNCIA COBRADORA</label>
+                <label for="agenciaCobradora">AGÊNCIA COBRADORA (5)</label>
                 <input type="text" id="agenciaCobradora" name="agenciaCobradora" maxlength="5" />
               </div>
               <div>
-                <label for="especie">ESPÉCIE</label>
+                <label for="especie">ESPÉCIE (2)</label>
                 <input type="text" id="especie" name="especie" maxlength="2" />
               </div>
               <div>
-                <label for="aceite">ACEITE</label>
+                <label for="aceite">ACEITE (1)</label>
                 <input type="text" id="aceite" name="aceite" maxlength="1" />
               </div>
               <div>
-                <label for="dataEmissao">DATA DE EMISSÃO</label>
+                <label for="dataEmissao">DATA DE EMISSÃO (6)</label>
                 <input type="text" id="dataEmissao" name="dataEmissao" maxlength="6" />
               </div>
               <div>
-                <label for="instrucao1">INSTRUÇÃO 1</label>
+                <label for="instrucao1">INSTRUÇÃO 1 (2)</label>
                 <input type="text" id="instrucao1" class="fixo" name="instrucao1" maxlength="2" />
                 <button type="button" onclick="lockUnlockButton('instrucao1',this)" class="editButton">Travar</button>
               </div>
               <div>
-                <label for="instrucao2">INSTRUÇÃO 2</label>
+                <label for="instrucao2">INSTRUÇÃO 2 (2)</label>
                 <input type="text" id="instrucao2" class="fixo" name="instrucao2" maxlength="2" />
                 <button type="button" onclick="lockUnlockButton('instrucao2',this)" class="editButton">Travar</button>
               </div>
               <div>
-                <label for="valorJuros">VALOR JUROS:</label>
+                <label for="valorJuros">VALOR JUROS (13):</label>
                 <input type="text" id="valorJuros" name="valorJuros" maxlength="13" />
               </div>
               <div>
-                <label for="dataDesconto">DATA DESCONTO:</label>
+                <label for="dataDesconto">DATA DESCONTO (6):</label>
                 <input type="text" id="dataDesconto" name="dataDesconto" maxlength="6" />
               </div>
               <div>
-                <label for="valorDesconto">VALOR DO DESCONTO:</label>
+                <label for="valorDesconto">VALOR DO DESCONTO (13):</label>
                 <input type="text" id="valorDesconto" name="valorDesconto" maxlength="13" />
               </div>
               <div>
-                <label for="valorIOF">VALOR DO I.O.F:</label>
+                <label for="valorIOF">VALOR DO I.O.F (13):</label>
                 <input type="text" id="valorIOF" name="valorIOF" maxlength="13" />
               </div>
               <div>
-                <label for="abatimento">ABATIMENTO:</label>
+                <label for="abatimento">ABATIMENTO (13):</label>
                 <input type="text" id="abatimento" name="abatimento" maxlength="13" />
               </div>
               <div>
-                <label>CÓDIGO DE INSCRIÇÃO PAGADOR:</label>
+                <label>CÓDIGO DE INSCRIÇÃO PAGADOR (2):</label>
                 <input type="text" id="codigoInscricaoPagador" maxlength="2" />
               </div>
               <div>
-                <label for="numeroInscricaoPagador">NÚMERO DE INSCRIÇÃO PAGADOR:</label>
+                <label for="numeroInscricaoPagador">NÚMERO DE INSCRIÇÃO PAGADOR (14):</label>
                 <input type="text" id="numeroInscricaoPagador" name="numeroInscricaoPagador" maxlength="14" />
               </div>
               <div>
-                <label for="nome">NOME:</label>
+                <label for="nome">NOME (30):</label>
                 <input type="text" id="nome" name="nome" maxlength="30" />
               </div>
               <div>
-                <label for="brancos2">BRANCOS2:</label>
+                <label for="brancos2">BRANCOS2 (10):</label>
                 <input type="text" id="brancos2" class="fixo" name="brancos2" maxlength="10" />
                 <button type="button" onclick="lockUnlockButton('brancos2',this)" class="editButton">Travar</button>
               </div>
               <div>
-                <label>LOGRADOURO:</label>
+                <label>LOGRADOURO (40):</label>
                 <input type="text" id="logradouro" maxlength="40" />
               </div>
               <div>
-                <label for="bairro">BAIRRO:</label>
+                <label for="bairro">BAIRRO (12):</label>
                 <input type="text" id="bairro" name="bairro" maxlength="12" />
               </div>
               <div>
-                <label for="cep">CEP:</label>
+                <label for="cep">CEP (8):</label>
                 <input type="text" id="cep" name="cep" maxlength="8" />
               </div>
               <div>
-                <label for="cidade">CIDADE:</label>
+                <label for="cidade">CIDADE (15):</label>
                 <input type="text" id="cidade" name="cidade" maxlength="15" />
               </div>
               <div>
-                <label for="estado">ESTADO:</label>
+                <label for="estado">ESTADO (2):</label>
                 <input type="text" id="estado" name="estado" maxlength="2" />
               </div>
               <div>
-                <label for="sacadorAvalista">SACADOR AVALISTA:</label>
+                <label for="sacadorAvalista">SACADOR AVALISTA (30):</label>
                 <input type="text" id="sacadorAvalista" class="fixo" name="sacadorAvalista" maxlength="30" />
                 <button type="button" onclick="lockUnlockButton('sacadorAvalista',this)"
                   class="editButton">Travar</button>
               </div>
               <div>
-                <label for="brancos3">BRANCOS3:</label>
+                <label for="brancos3">BRANCOS3 (4):</label>
                 <input type="text" id="brancos3" class="fixo" name="brancos3" maxlength="4" />
                 <button type="button" onclick="lockUnlockButton('brancos3',this)" class="editButton">Travar</button>
               </div>
               <div>
-                <label for="dataMora">DATA DE MORA:</label>
+                <label for="dataMora">DATA DE MORA (6):</label>
                 <input type="text" id="dataMora" name="dataMora" maxlength="6" />
               </div>
               <div>
-                <label for="prazo">PRAZO:</label>
+                <label for="prazo">PRAZO (2):</label>
                 <input type="text" id="prazo" name="prazo" maxlength="2" />
               </div>
               <div>
-                <label for="brancos4">BRANCOS4:</label>
+                <label for="brancos4">BRANCOS4 (1):</label>
                 <input type="text" id="brancos4" class="fixo" name="brancos4" maxlength="1" />
                 <button type="button" onclick="lockUnlockButton('brancos4',this)" class="editButton">Travar</button>
               </div>
@@ -296,16 +297,16 @@
               </div>
               <br>
               <div>
-                <label for="codigoMulta">CODIGO DA MULTA:</label>
+                <label for="codigoMulta">CODIGO DA MULTA (1):</label>
                 <input type="text" id="codigoMulta" name="codigoMulta" maxlength="1"><br>
 
-                <label for="dataMulta">DATA DA MULTA:</label>
+                <label for="dataMulta">DATA DA MULTA (8):</label>
                 <input type="text" id="dataMulta" name="dataMulta" maxlength="8"><br>
 
-                <label for="valorMulta">VALOR DA MULTA:</label>
+                <label for="valorMulta">VALOR DA MULTA (13):</label>
                 <input type="text" id="valorMulta" name="valorMulta" maxlength="13"><br>
               </div>
-              <label for="brancosMulta">BRANCOS:</label>
+              <label for="brancosMulta">BRANCOS (371):</label>
               <input type="text" id="brancosMulta" class="fixo" name="brancosMulta" maxlength="371">
               <button type="button" onclick="lockUnlockButton('brancosMulta',this)" class="editButton">Travar</button>
             </div>
@@ -320,304 +321,54 @@
                 <button type="button" onclick="adicionarLinhaRemessaRateioButton()">Adicionar Linha</button>
               </div>
               <br>
-              <div>  
-                <label for="codigoInscricaoRateio">CODIGO DE INSCRICAO:</label>
+              <div id="camposRateio">  
+                <label for="codigoInscricaoRateio">CODIGO DE INSCRICAO (2):</label>
                 <input type="text" id="codigoInscricaoRateio" name="codigoInscricaoRateio" maxlength="2">
                 <br>
   
-                <label for="numeroInscricaoRateio">NUMERO DE INSCRICAO:</label>
+                <label for="numeroInscricaoRateio">NUMERO DE INSCRICAO (14):</label>
                 <input type="text" id="numeroInscricaoRateio" name="numeroInscricaoRateio" maxlength="14">
                 <br>
   
-                <label for="agenciaBeneficiarioRateio">AGENCIA:</label>
+                <label for="agenciaBeneficiarioRateio">AGENCIA (4):</label>
                 <input type="text" id="agenciaBeneficiarioRateio" name="agenciaBeneficiarioRateio" maxlength="4">
                 <br>
   
-                <label for="zerosRateio">ZEROS:</label>
+                <label for="zerosRateio">ZEROS (2):</label>
                 <input type="text" id="zerosRateio" name="zerosRateio" maxlength="2">
                 <br>
   
-                <label for="contaBeneficiarioRateio">CONTA:</label>
+                <label for="contaBeneficiarioRateio">CONTA (5):</label>
                 <input type="text" id="contaBeneficiarioRateio" name="contaBeneficiarioRateio" maxlength="5">
                 <br>
   
-                <label for="dacBeneficiarioRateio">DAC:</label>
+                <label for="dacBeneficiarioRateio">DAC (1):</label>
                 <input type="text" id="dacBeneficiarioRateio" name="dacBeneficiarioRateio" maxlength="1">
-                <button type="button"
-                  onclick="setDacButton('agenciaBeneficiarioRateio','contaBeneficiarioRateio','dacBeneficiarioRateio')">Calcular
-                  Dac</button>\
+                <button type="button" onclick="setDacButton('agenciaBeneficiarioRateio','contaBeneficiarioRateio','dacBeneficiarioRateio')">Calcular Dac</button>\
                 <br>
   
-                <label for="numeroCarteiraRateio">NUMERO DA CARTEIRA:</label>
+                <label for="numeroCarteiraRateio">NUMERO DA CARTEIRA (3):</label>
                 <input type="text" id="numeroCarteiraRateio" name="numeroCarteiraRateio" maxlength="3">
                 <br>
   
-                <label for="nossoNumeroRateio">NOSSO NUMERO:</label>
+                <label for="nossoNumeroRateio">NOSSO NUMERO (8):</label>
                 <input type="text" id="nossoNumeroRateio" name="nossoNumeroRateio" maxlength="8">
                 <br>
   
-                <label for="dacNossoNumeroRateio">DAC DO NOSSO NUMERO:</label>
+                <label for="dacNossoNumeroRateio">DAC DO NOSSO NUMERO (1):</label>
                 <input type="text" id="dacNossoNumeroRateio" name="dacNossoNumeroRateio" maxlength="1">
                 <br>
   
-                <label for="sequenciaRateio">SEQUENCIA DE RATEIO:</label>
+                <label for="sequenciaRateio">SEQUENCIA DE RATEIO (2):</label>
                 <input type="text" id="sequenciaRateio" name="sequenciaRateio" maxlength="2">
                 <br>
-  
-                <div>
-                  <label for="agenciaRateio1">AGENCIA DE RATEIO 1</label>
-                  <input type="text" id="agenciaRateio1" name="agenciaRateio1" maxlength="4">
-                  <br>
-  
-  
-                  <label for="contaRateio1">CONTA DE RATEIO 1</label>
-                  <input type="text" id="contaRateio1" name="contaRateio1" maxlength="7">
-                  <br>
-  
-                  <label for="dacRateio1">DAC RATEIO 1:</label>
-                  <input type="text" id="dacRateio1" name="dacRateio1" maxlength="1">
-                  <br>
-  
-                  <label for="valorRateio1">VALOR RATEIO 1:</label>
-                  <input type="text" id="valorRateio1" name="valorRateio1">
-                  <br>
+                <br>
+
+                <div id="beneficiariosRateio">
+                  
                 </div>
-  
-                <div>
-                  <label for="agenciaRateio2">AGENCIA DE RATEIO 2</label>
-                  <input type="text" id="agenciaRateio2" name="agenciaRateio2" maxlength="4">
-                  <br>
-  
-                  <label for="contaRateio2">CONTA DE RATEIO 2</label>
-                  <input type="text" id="contaRateio2" name="contaRateio2" maxlength="7">
-                  <br>
-  
-                  <label for="dacRateio2">DAC RATEIO 2:</label>
-                  <input type="text" id="dacRateio2" name="dacRateio2" maxlength="1">
-                  <br>
-  
-                  <label for="valorRateio2">VALOR RATEIO 2:</label>
-                  <input type="text" id="valorRateio2" name="valorRateio2" maxlength="13">
-                  <br>
-                </div>
-  
-                <div>
-                  <label for="agenciaRateio3">AGENCIA DE RATEIO 3</label>
-                  <input type="text" id="agenciaRateio3" name="agenciaRateio3" maxlength="4">
-                  <br>
-  
-                  <label for="contaRateio3">CONTA DE RATEIO 3</label>
-                  <input type="text" id="contaRateio3" name="contaRateio3" maxlength="7">
-                  <br>
-  
-                  <label for="dacRateio3">DAC RATEIO 3:</label>
-                  <input type="text" id="dacRateio3" name="dacRateio3" maxlength="1">
-                  <br>
-  
-                  <label for="valorRateio3">VALOR RATEIO 3:</label>
-                  <input type="text" id="valorRateio3" name="valorRateio3" maxlength="13">
-                  <br>
-                </div>
-  
-                <div>
-                  <label for="agenciaRateio4">AGENCIA DE RATEIO 4</label>
-                  <input type="text" id="agenciaRateio4" name="agenciaRateio4" maxlength="4">
-                  <br>
-  
-                  <label for="contaRateio4">CONTA DE RATEIO 4</label>
-                  <input type="text" id="contaRateio4" name="contaRateio4" maxlength="7">
-                  <br>
-  
-                  <label for="dacRateio4">DAC RATEIO 4:</label>
-                  <input type="text" id="dacRateio4" name="dacRateio4" maxlength="1">
-                  <br>
-  
-                  <label for="valorRateio4">VALOR RATEIO 4:</label>
-                  <input type="text" id="valorRateio4" name="valorRateio4" maxlength="13">
-                  <br>
-                </div>
-  
-                <div>
-                  <label for="agenciaRateio5">AGENCIA DE RATEIO 5</label>
-                  <input type="text" id="agenciaRateio5" name="agenciaRateio5" maxlength="4">
-                  <br>
-  
-                  <label for="contaRateio5">CONTA DE RATEIO 5</label>
-                  <input type="text" id="contaRateio5" name="contaRateio5" maxlength="7">
-                  <br>
-  
-                  <label for="dacRateio5">DAC RATEIO 5:</label>
-                  <input type="text" id="dacRateio5" name="dacRateio5" maxlength="1">
-                  <br>
-  
-                  <label for="valorRateio5">VALOR RATEIO 5:</label>
-                  <input type="text" id="valorRateio5" name="valorRateio5" maxlength="13">
-                  <br>
-                </div>
-  
-                <div>
-                  <label for="agenciaRateio6">AGENCIA DE RATEIO 6</label>
-                  <input type="text" id="agenciaRateio6" name="agenciaRateio6" maxlength="4">
-                  <br>
-  
-                  <label for="contaRateio6">CONTA DE RATEIO 6</label>
-                  <input type="text" id="contaRateio6" name="contaRateio6" maxlength="7">
-                  <br>
-  
-                  <label for="dacRateio6">DAC RATEIO 6:</label>
-                  <input type="text" id="dacRateio6" name="dacRateio6" maxlength="1">
-                  <br>
-  
-                  <label for="valorRateio6">VALOR RATEIO 6:</label>
-                  <input type="text" id="valorRateio6" name="valorRateio6" maxlength="13">
-                  <br>
-                </div>
-  
-                <div>
-                  <label for="agenciaRateio7">AGENCIA DE RATEIO 7</label>
-                  <input type="text" id="agenciaRateio7" name="agenciaRateio7" maxlength="4">
-                  <br>
-  
-                  <label for="contaRateio7">CONTA DE RATEIO 7</label>
-                  <input type="text" id="contaRateio7" name="contaRateio7" maxlength="7">
-                  <br>
-  
-                  <label for="dacRateio7">DAC RATEIO 7:</label>
-                  <input type="text" id="dacRateio7" name="dacRateio7" maxlength="1">
-                  <br>
-  
-                  <label for="valorRateio7">VALOR RATEIO 7:</label>
-                  <input type="text" id="valorRateio7" name="valorRateio7" maxlength="13">
-                  <br>
-                </div>
-  
-                <div>
-                  <label for="agenciaRateio8">AGENCIA DE RATEIO 8</label>
-                  <input type="text" id="agenciaRateio8" name="agenciaRateio8" maxlength="4">
-                  <br>
-  
-                  <label for="contaRateio8">CONTA DE RATEIO 8</label>
-                  <input type="text" id="contaRateio8" name="contaRateio8" maxlength="7">
-                  <br>
-  
-                  <label for="dacRateio8">DAC RATEIO 8:</label>
-                  <input type="text" id="dacRateio8" name="dacRateio8" maxlength="1">
-                  <br>
-  
-                  <label for="valorRateio8">VALOR RATEIO 8:</label>
-                  <input type="text" id="valorRateio8" name="valorRateio8" maxlength="13">
-                  <br>
-                </div>
-  
-                <div>
-                  <label for="agenciaRateio9">AGENCIA DE RATEIO 9</label>
-                  <input type="text" id="agenciaRateio9" name="agenciaRateio9" maxlength="4">
-                  <br>
-  
-                  <label for="contaRateio9">CONTA DE RATEIO 9</label>
-                  <input type="text" id="contaRateio9" name="contaRateio9" maxlength="7">
-                  <br>
-  
-                  <label for="dacRateio9">DAC RATEIO 9:</label>
-                  <input type="text" id="dacRateio9" name="dacRateio9" maxlength="1">
-                  <br>
-  
-                  <label for="valorRateio9">VALOR RATEIO 9:</label>
-                  <input type="text" id="valorRateio9" name="valorRateio9" maxlength="13">
-                  <br>
-                </div>
-  
-                <div>
-                  <label for="agenciaRateio10">AGENCIA DE RATEIO 10</label>
-                  <input type="text" id="agenciaRateio10" name="agenciaRateio10" maxlength="4">
-                  <br>
-  
-                  <label for="contaRateio10">CONTA DE RATEIO 10</label>
-                  <input type="text" id="contaRateio10" name="contaRateio10" maxlength="7">
-                  <br>
-  
-                  <label for="dacRateio10">DAC RATEIO 10:</label>
-                  <input type="text" id="dacRateio10" name="dacRateio10" maxlength="1">
-                  <br>
-  
-                  <label for="valorRateio10">VALOR RATEIO 10:</label>
-                  <input type="text" id="valorRateio10" name="valorRateio10" maxlength="13">
-                  <br>
-                </div>
-  
-                <div>
-                  <label for="agenciaRateio11">AGENCIA DE RATEIO 11</label>
-                  <input type="text" id="agenciaRateio11" name="agenciaRateio11" maxlength="4">
-                  <br>
-  
-                  <label for="contaRateio11">CONTA DE RATEIO 11</label>
-                  <input type="text" id="contaRateio11" name="contaRateio11" maxlength="7">
-                  <br>
-  
-                  <label for="dacRateio11">DAC RATEIO 11:</label>
-                  <input type="text" id="dacRateio11" name="dacRateio11" maxlength="1">
-                  <br>
-  
-                  <label for="valorRateio11">VALOR RATEIO 11:</label>
-                  <input type="text" id="valorRateio11" name="valorRateio11" maxlength="13">
-                  <br>
-                </div>
-  
-                <div>
-                  <label for="agenciaRateio12">AGENCIA DE RATEIO 12</label>
-                  <input type="text" id="agenciaRateio12" name="agenciaRateio12" maxlength="4">
-                  <br>
-  
-                  <label for="contaRateio12">CONTA DE RATEIO 12</label>
-                  <input type="text" id="contaRateio12" name="contaRateio12" maxlength="7">
-                  <br>
-  
-                  <label for="dacRateio12">DAC RATEIO 12:</label>
-                  <input type="text" id="dacRateio12" name="dacRateio12" maxlength="1">
-                  <br>
-  
-                  <label for="valorRateio12">VALOR RATEIO 12:</label>
-                  <input type="text" id="valorRateio12" name="valorRateio12" maxlength="13">
-                  <br>
-                </div>
-  
-                <div>
-                  <label for="agenciaRateio13">AGENCIA DE RATEIO 13</label>
-                  <input type="text" id="agenciaRateio13" name="agenciaRateio13" maxlength="4">
-                  <br>
-  
-                  <label for="contaRateio13">CONTA DE RATEIO 13</label>
-                  <input type="text" id="contaRateio13" name="contaRateio13" maxlength="7">
-                  <br>
-  
-                  <label for="dacRateio13">DAC RATEIO 13:</label>
-                  <input type="text" id="dacRateio13" name="dacRateio13" maxlength="1">
-                  <br>
-  
-                  <label for="valorRateio13">VALOR RATEIO 13:</label>
-                  <input type="text" id="valorRateio13" name="valorRateio13" maxlength="13">
-                  <br>
-                </div>
-  
-                <div>
-                  <label for="agenciaRateio14">AGENCIA DE RATEIO 14</label>
-                  <input type="text" id="agenciaRateio14" name="agenciaRateio14" maxlength="4">
-                  <br>
-  
-                  <label for="contaRateio14">CONTA DE RATEIO 14</label>
-                  <input type="text" id="contaRateio14" name="contaRateio14" maxlength="7">
-                  <br>
-  
-                  <label for="dacRateio14">DAC RATEIO 14:</label>
-                  <input type="text" id="dacRateio14" name="dacRateio14" maxlength="1">
-                  <br>
-  
-                  <label for="valorRateio14">VALOR RATEIO 14:</label>
-                  <input type="text" id="valorRateio14" name="valorRateio14" maxlength="13">
-                  <br>
-                </div>
-  
-                <label for="tipoValorRateio">TIPO DE VALOR:</label>
+                <br>
+                <label for="tipoValorRateio">TIPO DE VALOR (1):</label>
                 <input type="text" id="tipoValorRateio" name="tipoValorRateio" maxlength="1">
                 <br>
               </div>
@@ -625,10 +376,8 @@
           </div>
           <br>
           <div id="DadosSacadorAvalista">
-            <button type="button" class="toggleButton" data-section="DadosSacadorAvalista">Maximizar Dados Sacador
-              Avalista</button>
-            <div class="sectionContent" id="DadosSacadorAvalistaContent" name="DadosSacadorAvalista"
-              style="display: none;">
+            <button type="button" class="toggleButton" data-section="DadosSacadorAvalista">Maximizar Dados Sacador Avalista</button>
+            <div class="sectionContent" id="DadosSacadorAvalistaContent" name="DadosSacadorAvalista" style="display: none;">
               <br>
               <div>
                 <button type="button" onclick="setDadosSacadorAvalistaButton()">Gerar Dados Sacador Avalista</button>
@@ -640,34 +389,34 @@
                   <label for="email">EMAIL:</label>
                   <input type="text" id="email" name="email" maxlength="120"><br>
                 </div>
-                <label for="codigoInscricaoSacador">CÓDIGO INSCRIÇÃO:</label>
+                <label for="codigoInscricaoSacador">CÓDIGO INSCRIÇÃO (2):</label>
                 <input type="text" id="codigoInscricaoSacador" name="codigoInscricaoSacador" maxlength="2"><br>
                 <div>
-                  <label for="numeroInscricaoSacador">NUMERO INSCRICAO:</label>
+                  <label for="numeroInscricaoSacador">NUMERO INSCRICAO (14):</label>
                   <input type="text" id="numeroInscricaoSacador" name="numeroInscricaoSacador" maxlength="14"><br>
                 </div>
                 <div>
-                  <label for="logradouroSacador">LOGRADOURO:</label>
+                  <label for="logradouroSacador">LOGRADOURO (40):</label>
                   <input type="text" id="logradouroSacador" name="logradouroSacador" maxlength="40"><br>
                 </div>
                 <div>
-                  <label for="bairroSacador">BAIRRO:</label>
+                  <label for="bairroSacador">BAIRRO (12):</label>
                   <input type="text" id="bairroSacador" name="bairroSacador" maxlength="12"><br>
                 </div>
                 <div>
-                  <label for="cepSacador">CEP:</label>
+                  <label for="cepSacador">CEP (8):</label>
                   <input type="text" id="cepSacador" name="cepSacador" maxlength="8"><br>
                 </div>
                 <div>
-                  <label for="cidadeSacador">CIDADE:</label>
+                  <label for="cidadeSacador">CIDADE (15):</label>
                   <input type="text" id="cidadeSacador" name="cidadeSacador" maxlength="15"><br>
                 </div>
                 <div>
-                  <label for="estadoSacador">ESTADO:</label>
+                  <label for="estadoSacador">ESTADO (2):</label>
                   <input type="text" id="estadoSacador" name="estadoSacador" maxlength="2"><br>
                 </div>
                 <div>
-                  <label for="brancosSacador">BRANCOS:</label>
+                  <label for="brancosSacador">BRANCOS (180):</label>
                   <input type="text" id="brancosSacador" class="fixo" name="brancosSacador" maxlength="180">
                   <button type="button" onclick="lockUnlockButton('brancosSacador',this)"
                     class="editButton">Travar</button>

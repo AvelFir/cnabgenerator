@@ -413,3 +413,7 @@ class Brancos{
     static DUZENTOS_NOVENTA_QUATRO = " ".repeat(294);
     static TREZENTOS_SETENTA_UM = " ".repeat(371);
 }
+
+class Constantes{
+  static LIMITE_CONTAS_RATEIO = 14;
+}

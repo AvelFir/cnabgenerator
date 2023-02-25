@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+  adicionarRateio(1);
+
   //Minimizar
   var toggleButtons = document.querySelectorAll(".toggleButton");
   for (var i = 0; i < toggleButtons.length; i++) {
@@ -7,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
       toggleSection(this.getAttribute("data-section"));
     });
   }
-
 
   //Configurações Padrao
   const agencia = localStorage.getItem("agenciaPadrao");
