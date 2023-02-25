@@ -46,7 +46,6 @@ function lockUnlockButton(fieldId, button) {
   }
 
   function setValorRemessaDetalhePadraoButton(){
-    document.getElementById("tipoDeRegistro").value = RemessaPadraoConstants.TIPO_REGISTRO.value;
     document.getElementById("codigoDeInscricao").value = RemessaPadraoConstants.CODIGO_INSCRICAO.value;
     document.getElementById("numeroDeInscricao").value = RemessaPadraoConstants.NUMERO_INSCRICAO.value;
     document.getElementById("agencia").value = RemessaPadraoConstants.AGENCIA.value;
@@ -95,7 +94,6 @@ function lockUnlockButton(fieldId, button) {
   }
 
   function setDadosSacadorAvalistaButton() {
-    document.getElementById('tipoRegistroSacador').value = RemessaDadosSacadorAvalista.TIPO_REGISTRO.value;
     document.getElementById('email').value = RemessaDadosSacadorAvalista.EMAIL.value;
     document.getElementById('codigoInscricaoSacador').value = RemessaDadosSacadorAvalista.CODIGO_INSCRICAO.value;
     document.getElementById('numeroInscricaoSacador').value = RemessaDadosSacadorAvalista.NUMERO_INSCRICAO.value;
@@ -109,7 +107,6 @@ function lockUnlockButton(fieldId, button) {
   }
 
   function setDetalheMultaButton() {
-    document.getElementById('tipoRegistro').value = RemessaMulta.TIPO_REGISTRO.value;
     document.getElementById('codigoMulta').value = RemessaMulta.CODIGO_MULTA.value;
     document.getElementById('dataMulta').value = RemessaMulta.DATA_MULTA.value;
     document.getElementById('valorMulta').value = RemessaMulta.VALOR_MULTA.value;
@@ -119,7 +116,6 @@ function lockUnlockButton(fieldId, button) {
   
 
   function setRemessaRateioCreditoButton(){
-    document.getElementById('tipoRegistroRateio').value = RemessaRateioCredito.TIPO_REGISTRO.value;
     document.getElementById('codigoInscricaoRateio').value = RemessaRateioCredito.CODIGO_INSCRICAO.value;
     document.getElementById('numeroInscricaoRateio').value = RemessaRateioCredito.NUMERO_INSCRICAO.value;
     document.getElementById('agenciaBeneficiarioRateio').value = RemessaRateioCredito.AGENCIA.value;

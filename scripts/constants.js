@@ -64,10 +64,9 @@ class RemessaHeaderArquivo {
     return { value: "000001", filler: "000000", size: 6, formatStyle: (value, fill, size) => formatStart(value, fill, size)  };
   }
 }
-
 class RemessaPadraoConstants {
   static get TIPO_REGISTRO() {
-    return { value: "1", filler: "0", size: 1, formatStyle: (value, fill, size) => formatStart(value, fill, size) };
+    return { value: "1", filler: "1", size: 1, formatStyle: (value, fill, size) => formatStart(value, fill, size) };
   }
 
   static get CODIGO_INSCRICAO() {
@@ -252,7 +251,7 @@ class RemessaPadraoConstants {
 class RemessaMulta {
 
   static get TIPO_REGISTRO() {
-    return { value: "2", filler: "0", size: 1, formatStyle: (value, fill, size) => formatStart(value, fill, size) };
+    return { value: "2", filler: "2", size: 1, formatStyle: (value, fill, size) => formatStart(value, fill, size) };
   }
 
   static get CODIGO_MULTA() {
@@ -278,7 +277,7 @@ class RemessaMulta {
 class RemessaRateioCredito {
 
   static get TIPO_REGISTRO() {
-    return { value: "4", filler: "0", size: 1, formatStyle: (value, fill, size) => formatStart(value, fill, size) };
+    return { value: "4", filler: "4", size: 1, formatStyle: (value, fill, size) => formatStart(value, fill, size) };
   }
 
   static get CODIGO_INSCRICAO() {
@@ -349,7 +348,7 @@ class RemessaRateioCredito {
 class RemessaDadosSacadorAvalista {
 
   static get TIPO_REGISTRO() {
-    return { value: "5", filler: "0", size: 1, formatStyle: (value, fill, size) => formatStart(value, fill, size) };
+    return { value: "5", filler: "5", size: 1, formatStyle: (value, fill, size) => formatStart(value, fill, size) };
   }
 
   static get EMAIL() {
