@@ -58,3 +58,8 @@ input:not(.fixo) {
 .invisivel {
   display: none;
 }
+
+.helpButton {
+  width: 18px;
+  height: 18px;
+}
