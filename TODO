@@ -1,6 +1,7 @@
 CNAB 400
 1 - Separar As Configuração para sobreporem separadamente
 2 - Criar botao para definir se os campos nao preenchidos terao como default espaços em brancos ou 0
+3 - Mostrar o valor atual na frente dos campos de valores.
 
 CNAB 240
 1 - Adicionar Linha Segmento P

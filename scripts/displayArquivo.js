@@ -41,3 +41,12 @@ function adicionarLinha400(input1Content) {
     // remova a linha da tabela
     linha.remove();
   }
+
+  function getMultiplicadorLinhaRemessaDetalhePadrao() {
+    let qtd = document.getElementById("multiplicadorLinhaRemessaDetalhePadrao").value;
+    let quantidadeBoletos = qtd || Constantes.LIMITE_MINIMO_LINHAS_REMESSA_PADRAO;
+    quantidadeBoletos = quantidadeBoletos < Constantes.LIMITE_MINIMO_LINHAS_REMESSA_PADRAO ? Constantes.LIMITE_MINIMO_LINHAS_REMESSA_PADRAO : quantidadeBoletos;
+    quantidadeBoletos = quantidadeBoletos > Constantes.LIMITE_MAXIMO_LINHAS_REMESSA_PADRAO ? Constantes.LIMITE_MAXIMO_LINHAS_REMESSA_PADRAO : quantidadeBoletos;
+    return quantidadeBoletos;
+  }
+  

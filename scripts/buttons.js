@@ -22,9 +22,12 @@ function lockUnlockButton(fieldId, button) {
   }
 
   function adicionarLinhaRemessaDetalhePadraoButton(){
-    var linha = mountLinhaRemessaDetalhePadrao();
+    let linha = mountLinhaRemessaDetalhePadrao();
     linha = linha.substring(0, linha.length - 6);
-    adicionarLinha400(linha);
+    const quantidadeLinhas = getMultiplicadorLinhaRemessaDetalhePadrao(); 
+    for (let i = 0; i < quantidadeLinhas; i++){
+      adicionarLinha400(linha);
+    }
   }
 
   function adicionarLinhaDetalheMultaButton(){

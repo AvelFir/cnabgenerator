@@ -416,4 +416,6 @@ class Brancos{
 
 class Constantes{
   static LIMITE_CONTAS_RATEIO = 14;
+  static LIMITE_MINIMO_LINHAS_REMESSA_PADRAO = 1;
+  static LIMITE_MAXIMO_LINHAS_REMESSA_PADRAO = 10000;
 }
