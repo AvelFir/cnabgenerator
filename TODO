@@ -1,5 +1,5 @@
 CNAB 400
-1 - Separar As Configuração para sobreporem separadamente
+1 - Separar As Configurações em "Campos Padroes|Fixos" e "Configurações Arquivo"
 2 - Criar botao para definir se os campos nao preenchidos terao como default espaços em brancos ou 0
 3 - Mostrar o valor atual na frente dos campos de valores.
 

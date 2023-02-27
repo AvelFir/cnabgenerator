@@ -98,6 +98,56 @@ function lockUnlockButton(fieldId, button) {
     setFieldsReadOnly('RemessaPadraoContent');
   }
 
+  function setValorInstrucaoButton(){
+    document.getElementById("agencia").value = RemessaPadraoConstants.AGENCIA.value;
+    document.getElementById("conta").value =RemessaPadraoConstants.CONTA.value;
+    document.getElementById("dac").value = RemessaPadraoConstants.DAC.value;
+    document.getElementById("usoEmpresa").value = RemessaPadraoConstants.USO_EMPRESA.filler;
+    document.getElementById("nossoNumero").value = RemessaPadraoConstants.NOSSO_NUMERO.value;
+    document.getElementById("numeroCarteira").value = RemessaPadraoConstants.NUMERO_CARTEIRA.value;
+    document.getElementById("codigoOcorrencia").value = RemessaPadraoConstants.CODIGO_OCORRENCIA.value;
+    document.getElementById("numeroDocumento").value = RemessaPadraoConstants.NUMERO_DOCUMENTO.filler;
+    document.getElementById("abatimento").value  = RemessaPadraoConstants.ABATIMENTO.filler;
+    document.getElementById("prazo").value = RemessaPadraoConstants.PRAZO.filler;
+
+    document.getElementById("codigoDeInscricao").value = RemessaPadraoConstants.CODIGO_INSCRICAO.filler;
+    document.getElementById("numeroDeInscricao").value = RemessaPadraoConstants.NUMERO_INSCRICAO.filler;
+    document.getElementById("zeros1").value = RemessaPadraoConstants.ZEROS.filler;
+    document.getElementById("brancos1").value =RemessaPadraoConstants.BRANCOS1.filler;
+    document.getElementById("instrucaoAlegacao").value = RemessaPadraoConstants.INSTRUCAO_ALEGACAO.filler;
+    document.getElementById("moedaVariavel").value = RemessaPadraoConstants.MOEDA_VARIAVEL.filler;
+    document.getElementById("usoBanco").value = RemessaPadraoConstants.USO_BANCO.filler;
+    document.getElementById("carteira").value = RemessaPadraoConstants.CARTEIRA.filler;
+    document.getElementById("vencimento").value = RemessaPadraoConstants.VENCIMENTO.filler;
+    document.getElementById("valorTitulo").value = RemessaPadraoConstants.VALOR_TITULO.filler;
+    document.getElementById("codigoBanco").value = RemessaPadraoConstants.CODIGO_BANCO.filler;
+    document.getElementById("agenciaCobradora").value = RemessaPadraoConstants.AGENCIA_COBRADORA.filler;
+    document.getElementById("especie").value = RemessaPadraoConstants.ESPECIE.filler;
+    document.getElementById("aceite").value =RemessaPadraoConstants.ACEITE.filler;
+    document.getElementById("dataEmissao").value = RemessaPadraoConstants.DATA_EMISSAO.filler;
+    document.getElementById("instrucao1").value = RemessaPadraoConstants.INSTRUCAO1.filler;
+    document.getElementById("instrucao2").value = RemessaPadraoConstants.INSTRUCAO2.filler;
+    document.getElementById("valorJuros").value  = RemessaPadraoConstants.VALOR_JUROS.filler;
+    document.getElementById("dataDesconto").value = RemessaPadraoConstants.DATA_DESCONTO.filler;
+    document.getElementById("valorDesconto").value  = RemessaPadraoConstants.VALOR_DESCONTO.filler;
+    document.getElementById("valorIOF").value = RemessaPadraoConstants.VALOR_IOF.filler;
+    document.getElementById("codigoInscricaoPagador").value = RemessaPadraoConstants.CODIGO_INSCRICAO_PAGADOR.filler;
+    document.getElementById("numeroInscricaoPagador").value = RemessaPadraoConstants.NUMERO_INSCRICAO_PAGADOR.filler;
+    document.getElementById("nome").value = RemessaPadraoConstants.NOME.filler;
+    document.getElementById("brancos2").value = RemessaPadraoConstants.BRANCOS2.filler;;
+    document.getElementById("logradouro").value = RemessaPadraoConstants.LOGRADOURO.filler;
+    document.getElementById("bairro").value = RemessaPadraoConstants.BAIRRO.filler;
+    document.getElementById("cep").value = RemessaPadraoConstants.CEP.filler;
+    document.getElementById("cidade").value = RemessaPadraoConstants.CIDADE.filler;
+    document.getElementById("estado").value = RemessaPadraoConstants.ESTADO.filler;
+    document.getElementById("sacadorAvalista").value = RemessaPadraoConstants.SACADOR_AVALISTA.filler;
+    document.getElementById("brancos3").value = RemessaPadraoConstants.BRANCOS3.filler;
+    document.getElementById("dataMora").value = RemessaPadraoConstants.DATA_MORA.filler;
+    document.getElementById("brancos4").value = RemessaPadraoConstants.BRANCOS4.filler;
+    
+    setFieldsReadOnly('RemessaPadraoContent');
+  }
+
   function setDadosSacadorAvalistaButton() {
     document.getElementById('email').value = RemessaDadosSacadorAvalista.EMAIL.value;
     document.getElementById('codigoInscricaoSacador').value = RemessaDadosSacadorAvalista.CODIGO_INSCRICAO.value;
@@ -247,4 +297,13 @@ function lockUnlockButton(fieldId, button) {
     document.getElementById("isSobreporLinha").checked = false;
     document.getElementById("codigoOcorrenciaPadrao").value = "";
     alert("Configurações Deletadas")
+  }
+
+
+  function alterarModoInstrucao(){
+    setModoInstrucao();
+  }
+
+  function alterarModoRemessaCompleta(){
+    setModoRemessaCompleta();
   }

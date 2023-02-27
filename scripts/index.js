@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+  // setModoRemessaCompleta();
+  setModoInstrucao();
+
   adicionarRateio(1);
 
   setQuantidadesLinhasMaximo();

@@ -46,3 +46,15 @@ input:not(.fixo) {
 .editButton {
   display: none;
 }
+
+.visivel {
+  display: block;
+}
+
+.botao-visivel {
+  display: inline-block;
+}
+
+.invisivel {
+  display: none;
+}
