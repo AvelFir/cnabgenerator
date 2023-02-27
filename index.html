@@ -88,8 +88,8 @@
               <div>
                 <button type="button" onclick="setValorRemessaDetalhePadraoButton()">Gerar Emissao Simples</button>
                 <button type="button" onclick="adicionarLinhaRemessaDetalhePadraoButton()">Adicionar Linha</button>
-                <label for="multiplicadorLinhaRemessaDetalhePadrao">qtd(min:1 max:10000):</label>
-                <input type="number" id="multiplicadorLinhaRemessaDetalhePadrao" min="1" max="10000" placeholder="default: 1">
+                <label for="multiplicadorLinhaRemessaDetalhePadrao">qtd:</label>
+                <input type="number" id="multiplicadorLinhaRemessaDetalhePadrao" min="1" max="10000" placeholder="padrao: 1">
               </div>
               <br>
               <div>
@@ -436,6 +436,14 @@
             <input type="text" id="nomeArquivo" name="nomeArquivo" maxlength="40" size="40" />
             <button type="button" onclick="setNomeArquivoButton()">Gerar</button>
             <input type="submit" value="Baixar Arquivo" onclick="baixarArquivoButton2()" />
+            <br>
+            <div>
+              <span id="labelQuantidadeNumeroLinhasArquivoMaximo">Quantidade Linhas Maximo: </span>
+              <span id="quantidadeNumeroLinhasArquivoMaximo">0</span>
+            </div>
+          <div>
+            <span id="labelQuantidadeNumeroLinhasArquivoAtual">Quantidade Linhas Atual: </span>
+            <span id="quantidadeNumeroLinhasArquivoAtual">0</span>
           </div>
           <table id="tabelaArquivo" style="width: 100%;">
             <tbody>

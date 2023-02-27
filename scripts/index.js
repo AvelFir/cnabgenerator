@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   adicionarRateio(1);
 
+  setQuantidadesLinhasMaximo();
+
   //Minimizar
   var toggleButtons = document.querySelectorAll(".toggleButton");
   for (var i = 0; i < toggleButtons.length; i++) {

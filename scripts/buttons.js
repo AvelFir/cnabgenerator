@@ -26,7 +26,9 @@ function lockUnlockButton(fieldId, button) {
     linha = linha.substring(0, linha.length - 6);
     const quantidadeLinhas = getMultiplicadorLinhaRemessaDetalhePadrao(); 
     for (let i = 0; i < quantidadeLinhas; i++){
-      adicionarLinha400(linha);
+      if(!adicionarLinha400(linha)){
+        break;
+      }
     }
   }
 

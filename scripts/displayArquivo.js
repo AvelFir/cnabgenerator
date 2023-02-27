@@ -1,4 +1,10 @@
 function adicionarLinha400(input1Content) {
+
+  if(getQuantidadeLinhas() >= Constantes.LIMITE_MAXIMO_LINHAS_ARQUIVO){
+    alert("Numero Maximo de Linhas Atingido!")
+    return false;
+  }
+
     // selecione a tabela onde deseja adicionar a nova linha
     const tabela = document.querySelector('#tabelaArquivo');
   
@@ -33,6 +39,8 @@ function adicionarLinha400(input1Content) {
   
     // adicione a nova linha à tabela
     tabela.appendChild(novaLinha);
+    setQuantidadesLinhasAtual();
+    return true;
   }
   
   function removerLinha(event) {
@@ -40,13 +48,30 @@ function adicionarLinha400(input1Content) {
     const linha = event.target.parentNode.parentNode;
     // remova a linha da tabela
     linha.remove();
+    setQuantidadesLinhasAtual();
   }
 
   function getMultiplicadorLinhaRemessaDetalhePadrao() {
     let qtd = document.getElementById("multiplicadorLinhaRemessaDetalhePadrao").value;
     let quantidadeBoletos = qtd || Constantes.LIMITE_MINIMO_LINHAS_REMESSA_PADRAO;
     quantidadeBoletos = quantidadeBoletos < Constantes.LIMITE_MINIMO_LINHAS_REMESSA_PADRAO ? Constantes.LIMITE_MINIMO_LINHAS_REMESSA_PADRAO : quantidadeBoletos;
-    quantidadeBoletos = quantidadeBoletos > Constantes.LIMITE_MAXIMO_LINHAS_REMESSA_PADRAO ? Constantes.LIMITE_MAXIMO_LINHAS_REMESSA_PADRAO : quantidadeBoletos;
+    quantidadeBoletos = quantidadeBoletos > Constantes.LIMITE_MAXIMO_LINHAS_ARQUIVO ? Constantes.LIMITE_MAXIMO_LINHAS_ARQUIVO : quantidadeBoletos;
     return quantidadeBoletos;
   }
   
+  function getQuantidadeLinhas(){
+    const tabela = document.getElementById("tabelaArquivo");
+    const numTRs = tabela.rows.length;
+    return numTRs;
+  }
+
+  function setQuantidadesLinhasAtual(){
+    const numTRs = getQuantidadeLinhas();
+    const numTRsElemento = document.getElementById("quantidadeNumeroLinhasArquivoAtual");
+    numTRsElemento.textContent = numTRs;
+  }
+
+  function setQuantidadesLinhasMaximo(){
+    const maximo = document.getElementById("quantidadeNumeroLinhasArquivoMaximo");
+    maximo.textContent = Constantes.LIMITE_MAXIMO_LINHAS_ARQUIVO;
+  }
