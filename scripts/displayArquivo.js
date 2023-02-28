@@ -75,3 +75,9 @@ function adicionarLinha400(input1Content) {
     const maximo = document.getElementById("quantidadeNumeroLinhasArquivoMaximo");
     maximo.textContent = Constantes.LIMITE_MAXIMO_LINHAS_ARQUIVO;
   }
+
+function limparTabela(){
+  const tabela = document.getElementById("tabelaArquivo");
+  tabela.innerHTML = "";
+  setQuantidadesLinhasAtual();
+}
