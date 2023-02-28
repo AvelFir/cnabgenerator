@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  // setModoRemessaCompleta();
-  setModoInstrucao();
+  setModoRemessaCompleta();
 
   adicionarRateio(1);
 
