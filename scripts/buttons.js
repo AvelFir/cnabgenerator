@@ -246,6 +246,7 @@ function lockUnlockButton(fieldId, button) {
     var complemento = document.getElementById("complementoLinhaPadrao").value;
     var isComplemento = document.getElementById("isComplementoPadrao").checked;
     var isSobreporLinha = document.getElementById("isSobreporLinha").checked;
+    var fillerPadrao = document.getElementById("fillerPadrao").value;
 
     localStorage.setItem("agenciaPadrao", agencia);
 
@@ -269,22 +270,14 @@ function lockUnlockButton(fieldId, button) {
 
     localStorage.setItem("isSobreporLinha", isSobreporLinha);
 
+    localStorage.setItem("fillerPadrao", fillerPadrao);
+
     var message = "Configurações Salvas!";
     alert(message);
   }
   
   function apagarConfiguracoes(){
-    localStorage.removeItem('agenciaPadrao');
-    localStorage.removeItem('contaPadrao');
-    localStorage.removeItem('dacPadrao');
-    localStorage.removeItem('headerArquivoPadrao');
-    localStorage.removeItem('complementoArquivoPadrao');
-    localStorage.removeItem('isComplementoArquivoPadrao');
-    localStorage.removeItem('complementoLinhaPadrao');
-    localStorage.removeItem('isComplementoPadrao');
-    localStorage.removeItem('nossoNumeroPadrao');
-    localStorage.removeItem('codigoOcorrenciaPadrao');
-    localStorage.removeItem('isSobreporLinha');
+    localStorage.clear();
     document.getElementById("agenciaPadrao").value = "";
     document.getElementById("contaPadrao").value = "";
     document.getElementById("dacPadrao").value = "";
@@ -296,6 +289,7 @@ function lockUnlockButton(fieldId, button) {
     document.getElementById("isComplementoPadrao").checked = false;
     document.getElementById("isSobreporLinha").checked = false;
     document.getElementById("codigoOcorrenciaPadrao").value = "";
+    document.getElementById("fillerPadrao").value = "padrao";
     alert("Configurações Deletadas")
   }
 

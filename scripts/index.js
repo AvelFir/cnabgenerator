@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const complementoLinha = localStorage.getItem("complementoLinhaPadrao");
   const isComplementoPadrao = localStorage.getItem("isComplementoPadrao");
   const isSobreporLinha = localStorage.getItem("isSobreporLinha");
+  const fillerPadrao = localStorage.getItem("fillerPadrao");
   
   if (agencia) {
     document.getElementById("agenciaPadrao").value = agencia;
@@ -50,6 +51,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   if (complementoLinha) {
     document.getElementById("complementoLinhaPadrao").value = complementoLinha;
+  }
+  if (fillerPadrao) {
+    document.getElementById("fillerPadrao").value = fillerPadrao;
   }
   document.getElementById("isComplementoArquivoPadrao").checked = (isComplementoArquivoPadrao === "true");
   document.getElementById("isComplementoPadrao").checked = (isComplementoPadrao === "true");
