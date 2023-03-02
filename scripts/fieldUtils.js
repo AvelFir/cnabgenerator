@@ -8,46 +8,59 @@ function formatEnd(str,size,filler){
 
 function getValueOrFiller(field, configuration){
     var fieldValue = field ? field.value : "";
-    var fillerValue = configuration.filler;
     var savedValue = localStorage.getItem(field.name + "Padrao");
     var isSobrepor = localStorage.getItem("isSobreporLinha") === "true";
     var size = configuration.size;
 
     if((isSobrepor || !isValidString(fieldValue)) && isValidString(savedValue)){
-        return configuration.formatStyle(savedValue,size,fillerValue[0]);
+        return configuration.formatStyle(savedValue,size,configuration.filler[0]);
     }
     if(isValidString(fieldValue)){
-        return configuration.formatStyle(fieldValue,size,fillerValue[0]);
+        return configuration.formatStyle(fieldValue,size,configuration.filler[0]);
     }
-    return fillerValue;    
+    var filler = getFiller(configuration);
+    return filler;    
 }
 
 function getValueOrFiller(field, configuration, savedValueName){
     var fieldValue = field ? field.value : "";
-    var fillerValue = configuration.filler;
     var savedValue = localStorage.getItem(savedValueName);
     var isSobrepor = localStorage.getItem("isSobreporLinha") === "true";
     var size = configuration.size;
 
     if((isSobrepor || !isValidString(fieldValue)) && isValidString(savedValue)){
-        return configuration.formatStyle(savedValue,size,fillerValue[0]);
+        return configuration.formatStyle(savedValue,size,configuration.filler[0]);
     }
     if(isValidString(fieldValue)){
-        return configuration.formatStyle(fieldValue,size,fillerValue[0]);
+        return configuration.formatStyle(fieldValue,size,configuration.filler[0]);
     }
-    return fillerValue;    
+    var filler = getFiller(configuration);
+    return filler;    
 } 
 
 function getSavedValueOrFiller(fieldName, configuration){
-    var fillerValue = configuration.filler;
     var savedValue = localStorage.getItem(fieldName + "Padrao");
     var size = configuration.size;
 
     if(isValidString(savedValue)){
-        return configuration.formatStyle(savedValue,size,fillerValue[0]);
+        return configuration.formatStyle(savedValue,size,configuration.filler[0]);
     }
-    return fillerValue;    
+    var filler = getFiller(configuration);
+    return filler;    
 } 
+
+function getFiller(configuration){
+    const fillerPadrao = localStorage.getItem("fillerPadrao");
+    const size = configuration.size;
+    switch(fillerPadrao){
+        case "brancos":
+            return " ".repeat(size);
+        case "zeros":
+            return "0".repeat(size);
+        default:
+            return configuration.filler;
+    }
+}
 
 function getFirstValueOr(primaryValue,secondaryValue){
     return isValidString(primaryValue) ? primaryValue : secondaryValue;
