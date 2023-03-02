@@ -391,6 +391,84 @@ class RemessaDadosSacadorAvalista {
     return { value: "000003", filler: "000000", size: 6, formatStyle: (value, fill, size) => formatStart(value, fill, size)  };
   }
 }
+
+class RegistroMensagemFrente {
+
+  static get TIPO_REGISTRO() {
+    return { value: "7", filler: "7", size: 1, formatStyle: (value, fill, size) => formatStart(value, fill, size) };
+  }
+
+  static get FLASH() {
+    return { value: "001", filler: Brancos.TRES, size: 3, formatStyle: (value, fill, size) => formatEnd(value, fill, size) };
+  }
+
+  static get NUMERO_LINHA_1() {
+    return { value: "01", filler: "00", size: 2, formatStyle: (value, fill, size) => formatStart(value, fill, size)  };
+  }
+
+  static get TEXTO_LINHA_1() {
+    return { value: "Texto 1".padEnd(128,Brancos.UM), filler: Brancos.CENTO_VINTE_OITO, size: 128, formatStyle: (value, fill, size) => formatEnd(value, fill, size)  };
+  }
+
+  static get NUMERO_LINHA_2() {
+    return { value: "02", filler: "00", size: 2, formatStyle: (value, fill, size) => formatStart(value, fill, size)  };
+  }
+
+  static get TEXTO_LINHA_2() {
+    return { value: "Texto 2".padEnd(128,Brancos.UM), filler: Brancos.CENTO_VINTE_OITO, size: 128, formatStyle: (value, fill, size) => formatEnd(value, fill, size)  };
+  }
+
+  static get NUMERO_LINHA_3() {
+    return { value: "03", filler: "00", size: 2, formatStyle: (value, fill, size) => formatStart(value, fill, size)  };
+  }
+
+  static get TEXTO_LINHA_3() {
+    return { value: "Texto 3".padEnd(127,Brancos.UM), filler: Brancos.CENTO_VINTE_SETE, size: 127, formatStyle: (value, fill, size) => formatEnd(value, fill, size)  };
+  }
+
+  static get DESTINO_BOLETO() {
+    return { value: "A", filler: Brancos.QUARENTA, size: 40, formatStyle: (value, fill, size) => formatEnd(value, fill, size) };
+  }
+
+  static get NUMERO_SEQUENCIAL() {
+    return { value: "000003", filler: "000000", size: 6, formatStyle: (value, fill, size) => formatStart(value, fill, size)  };
+  }
+}
+
+class RegistroMensagemVerso {
+
+  static get TIPO_REGISTRO() {
+    return { value: "8", filler: "8", size: 1, formatStyle: (value, fill, size) => formatStart(value, fill, size) };
+  }
+
+  static get NUMERO_LINHA_1() {
+    return { value: "01", filler: "00", size: 2, formatStyle: (value, fill, size) => formatStart(value, fill, size)  };
+  }
+
+  static get TEXTO_LINHA_1() {
+    return { value: "Texto 1".padEnd(140,Brancos.UM), filler: Brancos.CENTO_QUARENTA, size: 140, formatStyle: (value, fill, size) => formatEnd(value, fill, size)  };
+  }
+
+  static get BRANCOS1() {
+    return { value: Brancos.CINQUENTA, filler: Brancos.CINQUENTA, size: 50, formatStyle: (value, fill, size) => formatEnd(value, fill, size)  };
+  }
+
+  static get NUMERO_LINHA_2() {
+    return { value: "02", filler: "00", size: 2, formatStyle: (value, fill, size) => formatStart(value, fill, size)  };
+  }
+
+  static get TEXTO_LINHA_2() {
+    return { value: "Texto 2".padEnd(140,Brancos.UM), filler: Brancos.CENTO_QUARENTA, size: 140, formatStyle: (value, fill, size) => formatEnd(value, fill, size)  };
+  }
+
+  static get BRANCOS2() {
+    return { value: Brancos.CINQUENTA_NOVE, filler: Brancos.CINQUENTA_NOVE, size: 59, formatStyle: (value, fill, size) => formatEnd(value, fill, size)  };
+  }
+
+  static get NUMERO_SEQUENCIAL() {
+    return { value: "000004", filler: "000000", size: 6, formatStyle: (value, fill, size) => formatStart(value, fill, size)  };
+  }
+}
 class Brancos{
     static UM = " ".repeat(1);
     static DOIS = " ".repeat(2);
@@ -408,7 +486,12 @@ class Brancos{
     static VINTE_CINCO = " ".repeat(25);
     static TRINTA = " ".repeat(30);
     static QUARENTA = " ".repeat(40);
+    static CINQUENTA = " ".repeat(50);
+    static CINQUENTA_NOVE = " ".repeat(59);
     static CENTO_VINTE = " ".repeat(120);
+    static CENTO_VINTE_SETE = " ".repeat(127);
+    static CENTO_VINTE_OITO = " ".repeat(128);
+    static CENTO_QUARENTA = " ".repeat(140);
     static CENTO_OITENTA = " ".repeat(180);
     static DUZENTOS_NOVENTA_QUATRO = " ".repeat(294);
     static TREZENTOS_SETENTA_UM = " ".repeat(371);
