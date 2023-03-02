@@ -82,7 +82,7 @@ function mountArquivo() {
 }
 
 function mountLinhaRemessaDetalhePadrao() {
-  var tipoDeRegistro = getValueOrFiller(document.getElementById("tipoDeRegistro"), RemessaPadraoConstants.TIPO_REGISTRO);
+  var tipoDeRegistro = 1;
   var codigoDeInscricao = getValueOrFiller(document.getElementById("codigoDeInscricao"), RemessaPadraoConstants.CODIGO_INSCRICAO);
   var numeroDeInscricao = getValueOrFiller(document.getElementById("numeroDeInscricao"), RemessaPadraoConstants.NUMERO_INSCRICAO);
   var agencia = getValueOrFiller(document.getElementById("agencia"), RemessaPadraoConstants.AGENCIA,"agenciaPadrao");
@@ -186,7 +186,7 @@ function mountLinhaRemessaDetalhePadrao() {
   }
 
   function mountRemessaMultaDefaultValues() {
-    const tipoRegistro = getValueOrFiller(document.getElementById('tipoRegistro'), RemessaMulta.TIPO_REGISTRO);
+    const tipoRegistro = 2;
     const codigoMulta = getValueOrFiller(document.getElementById('codigoMulta'), RemessaMulta.CODIGO_MULTA);
     const dataMulta = getValueOrFiller(document.getElementById('dataMulta'), RemessaMulta.DATA_MULTA);
     const valorMulta = getValueOrFiller(document.getElementById('valorMulta'), RemessaMulta.VALOR_MULTA);
@@ -197,7 +197,7 @@ function mountLinhaRemessaDetalhePadrao() {
   }
 
   function mountSacadorAvalista() {
-    const tipoRegistroSacador = getValueOrFiller(document.getElementById("tipoRegistroSacador"), RemessaDadosSacadorAvalista.TIPO_REGISTRO);
+    const tipoRegistroSacador = 5;
     const codigoInscricaoSacador = getValueOrFiller(document.getElementById("codigoInscricaoSacador"), RemessaDadosSacadorAvalista.CODIGO_INSCRICAO);
     const numeroInscricaoSacador = getValueOrFiller(document.getElementById("numeroInscricaoSacador"), RemessaDadosSacadorAvalista.NUMERO_INSCRICAO);
     const email = getValueOrFiller(document.getElementById("email"), RemessaDadosSacadorAvalista.EMAIL);
@@ -213,7 +213,7 @@ function mountLinhaRemessaDetalhePadrao() {
   }
 
   function mountRemessaRateioCredito() {
-    const tipoRegistroRateio = getValueOrFiller(document.getElementById('tipoRegistroRateio'), RemessaRateioCredito.TIPO_REGISTRO);
+    const tipoRegistroRateio = 4;
     const codigoInscricaoRateio = getValueOrFiller(document.getElementById('codigoInscricaoRateio'), RemessaRateioCredito.CODIGO_INSCRICAO);
     const numeroInscricaoRateio = getValueOrFiller(document.getElementById('numeroInscricaoRateio'), RemessaRateioCredito.NUMERO_INSCRICAO);
     const agenciaBeneficiarioRateio = getValueOrFiller(document.getElementById('agenciaBeneficiarioRateio'), RemessaRateioCredito.AGENCIA, "agenciaPadrao");
