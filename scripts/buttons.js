@@ -198,6 +198,8 @@ function lockUnlockButton(fieldId, button) {
     document.getElementById('dacRateio1').value = RemessaRateioCredito.DAC_RATEIO.value;
     document.getElementById('valorRateio1').value = RemessaRateioCredito.VALOR_RATEIO.value;
     document.getElementById('tipoValorRateio').value = RemessaRateioCredito.TIPO_VALOR.value;
+    setFieldsReadOnly('RateioCreditoContent');
+
   }
 
   function setRegistroMensagemFrenteButton(){
@@ -209,6 +211,8 @@ function lockUnlockButton(fieldId, button) {
     document.getElementById("numeroLinha3").value = "";
     document.getElementById("textoLinha3").value = "";
     document.getElementById("destinoBoleto").value = RegistroMensagemFrente.DESTINO_BOLETO.value;
+    
+    setFieldsReadOnly('RegistroMensagemFrenteContent');
   }
 
   function setRegistroMensagemVersoButton(){
@@ -218,6 +222,8 @@ function lockUnlockButton(fieldId, button) {
     document.getElementById("numeroLinhaVerso2").value = "";
     document.getElementById("textoLinhaVerso2").value = "";
     document.getElementById("brancosVerso2").value = "";
+    
+    setFieldsReadOnly('RegistroMensagemVersoContent');
   }
   
   function setNossoNumeroButton(tipo){
