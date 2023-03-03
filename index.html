@@ -480,7 +480,7 @@
               style="display: none;">
               <br>
               <div>
-                <button type="button" onclick="setRegistroMensagemFrenteButton()">Gerar Dados Sacador Avalista</button>
+                <button type="button" onclick="setRegistroMensagemFrenteButton()">Gerar Mensagem Frente</button>
                 <button type="button" onclick="adicionarLinhaRegistroMensagemFrenteButton()">Adicionar Linha</button>
               </div>
               <br>
@@ -503,21 +503,25 @@
                 <div>
                   <label for="numeroLinha2">Número da Linha 2 (2):</label>
                   <input type="text" id="numeroLinha2" name="numeroLinha2" maxlength="2">
+                  <button type="button" onclick="lockUnlockButton('numeroLinha2',this)" class="editButton">Travar</button>
                 </div>
                 
                 <div>
                   <label for="textoLinha2">Texto da Linha 2 (128):</label>
                   <input type="text" id="textoLinha2" name="textoLinha2" maxlength="128">
+                  <button type="button" onclick="lockUnlockButton('textoLinha2',this)" class="editButton">Travar</button>
                 </div>
                 
                 <div>
                   <label for="numeroLinha3">Número da Linha 3 (2):</label>
                   <input type="text" id="numeroLinha3" name="numeroLinha3" maxlength="2" >
+                  <button type="button" onclick="lockUnlockButton('numeroLinha3',this)" class="editButton">Travar</button>
                 </div>
                 
                 <div>
                   <label for="textoLinha3">Texto da Linha 3 (127):</label>
                   <input type="text" id="textoLinha3" name="textoLinha3" maxlength="127">
+                  <button type="button" onclick="lockUnlockButton('textoLinha3',this)" class="editButton">Travar</button>
                 </div>
                 
                 <div>

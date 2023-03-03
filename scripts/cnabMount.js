@@ -301,6 +301,21 @@ function mountLinhaRemessaDetalhePadrao() {
     agenciaRateio14 + contaRateio14 + dacRateio14 + valorRateio14 + 
     tipoValorRateio + numeroSequencialRateio;
   }
+
+  function mountMensagemFrente(){
+      const tipoRegistro = RegistroMensagemFrente.TIPO_REGISTRO.value;
+      const flash = getValueOrFiller(document.getElementById("flash"), RegistroMensagemFrente.FLASH);
+      const numeroLinha1 = getValueOrFiller(document.getElementById("numeroLinha1"), RegistroMensagemFrente.NUMERO_LINHA_1);
+      const textoLinha1 = getValueOrFiller(document.getElementById("textoLinha1"), RegistroMensagemFrente.TEXTO_LINHA_1);
+      const numeroLinha2 = getValueOrFiller(document.getElementById("numeroLinha2"), RegistroMensagemFrente.NUMERO_LINHA_2);
+      const textoLinha2 = getValueOrFiller(document.getElementById("textoLinha2"), RegistroMensagemFrente.TEXTO_LINHA_2);
+      const numeroLinha3 = getValueOrFiller(document.getElementById("numeroLinha3"), RegistroMensagemFrente.NUMERO_LINHA_3);
+      const textoLinha3 = getValueOrFiller(document.getElementById("textoLinha3"), RegistroMensagemFrente.TEXTO_LINHA_3);
+      const destinoBoleto = getValueOrFiller(document.getElementById("destinoBoleto"), RegistroMensagemFrente.DESTINO_BOLETO);
+      const numeroSequencial = RegistroMensagemFrente.NUMERO_SEQUENCIAL.value;
+    
+      return tipoRegistro + flash + numeroLinha1 + textoLinha1 + numeroLinha2 + textoLinha2 + numeroLinha3 + textoLinha3 + destinoBoleto + numeroSequencial;
+  }
   
   function mountLinhaTrailerArquivoDefaultValues(){
     var tipoDeRegistro = "9";

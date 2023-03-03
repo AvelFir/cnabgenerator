@@ -427,7 +427,7 @@ class RegistroMensagemFrente {
   }
 
   static get DESTINO_BOLETO() {
-    return { value: "A", filler: Brancos.QUARENTA, size: 40, formatStyle: (value, fill, size) => formatEnd(value, fill, size) };
+    return { value: "A", filler: Brancos.UM, size: 1, formatStyle: (value, fill, size) => formatEnd(value, fill, size) };
   }
 
   static get NUMERO_SEQUENCIAL() {
