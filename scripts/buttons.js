@@ -56,6 +56,12 @@ function lockUnlockButton(fieldId, button) {
     adicionarLinha400(linha);
   }
 
+  function adicionarLinhaRegistroMensagemVersoButton(){
+    var linha = mountMensagemVerso();
+    linha = linha.substring(0, linha.length - 6);
+    adicionarLinha400(linha);
+  }
+
   function setValorRemessaDetalhePadraoButton(){
     document.getElementById("codigoDeInscricao").value = RemessaPadraoConstants.CODIGO_INSCRICAO.value;
     document.getElementById("numeroDeInscricao").value = RemessaPadraoConstants.NUMERO_INSCRICAO.value;
@@ -205,6 +211,14 @@ function lockUnlockButton(fieldId, button) {
     document.getElementById("destinoBoleto").value = RegistroMensagemFrente.DESTINO_BOLETO.value;
   }
 
+  function setRegistroMensagemVersoButton(){
+    document.getElementById("numeroLinhaVerso1").value = RegistroMensagemVerso.NUMERO_LINHA_1.value;
+    document.getElementById("textoLinhaVerso1").value = RegistroMensagemVerso.TEXTO_LINHA_1.value;
+    document.getElementById("brancosVerso1").value = "";
+    document.getElementById("numeroLinhaVerso2").value = "";
+    document.getElementById("textoLinhaVerso2").value = "";
+    document.getElementById("brancosVerso2").value = "";
+  }
   
   function setNossoNumeroButton(tipo){
     const nossoNumero = tipo == "data" ? gerarNossoNumeroData() : gerarNossoNumeroAleatorio();

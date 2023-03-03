@@ -316,6 +316,19 @@ function mountLinhaRemessaDetalhePadrao() {
     
       return tipoRegistro + flash + numeroLinha1 + textoLinha1 + numeroLinha2 + textoLinha2 + numeroLinha3 + textoLinha3 + destinoBoleto + numeroSequencial;
   }
+
+  function mountMensagemVerso() {
+    const tipoRegistro = RegistroMensagemVerso.TIPO_REGISTRO.value;
+    const numeroLinha1 = getValueOrFiller(document.getElementById("numeroLinhaVerso1"), RegistroMensagemVerso.NUMERO_LINHA_1);
+    const textoLinha1 = getValueOrFiller(document.getElementById("textoLinhaVerso1"), RegistroMensagemVerso.TEXTO_LINHA_1);
+    const brancos1 = getValueOrFiller(document.getElementById("brancosVerso1"), RegistroMensagemVerso.BRANCOS1);
+    const numeroLinha2 = getValueOrFiller(document.getElementById("numeroLinhaVerso2"), RegistroMensagemVerso.NUMERO_LINHA_2);
+    const textoLinha2 = getValueOrFiller(document.getElementById("textoLinhaVerso2"), RegistroMensagemVerso.TEXTO_LINHA_2);
+    const brancos2 = getValueOrFiller(document.getElementById("brancosVerso2"), RegistroMensagemVerso.BRANCOS2);
+    const numeroSequencial = RegistroMensagemVerso.NUMERO_SEQUENCIAL.value;
+    
+    return tipoRegistro + numeroLinha1 + textoLinha1 + brancos1 + numeroLinha2 + textoLinha2 + brancos2 + numeroSequencial;
+    }
   
   function mountLinhaTrailerArquivoDefaultValues(){
     var tipoDeRegistro = "9";
