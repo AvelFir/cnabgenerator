@@ -137,6 +137,9 @@
                   <label for="multiplicadorLinhaRemessaDetalhePadrao">qtd:</label>
                   <input type="number" id="multiplicadorLinhaRemessaDetalhePadrao" min="1" max="10000"
                     placeholder="padrao: 1">
+                  <br>
+                  <br>
+                  <button type="button" id="clearButton" onclick="limparInputs('camposRemessaPadrao')">Limpar</button>
                 </div>
                 <br>
                 <div id="camposRemessaPadrao">
@@ -363,59 +366,72 @@
               <div>
                 <button type="button" onclick="setRemessaRateioCreditoButton()">Gerar Rateio de Credito</button>
                 <button type="button" onclick="adicionarLinhaRemessaRateioButton()">Adicionar Linha</button>
+                <br>
+                <br>
+                <button type="button" id="clearButton" onclick="limparInputs('camposRateio')">Limpar</button>
               </div>
               <br>
               <div id="camposRateio">
-                <label for="codigoInscricaoRateio">CODIGO DE INSCRICAO (2):</label>
-                <input type="text" id="codigoInscricaoRateio" name="codigoInscricaoRateio" maxlength="2">
+                <div>
+                  <label for="codigoInscricaoRateio">CODIGO DE INSCRICAO (2):</label>
+                  <input type="text" id="codigoInscricaoRateio" name="codigoInscricaoRateio" maxlength="2">
+                </div>
                 <br>
-
-                <label for="numeroInscricaoRateio">NUMERO DE INSCRICAO (14):</label>
-                <input type="text" id="numeroInscricaoRateio" name="numeroInscricaoRateio" maxlength="14">
+                <div>
+                  <label for="numeroInscricaoRateio">NUMERO DE INSCRICAO (14):</label>
+                  <input type="text" id="numeroInscricaoRateio" name="numeroInscricaoRateio" maxlength="14">
+                </div>
                 <br>
-
-                <label for="agenciaBeneficiarioRateio">AGENCIA (4):</label>
-                <input type="text" id="agenciaBeneficiarioRateio" name="agenciaBeneficiarioRateio" maxlength="4">
+                <div>
+                  <label for="agenciaBeneficiarioRateio">AGENCIA (4):</label>
+                  <input type="text" id="agenciaBeneficiarioRateio" name="agenciaBeneficiarioRateio" maxlength="4">
+                </div>
                 <br>
-
-                <label for="zerosRateio">ZEROS (2):</label>
-                <input type="text" id="zerosRateio" name="zerosRateio" maxlength="2">
+                <div>
+                  <label for="zerosRateio">ZEROS (2):</label>
+                  <input type="text" id="zerosRateio" name="zerosRateio" maxlength="2">
+                </div>
                 <br>
-
-                <label for="contaBeneficiarioRateio">CONTA (5):</label>
-                <input type="text" id="contaBeneficiarioRateio" name="contaBeneficiarioRateio" maxlength="5">
+                <div>
+                  <label for="contaBeneficiarioRateio">CONTA (5):</label>
+                  <input type="text" id="contaBeneficiarioRateio" name="contaBeneficiarioRateio" maxlength="5">
+                </div>
                 <br>
-
-                <label for="dacBeneficiarioRateio">DAC (1):</label>
-                <input type="text" id="dacBeneficiarioRateio" name="dacBeneficiarioRateio" maxlength="1">
-                <button type="button"
-                  onclick="setDacButton('agenciaBeneficiarioRateio','contaBeneficiarioRateio','dacBeneficiarioRateio')">Calcular
-                  Dac</button>\
+                <div>
+                  <label for="dacBeneficiarioRateio">DAC (1):</label>
+                  <input type="text" id="dacBeneficiarioRateio" name="dacBeneficiarioRateio" maxlength="1">
+                  <button type="button" onclick="setDacButton('agenciaBeneficiarioRateio','contaBeneficiarioRateio','dacBeneficiarioRateio')">Calcular Dac</button>
+                </div>
                 <br>
-
-                <label for="numeroCarteiraRateio">NUMERO DA CARTEIRA (3):</label>
-                <input type="text" id="numeroCarteiraRateio" name="numeroCarteiraRateio" maxlength="3">
+                <div>
+                  <label for="numeroCarteiraRateio">NUMERO DA CARTEIRA (3):</label>
+                  <input type="text" id="numeroCarteiraRateio" name="numeroCarteiraRateio" maxlength="3">
+                </div>
                 <br>
-
-                <label for="nossoNumeroRateio">NOSSO NUMERO (8):</label>
-                <input type="text" id="nossoNumeroRateio" name="nossoNumeroRateio" maxlength="8">
+                <div>
+                  <label for="nossoNumeroRateio">NOSSO NUMERO (8):</label>
+                  <input type="text" id="nossoNumeroRateio" name="nossoNumeroRateio" maxlength="8">
+                </div>
                 <br>
-
-                <label for="dacNossoNumeroRateio">DAC DO NOSSO NUMERO (1):</label>
-                <input type="text" id="dacNossoNumeroRateio" name="dacNossoNumeroRateio" maxlength="1">
+                <div>
+                  <label for="dacNossoNumeroRateio">DAC DO NOSSO NUMERO (1):</label>
+                  <input type="text" id="dacNossoNumeroRateio" name="dacNossoNumeroRateio" maxlength="1">
+                </div>
                 <br>
-
-                <label for="sequenciaRateio">SEQUENCIA DE RATEIO (2):</label>
-                <input type="text" id="sequenciaRateio" name="sequenciaRateio" maxlength="2">
+                <div>
+                  <label for="sequenciaRateio">SEQUENCIA DE RATEIO (2):</label>
+                  <input type="text" id="sequenciaRateio" name="sequenciaRateio" maxlength="2">
+                </div>
                 <br>
                 <br>
-
                 <div id="beneficiariosRateio">
 
                 </div>
                 <br>
+                <div>
                 <label for="tipoValorRateio">TIPO DE VALOR (1):</label>
                 <input type="text" id="tipoValorRateio" name="tipoValorRateio" maxlength="1">
+              </div>
                 <br>
               </div>
             </div>
