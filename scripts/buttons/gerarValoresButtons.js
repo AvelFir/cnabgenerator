@@ -178,7 +178,7 @@ function setValorRemessaDetalhePadraoButton() {
   }
   
   function setComplementoButton() {
-    const complemento = gerarComplemento();
+    const complemento = gerarComplementoLinha();
     document.getElementById("complementoLinhaPadrao").value = complemento;
   }
   
