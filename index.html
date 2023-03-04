@@ -343,19 +343,28 @@
                 <button type="button" onclick="adicionarLinhaDetalheMultaButton()">Adicionar Linha</button>
               </div>
               <br>
-              <div>
-                <label for="codigoMulta">CODIGO DA MULTA (1):</label>
-                <input type="text" id="codigoMulta" name="codigoMulta" maxlength="1"><br>
-
-                <label for="dataMulta">DATA DA MULTA (8):</label>
-                <input type="text" id="dataMulta" name="dataMulta" maxlength="8"><br>
-
-                <label for="valorMulta">VALOR DA MULTA (13):</label>
-                <input type="text" id="valorMulta" name="valorMulta" maxlength="13"><br>
-              </div>
-              <label for="brancosMulta">BRANCOS (371):</label>
-              <input type="text" id="brancosMulta" class="fixo" name="brancosMulta" maxlength="371">
-              <button type="button" onclick="lockUnlockButton('brancosMulta',this)" class="editButton">Travar</button>
+              <button type="button" id="clearButton" onclick="limparInputs('camposMulta')">Limpar</button>
+              <br>
+              <br>
+              <div id="camposMulta">
+                <div>
+                  <label for="codigoMulta">CODIGO DA MULTA (1):</label>
+                  <input type="text" id="codigoMulta" name="codigoMulta" maxlength="1">
+                </div>
+                <div>
+                  <label for="dataMulta">DATA DA MULTA (8):</label>
+                  <input type="text" id="dataMulta" name="dataMulta" maxlength="8">
+                </div>
+                <div>
+                  <label for="valorMulta">VALOR DA MULTA (13):</label>
+                  <input type="text" id="valorMulta" name="valorMulta" maxlength="13">
+                </div>
+                <div>
+                  <label for="brancosMulta">BRANCOS (371):</label>
+                  <input type="text" id="brancosMulta" class="fixo" name="brancosMulta" maxlength="371">
+                  <button type="button" onclick="lockUnlockButton('brancosMulta',this)" class="editButton">Travar</button>
+                </div>
+              </div>              
             </div>
           </div>
           <br>
