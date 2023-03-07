@@ -40,13 +40,18 @@
           </abbr>
           <br>
           <br>
+        <div>
           <label for="complementoArquivoPadrao">COMPLEMENTO DE ARQUIVO PADRAO (109):</label>
           <input type="text" id="complementoArquivoPadrao" name="complementoArquivoPadrao" maxlength="109" size=100 />
-          <button type="button" onclick="setComplementoArquivoPadraoButton()">Gerar Complemento</button>
-          <br>
+          <button type="button" id="gerarComplementoArquivoPadraoButton" onclick="setComplementoArquivoPadraoButton()">Gerar Complemento</button>
+          <div>
           <label for="isComplementoArquivoPadrao">Deseja usar complemento no topo do arquivo?:</label>
           <input type="checkbox" id="isComplementoArquivoPadrao" name="isComplementoArquivoPadrao">
           <br>
+          <label for="isComplementoArquivoAutomatico">Automatico:</label>
+          <input type="checkbox" id="isComplementoArquivoAutomatico" name="isComplementoArquivoAutomatico">
+        </div>
+        </div>
           <br>
           <label for="complementoLinhaPadrao">COMPLEMENTO DE LINHA PADRAO (700):</label>
           <input type="text" id="complementoLinhaPadrao" name="complementoLinhaPadrao" maxlength="700" size=100 />

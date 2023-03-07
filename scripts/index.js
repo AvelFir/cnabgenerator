@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const isComplementoPadrao = localStorage.getItem("isComplementoPadrao");
   const isSobreporLinha = localStorage.getItem("isSobreporLinha");
   const fillerPadrao = localStorage.getItem("fillerPadrao");
+  const isComplementoArquivoAutomatico = localStorage.getItem("isComplementoArquivoAutomatico")
   
   if (agencia) {
     document.getElementById("agenciaPadrao").value = agencia;
@@ -56,10 +57,33 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("fillerPadrao").value = fillerPadrao;
   }
   document.getElementById("isComplementoArquivoPadrao").checked = (isComplementoArquivoPadrao === "true");
+  document.getElementById("isComplementoArquivoAutomatico").checked = (isComplementoArquivoAutomatico === "true");
   document.getElementById("isComplementoPadrao").checked = (isComplementoPadrao === "true");
   document.getElementById("isSobreporLinha").checked = (isSobreporLinha === "true");
 
-  //Adicionar Header
+
+  //Ativa e desativa o campo readonly para o complemento de arquivo
+  const cap = document.getElementById('complementoArquivoPadrao');
+  const isCAP = document.getElementById('isComplementoArquivoAutomatico');
+  const gCAP = document.getElementById('gerarComplementoArquivoPadraoButton');
+  
+  isCAP.onchange = function() {
+    if (isCAP.checked) {
+      setElementReadOnly(cap);
+      gCAP.disabled = true;
+    } else {
+      removeElementReadOnly(cap);
+      gCAP.disabled = false;
+    }
+  }
+
+  if (isCAP.checked) {
+    setElementReadOnly(cap);
+    gCAP.disabled = true;
+  } else {
+    removeElementReadOnly(cap);
+    gCAP.disabled = false;
+  }
 
 });
 

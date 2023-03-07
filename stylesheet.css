@@ -1,5 +1,6 @@
 input[readonly] {
-  opacity: 0.5;
+  opacity: 0.1;
+  color:gray;
 }
 
 input:not(.fixo) {

@@ -9,6 +9,7 @@ function salvarItemById(campo) {
     var headerArquivoPadrao = document.getElementById("headerArquivoPadrao").value;
     var complementoArquivoPadrao = document.getElementById("complementoArquivoPadrao").value;
     var isComplementoArquivoPadrao = document.getElementById("isComplementoArquivoPadrao").checked;
+    var isComplementoArquivoAutomatico = document.getElementById("isComplementoArquivoAutomatico").checked;
     var complemento = document.getElementById("complementoLinhaPadrao").value;
     var isComplemento = document.getElementById("isComplementoPadrao").checked;
     var fillerPadrao = document.getElementById("fillerPadrao").value;
@@ -18,6 +19,8 @@ function salvarItemById(campo) {
     localStorage.setItem("complementoArquivoPadrao", complementoArquivoPadrao);
   
     localStorage.setItem("isComplementoArquivoPadrao", isComplementoArquivoPadrao);
+
+    localStorage.setItem("isComplementoArquivoAutomatico", isComplementoArquivoAutomatico);
   
     localStorage.setItem("complementoLinhaPadrao", complemento);
   
@@ -30,19 +33,35 @@ function salvarItemById(campo) {
   }
   
   function apagarConfiguracoes() {
-    localStorage.removeItem('headerArquivoPadrao');
-    localStorage.removeItem('complementoArquivoPadrao');
-    localStorage.removeItem('isComplementoArquivoPadrao');
-    localStorage.removeItem('complementoLinhaPadrao');
-    localStorage.removeItem('isComplementoPadrao');
-    localStorage.removeItem('fillerPadrao');
+    const headerArquivoPadrao = 'headerArquivoPadrao';
+    const complementoArquivoPadrao ='complementoArquivoPadrao';
+    const isComplementoArquivoPadrao = "isComplementoArquivoPadrao";
+    const isComplementoArquivoAutomatico ='isComplementoArquivoAutomatico';
+    const complementoLinhaPadrao = 'complementoLinhaPadrao';
+    const isComplementoPadrao = 'isComplementoPadrao';
+    const fillerPadrao = 'fillerPadrao';
+
+    localStorage.removeItem(headerArquivoPadrao);
+    localStorage.removeItem(complementoArquivoPadrao);
+    localStorage.removeItem(isComplementoArquivoAutomatico);
+    localStorage.removeItem(isComplementoArquivoPadrao);
+    localStorage.removeItem(complementoLinhaPadrao);
+    localStorage.removeItem(isComplementoPadrao);
+    localStorage.removeItem(fillerPadrao);
   
-    document.getElementById("headerArquivoPadrao").value = "";
-    document.getElementById("complementoArquivoPadrao").value = "";
-    document.getElementById("isComplementoArquivoPadrao").checked = false;
-    document.getElementById("complementoLinhaPadrao").value = "";
-    document.getElementById("isComplementoPadrao").checked = false;
-    document.getElementById("fillerPadrao").value = "padrao";
+    removeElementReadOnly(document.getElementById(complementoArquivoPadrao));
+    
+    const gerarComplementoArquivoPadraoButton ='gerarComplementoArquivoPadraoButton';
+    document.getElementById(gerarComplementoArquivoPadraoButton).disabled = false;
+
+    document.getElementById(headerArquivoPadrao).value = "";
+    document.getElementById(complementoArquivoPadrao).value = "";
+    document.getElementById(isComplementoArquivoPadrao).checked = false;
+    document.getElementById(isComplementoArquivoAutomatico).checked = false;
+    document.getElementById(complementoLinhaPadrao).value = "";
+    document.getElementById(isComplementoPadrao).checked = false;
+    document.getElementById(fillerPadrao).value = "padrao";
+
     alert("Configurações Deletadas")
   }
   

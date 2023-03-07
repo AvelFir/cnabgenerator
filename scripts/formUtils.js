@@ -10,3 +10,11 @@ function toggleInputFieldReadonly(inputField, lockUnlockButton) {
     lockUnlockButton.innerHTML = UNLOCKED_TEXT;
   }
 }
+
+function setElementReadOnly(element){
+  element.setAttribute("readonly", "readonly");
+}
+
+function removeElementReadOnly(element){
+  element.removeAttribute("readonly");
+}

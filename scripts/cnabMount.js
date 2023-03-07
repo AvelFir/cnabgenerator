@@ -27,6 +27,7 @@ function mountCnab400(){
   return documento;
 }
 
+//TODO refatorar
 function mountArquivo() {
   var header = getFirstValueOr(localStorage.getItem("headerArquivoPadrao"), mountRemessaHeaderArquivoDefaultValues().substring(0, 400 - 6));
   header += getContadorSequencialGlobal();
@@ -64,7 +65,11 @@ function mountArquivo() {
   var documento;
 
   if(isComplementoArquivoPadrao){
+    const isComplementoArquivoAutomatico = localStorage.getItem("isComplementoArquivoAutomatico") === "true";
     var complementoArquivoPadrao = localStorage.getItem("complementoArquivoPadrao");
+    if(isComplementoArquivoAutomatico){
+      complementoArquivoPadrao = gerarComplementoArquivo();
+    }
     documento = [complementoArquivoPadrao,header]
     for (let i = 0; i < listaConcatenada.length; i++) {
       documento.push(listaConcatenada[i]);
