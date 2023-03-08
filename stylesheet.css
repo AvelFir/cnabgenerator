@@ -64,3 +64,10 @@ input:not(.fixo) {
   width: 20px;
   height: 20px;
 }
+
+div.titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;  
+}

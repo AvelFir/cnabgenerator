@@ -24,6 +24,9 @@
 </head>
 
 <body>
+  <div class="titulo">
+    <h2>Gerador Cnab 400</h2>
+  </div>
   <form method="post">
 
     <div class="section" id="Configuracao">
@@ -123,8 +126,10 @@
     <br>
     <div class="container">
       <div class="linhas">
-        <div class="section" id="linhasRemessa" style="border: 1px solid red">
-          <br>
+        <div class="section" id="linhasRemessa" style="border: 1px solid black">
+          <div class="titulo">
+            <h2>Linhas Remessa</h2>
+          </div>
           <div id="RemessaDetalhePadrao">
             <button type="button" class="toggleButton" data-section="RemessaPadrao">Maximizar Remessa Padrao</button>
             <div class="sectionContent" id="RemessaPadraoContent" name="Remessa Detalhe Padrao" style="display: none;">
@@ -620,6 +625,9 @@
         </div>
       </div>
       <div class="displayArquivo" style="border: 1px solid black;">
+        <div class="titulo">
+          <h2>Display Arquivo</h2>
+        </div>
         <div>
           <label for="nomeArquivo">NOME ARQUIVO:</label>
           <input type="text" id="nomeArquivo" name="nomeArquivo" maxlength="40" size="40" />
